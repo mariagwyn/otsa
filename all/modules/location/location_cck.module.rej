@@ -1,0 +1,68 @@
+--- location_cck.module
++++ location_cck.module
+@@ -163,6 +163,17 @@
+       location_save_locations($items, $criteria);
+     }
+   }
++  elseif ($entity_type == 'field_collection_item')
++  { 
++    if (!empty($items)) {
++      // Store instances of locations by field name and item id.
++      $criteria = array(
++        'genid' => 'field_collection_item:' . $field['field_name'] . ':' . $entity->item_id,
++        'nid' => $entity->item_id,
++      );
++      location_save_locations($items, $criteria);
++    }
++  }
+ }
+ 
+ /**
+@@ -180,6 +191,17 @@
+       location_save_locations($items, $criteria);
+     }
+   }
++  elseif ($entity_type == 'field_collection_item')
++  { 
++    if (!empty($items)) {
++      // Store instances of locations by field name and item id.
++      $criteria = array(
++        'genid' => 'field_collection_item:' . $field['field_name'] . ':' . $entity->item_id,
++        'nid' => $entity->item_id,
++      );
++      location_save_locations($items, $criteria);
++    }
++  }
+ }
+ 
+ /**
+@@ -199,6 +221,9 @@
+       $locs = array();
+       location_save_locations($locs, array('genid' => $genid));
+     }
++  } elseif ($entity_type == 'field_collection_item') {
++    $locs = array();
++    location_save_locations($locs, array('genid' => 'field_collection_item:' . $field['field_name'] . ':' . $entity->item_id));
+   }
+ }
+ 
+@@ -210,6 +235,10 @@
+     $genid = 'cck:' . $field['field_name'] . ':' . $entity->vid;
+     $locs = array();
+     location_save_locations($locs, array('genid' => $genid));
++  } elseif ($entity_type == 'field_collection_item') {
++    $genid = 'field_collection_item:' . $field['field_name'] . ':' . $entity->item_id;
++    $locs = array();
++    location_save_locations($locs, array('genid' => $genid));
+   }
+ }
+ 
+@@ -224,7 +253,7 @@
+  * Implement hook_field_load().
+  */
+ function location_cck_field_load($entity_type, $entities, $field, $instances, $langcode, &$items, $age) {
+-  if ($entity_type == 'node') {
++  if ($entity_type == 'node' || $entity_type == 'field_collection_item') {
+     foreach ($entities as $id => $entity) {
+       foreach ($items[$id] as $delta => $item) {
+         $location = array();

@@ -1,0 +1,5 @@
+name = OTSA custom settings
+description = "Custom Modifications to OTSA website"
+package = Custom Modules
+core = 7.x
+files[] = otsa.module

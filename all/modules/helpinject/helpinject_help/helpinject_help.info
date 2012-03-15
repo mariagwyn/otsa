@@ -1,0 +1,5 @@
+name = Help injection help
+description = Ties in the advanced help icons for the generated help documents.
+dependencies[] = advanced_help
+stylesheets[all][] = helpinject_help.css
+core = 7.x

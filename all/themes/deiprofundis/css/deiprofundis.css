@@ -1,0 +1,159 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/*** HTML settings ***/
+blockquote {padding: .25em 2em; background:url(images/quote.png) left top no-repeat;}
+.inset {display:block;}
+.right {float:right; margin: 0 0 1em 1em;}
+.left {float: left; margin: 0 1em 1em 0;}
+.fifty {width: 50%;}
+.fourty {width: 40%}
+
+	#tippy-top {height: 30px; display:block;}
+	#tippy-top-inner {width: 960px; margin:auto; padding: .25em 0;}
+	#tippy-top .block ul {margin:0}
+	#tippy-top {background: #7d1e19;}
+	#block-system-user-menu {width: 50%; float:right;}
+	#block-system-user-menu li {display:inline; float:right; padding-left: 1.5em; color:#fffdee;
+		}
+#tippy-top ul.menu li a, #tippy-top ul.menu li.active a, #tippy-top ul.menu li a:hover, #tippy-top ul.menu li a:visited {
+	color:#fffdee;}
+
+#header {}	
+#header-inner {}
+.taxonomy {
+  font-size: 0.92em;
+  float:left;
+  margin: 0 .5em .75em 0;
+  color:#97865b;
+}
+.node-links {float:right; padding:0; text-align:right; color:#97865b;}
+.description, .form-item .description {
+  font-size: 0.92em;
+  line-height: 150%;
+  margin-bottom: 0.75em;
+  color: #97865b;
+}
+
+.content {clear:left;}
+#content .taxonomy li:after, .links li:after {
+	content: " | ";
+}
+#content .taxonomy li.last:after, .links li.last:after, table .links li:after {
+	content: "";
+}
+/*** Node settings ***/
+.node {}
+.node h2 {}
+
+.left {float:left; margin: 1em 1em 1em 0;}
+.right {float:right; margin: 1em 0 1em 1em;}
+img.left, .left img, img.right, .right img, img.image {border: 3px double #7d1e19;}
+ul.galleries li img {padding:0}
+#footer a:link, #footer a:visited {color:#97865b;}
+#footer a:hover, #footer a:active {color:#366DA4;}
+
+#footer .block {padding-top: 4em;}
+#top {
+  clear:both;
+	padding: 1em 0;
+}
+.to-top {
+  background: url(images/link-arrow-up.png) no-repeat 0% 50%;
+  padding: 6px 0 2px 20px;
+}
+
+/*** Date settings ***/
+.post-date {
+float:right;
+margin:2px 0 2px .5em;
+min-width:36px;
+padding:0pt;
+text-align:center;
+width:3.1em;
+border: 1px solid #97865b;
+}
+div.post-date .top {
+background-color:#97865b;
+color: #fffdee;
+width: 100%;
+display:block;
+}
+.post-date .day {
+color:#fffdee;
+font-family: Georgia, "Times New Roman", Times, serif;
+font-weight:bold;
+letter-spacing:0.13em;
+line-height:98%;
+padding:0;
+text-transform:uppercase;
+}
+.post-date div.btm {
+color:#97865b;
+margin:0;
+padding:0pt 0pt 2px;
+}
+.post-date .date, .post-date .month, .post-date .year {
+display:block;
+}
+.post-date .date {
+font-weight:bold;
+line-height: 110%;
+}
+.post-date .month {
+letter-spacing:normal;
+line-height:100%;
+padding:0pt;
+}
+.post-date .year {
+letter-spacing:0.05em;
+line-height:110%;
+}
+
+.footnote p {font-size: .9em; margin: .25em 0; line-height:1.2em;}
+.quote-msg {
+  margin: 1em;
+  padding: 1em 2em;
+  background: transparent url(images/quote.png) no-repeat top left;
+	border:none;
+	line-height: 1.2em;
+}
+.quote-author {
+  display: block;
+  font-weight: bold;
+  margin: 0 0 1em 0;
+}
+/*********************/
+/*** Oremus Bible Browser Styles (bible.oremus.org/bible.css) ***/
+/*********************/
+span.cc, span.rr, div.bible p span.cc, div.bible p span.rr, span.cp, div.bible p span.cp
+{
+	float : left ;
+	font-size : 2em ;
+	font-family : Verdana, Arial, Helvetica, sans-serif ;
+	color : #666666 ;
+	line-height : 1em ;
+	margin-right : 0.2em ;
+	/*
+	 * this vertical-align is needed to force IE to lay things out
+	 * properly; otherwise if the chapter number falls in the same
+	 * line as a verse superscript then IE will set this chapter
+	 * num too high, and then set the second line of the passage
+	 * too high as well, overlapping with this line; a side effect
+	 * is that in Mozilla and Safari the chapter number is now
+	 * raised slightly too high and aligns with the top of the
+	 * superscript verse number; but it's not too bad, I guess.
+	 * sjk 16 Jan 2006.
+	 */
+	vertical-align : top ;
+}
+sup.ww, sup.uu, sup.ii, sup.oo, sup.plus-M, sup.hh, sup.plus-V
+{
+	font-family : Verdana, Arial, Helvetica, sans-serif ;
+	color : #777777 ;
+}
+span.vv, div.bible p span.vv
+{
+	font-family : Verdana, Arial, Helvetica, sans-serif ;
+	color : #777777 ;
+}

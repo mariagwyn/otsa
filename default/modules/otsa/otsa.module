@@ -1,0 +1,30 @@
+<?php
+
+/**
+ * Implements hook_user_view_alter().
+ *
+ * For more information see:
+ * http://api.drupal.org/api/drupal/modules--user--user.api.php/function/hook_user_view_alter/7
+ */
+function otsa_user_view_alter(&$build) {
+  $build['summary']['member_for']['#title'] = 'Site member:';
+  return;
+}
+
+/**
+* Implementation of hook_form_alter().
+*/
+function otsa_form_alter(&$form, $form_state, $form_id) {
+  switch ($form_id) {
+    // This is our form ID.
+
+case 'uc_cart_checkout_form':
+      $form['panes']['#description'] = t('description');
+      $form['panes']['billing']['#description'] = t('Enter your billing address and information here.  If you have placed an online order before, you may select an address below:');
+case 'uc_cart_checkout_review_form':
+	$form['actions']['submit']['#value'] = t('Place Order');
+case 'user_profile_form':
+      $form['locations']['#title'] = t('Primary Address');
+    }
+return; 
+}
