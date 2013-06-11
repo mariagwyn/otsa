@@ -1,0 +1,65 @@
+<?php
+
+
+/**
+ * Implementation of hook_field_formatter_info().
+ */
+function commerce_pdf_invoice_field_formatter_info() {
+  return array(
+    'addressfield_invoice' => array(
+      'label' => t('Invoice'),
+      'field types' => array('addressfield'),
+    ),
+  );
+}
+
+
+
+/**
+ * Implements hook_field_formatter_view().
+ */
+function commerce_pdf_invoice_field_formatter_view($entity_type, $entity, $field, $instance, $langcode, $items, $display) {
+  $element = array();
+
+  switch ($display['type']) {
+    case 'addressfield_invoice':
+      foreach ($items as $delta => $item) {
+        $element[$delta] = array(
+          '#theme' => array('addressfield_invoice_formatter__' . $item['country'], 'addressfield_invoice_formatter'),
+          '#address' => $item,
+        );
+      }
+      break;
+  }
+
+  return $element;
+}
+
+
+
+/**
+ * Implements hook_theme().
+ */
+function commerce_pdf_invoice_theme() {
+  $path = drupal_get_path('module', 'commerce_pdf_invoice') . '/theme';
+  $templates['addressfield_invoice_formatter'] = array(
+    'variables' => array('address' => NULL),
+    'template' => 'addressfield-invoice-formatter',
+    'path' => $path,
+  );
+  $templates += drupal_find_theme_templates($templates, '.tpl.php', $path);
+  return $templates;
+}
+
+
+
+/**
+ * Implements hook_views_api().
+ */
+function commerce_pdf_invoice_views_api() {
+  return array(
+    'api' => 3,
+    'path' => drupal_get_path('module', 'commerce_pdf_invoice') . '/includes/views',
+  );
+}
+

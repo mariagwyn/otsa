@@ -83,12 +83,31 @@ function biblio_admin_settings() {
     '#group' => 'biblio_settings',
     '#description' => ''
   );
-  $form['authors']['biblio_auto_orphaned_author_delete'] = array(
+  $form['authors']['orphans'] = array(
+    '#type' => 'fieldset',
+    '#collapsible' => TRUE,
+    '#collapsed' => FALSE,
+    '#title' => t('Orphaned Authors'),
+    '#description' => ''
+  );
+  $form['authors']['orphans']['biblio_auto_orphaned_author_delete'] = array(
     '#type' => 'checkbox',
     '#title' => t('Automatically delete orphaned authors'),
     '#return_value' => 1,
     '#default_value' => variable_get('biblio_auto_orphaned_author_delete', 0),
-    '#description' => t('Orphaned authors are those which are no longer linked to any entries as the result of a biblio update or delete.')
+    '#description' => t('Orphaned authors are those which are no longer linked to any entries as the result of a biblio update or delete. This requires a functioning "cron" process.')
+  );
+  $form['authors']['orphans']['biblio_orphan_clean_interval'] = array(
+    '#type' => 'radios',
+    '#title' => t('Orphaned author cleaning frequency'),
+    '#default_value' => variable_get('biblio_orphan_clean_interval', 24*60*60),
+    '#options' => array(
+        0 => t('Every CRON run'),
+        3600 => t('Hourly'),
+        86400 => t('Daily'),
+        604800 => t('Weeekly'),
+     ),
+    '#description' => t('How frequently should we check for and delete orphans.')
   );
   $form['authors']['biblio_init_auth_count'] = array(
     '#type' => 'textfield',
@@ -524,7 +543,7 @@ function biblio_admin_settings() {
     '#default_value' => variable_get('biblio_sort_tabs', array('author', 'title', 'type', 'year')),
     '#options' => array(
       'author'  => t('Author'),
-      'keyword' => t('Keyword'),
+      'keyword' => t('Keyword  (<i>Warning: sorting by keyword may produce many duplicates due to the fact that an entry is listed for each keyword attached to it.</i>)'),
       'title'   => t('Title'),
       'type'    => t('Type'),
       'year'    => t('Year')
@@ -1759,7 +1778,7 @@ function biblio_admin_author_types_form_submit($form, $form_state) {
     }
   }
   $form_state['redirect'] = 'admin/config/content/biblio/author/type';
-  
+
 }
 
 function biblio_admin_author_type_delete_confirm($form, &$form_state, $type_id) {

@@ -13,6 +13,17 @@
 function acquia_spi_uninstall() {
   variable_del('acquia_spi_cron_last');
   variable_del('acquia_spi_cron_interval');
+  variable_del('acquia_spi_cron_interval_override');
+  variable_del('acquia_spi_use_cron');
+  variable_del('acquia_welcome');
+  variable_del('acquia_spi_boot_last');
+  variable_del('acquia_spi_module_diff_data');
+  variable_del('acquia_spi_admin_priv');
+  variable_del('acquia_spi_send_node_user');
+  variable_del('acquia_spi_send_watchdog');
+  variable_del('acquia_spi_server');
+  variable_del('acquia_spi_ssl_override');
+  variable_del('acquia_spi_module_rebuild');
 }
 
 /**
@@ -29,7 +40,7 @@ function acquia_spi_requirements($phase) {
       $has_credentials = acquia_agent_has_credentials();
 
       if ($has_credentials) {
-        $key = md5(acquia_agent_settings('acquia_key'). '-spi-send-' . drupal_get_private_key());
+        $key = sha1(drupal_get_private_key());
         $config_url = $description = $interval = '';
         $ago = REQUEST_TIME - $last_sent;
         if ($ago >= 60 * 60 * 36) { // 1.5 days ago.

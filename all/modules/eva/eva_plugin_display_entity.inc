@@ -27,6 +27,10 @@ class eva_plugin_display_entity extends views_plugin_display {
 
     $categories['entity_view'] = array(
       'title' => t('Entity content settings'),
+      'column' => 'second',
+      'build' => array(
+        '#weight' => -10,
+      ),
     );
 
     if ($entity_type = $this->get_option('entity_type')) {
@@ -62,6 +66,13 @@ class eva_plugin_display_entity extends views_plugin_display {
       'title' => t('Show title'),
       'value' => $this->get_option('show_title') ? t('Yes') : t('No'),
     );
+
+    if (module_exists('token')) {
+      // We must load token values here to show them on the options form.
+      drupal_add_js(drupal_get_path('module', 'token') . '/token.js');
+      drupal_add_css(drupal_get_path('module', 'token') . '/token.css');
+      drupal_add_library('token', 'treeTable');
+    }
   }
 
   /**
@@ -86,7 +97,7 @@ class eva_plugin_display_entity extends views_plugin_display {
         $form['entity_type'] = array(
           '#type' => 'radios',
           '#required' => TRUE,
-          '#title' => t("Attache this display to the following entity type"),
+          '#title' => t("Attach this display to the following entity type"),
           '#options' => $entity_names,
           '#default_value' => $this->get_option('entity_type'),
         );
@@ -99,7 +110,7 @@ class eva_plugin_display_entity extends views_plugin_display {
         $form['#title'] .= t('Bundles');
         $form['bundles'] = array(
           '#type' => 'checkboxes',
-          '#title' => t("Attache this display to the following bundles"),
+          '#title' => t("Attach this display to the following bundles"),
           '#options' => $options,
           '#default_value' => $this->get_option('bundles'),
         );
@@ -121,11 +132,30 @@ class eva_plugin_display_entity extends views_plugin_display {
           '#default_value' => $default,
         );
 
-        $form['default_argument'] = array(
+        $form['token'] = array(
+          '#type' => 'fieldset',
+          '#title' => t('Token replacement'),
+          '#collapsible' => TRUE,
+          '#states' => array(
+            'visible' => array(
+              'input:[name=argument_mode]' => array('value' => 'token'),
+            ),
+          ),
+        );
+
+        $form['token']['default_argument'] = array(
+          '#title' => t('Arguments'),
           '#type' => 'textfield',
           '#default_value' => $this->get_option('default_argument'),
           '#description' => t('You may use token replacement to provide arguments based on the current entity. Separate arguments with "/".'),
         );
+
+        if (module_exists('token')) {
+          $form['token']['tokens'] = array(
+            '#theme' => 'token_tree',
+            '#token_types' => array(token_get_entity_mapping('entity', $entity_type)),
+          );
+        }
         break;
 
       case 'show_title':
@@ -199,16 +229,6 @@ class eva_plugin_display_entity extends views_plugin_display {
   }
 
   /**
-   * Node content views use exposed widgets only if AJAX is set.
-   */
-  function uses_exposed() {
-    if ($this->use_ajax()) {
-      return parent::uses_exposed();
-    }
-    return FALSE;
-  }
-
-  /**
    * We have to run token replacement before the arguments are used.
    */
   function pre_execute() {
@@ -238,6 +258,20 @@ class eva_plugin_display_entity extends views_plugin_display {
         $this->view->args = array($entity->{$entity_info['entity keys']['id']});
       }
     }
+  }
+
+  /**
+   * Specify the path of the entity.
+   */
+  function get_path() {
+    if (isset($this->view->current_entity)) {
+      $uri = entity_uri($this->view->display_handler->get_option('entity_type'), $this->view->current_entity);
+      if ($uri) {
+        $uri['options']['absolute'] = TRUE;
+        return url($uri['path'], $uri['options']);
+      }
+    }
+    return parent::get_path();
   }
 
   /**

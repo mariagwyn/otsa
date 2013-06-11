@@ -29,18 +29,13 @@
 <div class="<?php print $classes; ?>">
   <?php print render($title_prefix); ?>
   <?php if ($title): ?>
-    <?php print $title; ?>
+    <h2 class="title"><?php print $title; ?></h2>
   <?php endif; ?>
   <?php print render($title_suffix); ?>
+
   <?php if ($header): ?>
     <div class="view-header">
       <?php print $header; ?>
-    </div>
-  <?php endif; ?>
-
-  <?php if ($exposed): ?>
-    <div class="view-filters">
-      <?php print $exposed; ?>
     </div>
   <?php endif; ?>
 

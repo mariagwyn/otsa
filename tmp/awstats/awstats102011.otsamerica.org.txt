@@ -1,0 +1,2212 @@
+AWSTATS DATA FILE 7.0 (build 1.971)
+# If you remove this file, all statistics for date 201110 will be lost/reset.
+# Last config file used to build this data file was /home/otsameri/tmp/awstats/awstats.otsamerica.org.conf.
+
+# Position (offset in bytes) in this file for beginning of each section for
+# direct I/O access. If you made changes somewhere in this file, you should
+# also remove completely the MAP section (AWStats will rewrite it at next
+# update).
+BEGIN_MAP 27
+POS_GENERAL 2008                
+POS_TIME 2693                
+POS_VISITOR 29313               
+POS_DAY 60287               
+POS_DOMAIN 3696                
+POS_LOGIN 4915                
+POS_ROBOT 5070                
+POS_WORMS 5694                
+POS_EMAILSENDER 5825                
+POS_EMAILRECEIVER 5968                
+POS_SESSION 61203               
+POS_SIDER 61415               
+POS_FILETYPES 6103                
+POS_DOWNLOADS 6419                
+POS_OS 7471                
+POS_BROWSER 7742                
+POS_SCREENSIZE 9166                
+POS_UNKNOWNREFERER 9240                
+POS_UNKNOWNREFERERBROWSER 10981               
+POS_ORIGIN 11889               
+POS_SEREFERRALS 12040               
+POS_PAGEREFS 12261               
+POS_SEARCHWORDS 14876               
+POS_KEYWORDS 18967               
+POS_MISC 2355                
+POS_ERRORS 21139               
+POS_CLUSTER 4771                
+POS_SIDER_404 21298               
+END_MAP
+
+# LastLine    = Date of last record processed - Last record line number in last log - Last record offset in last log - Last record signature value
+# FirstTime   = Date of first visit for history file
+# LastTime    = Date of last visit for history file
+# LastUpdate  = Date of last update - Nb of parsed records - Nb of parsed old records - Nb of parsed new records - Nb of parsed corrupted - Nb of parsed dropped
+# TotalVisits = Number of visits
+# TotalUnique = Number of unique visitors
+# MonthHostsKnown   = Number of hosts known
+# MonthHostsUnKnown = Number of hosts unknown
+BEGIN_GENERAL 8
+LastLine 20111101000353 879 219676 12693961118264
+FirstTime 20111001012533
+LastTime 20111031235817
+LastUpdate 20111101081537 879 0 878 0 0
+TotalVisits 838                 
+TotalUnique 596                 
+MonthHostsKnown 0                   
+MonthHostsUnknown 877                 
+END_GENERAL
+
+# Misc ID - Pages - Hits - Bandwidth
+BEGIN_MISC 10
+QuickTimeSupport 0 0 0
+JavaEnabled 0 0 0
+JavascriptDisabled 0 0 0
+PDFSupport 0 0 0
+WindowsMediaPlayerSupport 0 0 0
+AddToFavourites 0 241 0
+RealPlayerSupport 0 0 0
+TotalMisc 0 0 0
+DirectorSupport 0 0 0
+FlashSupport 0 0 0
+END_MISC
+
+# Hour - Pages - Hits - Bandwidth - Not viewed Pages - Not viewed Hits - Not viewed Bandwidth
+BEGIN_TIME 24
+0 113 885 9579640 1159 1646 34372844
+1 152 938 13655891 747 1143 17543103
+2 213 834 13790262 666 1142 17636461
+3 97 874 8830467 941 1318 27767090
+4 90 496 7357711 507 965 14421101
+5 87 750 7194724 632 967 17258444
+6 84 504 8828460 842 1209 21197352
+7 127 905 9789562 672 1144 17009931
+8 106 978 9549423 577 931 15008699
+9 63 948 8075257 441 845 10812418
+10 52 916 9301871 459 923 11281856
+11 118 571 8077386 643 959 16278943
+12 155 1400 12477474 742 1148 16891851
+13 168 1649 14690482 792 1172 18406406
+14 109 1363 16269386 599 1007 15293553
+15 159 1587 15669609 481 906 12608693
+16 231 1130 14937292 573 990 15413394
+17 99 711 7802770 546 891 13850451
+18 60 615 6926442 667 929 13796926
+19 42 947 8066471 711 1153 17937846
+20 69 1291 10555213 791 1175 21062222
+21 121 1278 12819081 559 999 15271816
+22 174 912 12204551 422 730 11435542
+23 137 1010 14738725 622 1048 15364687
+END_TIME
+
+# Domain - Pages - Hits - Bandwidth
+# The 25 first Pages must be first (order not required for others)
+BEGIN_DOMAIN 64
+us 1565 14141 150419038
+cn 212 813 10737611
+ru 133 434 6671036
+ua 94 278 5343366
+in 91 1095 9418435
+ca 82 1505 10448365
+ro 76 672 6663211
+de 70 399 5669241
+eg 48 108 2391054
+hk 46 110 2216254
+ci 45 45 1675836
+ng 45 45 1716444
+dk 41 249 2684631
+pl 33 164 2117429
+gb 25 269 4364641
+fr 16 78 1131197
+cz 15 15 636823
+br 14 75 916881
+eu 13 273 3253530
+sg 12 73 785247
+nl 11 139 1244208
+gr 10 397 4537234
+au 10 364 2987419
+jp 8 87 1111608
+id 8 8 362350
+il 2 2 89022
+tr 7 7 318439
+ph 7 151 1172954
+es 1 1 44511
+my 2 32 346544
+no 1 65 359554
+lv 1 1 36944
+mx 1 61 329784
+sy 1 68 587569
+sa 6 96 806854
+lb 0 1 923050
+co 2 2 90230
+ie 1 62 314724
+cy 2 125 2642484
+al 2 2 90228
+by 6 6 210552
+lt 2 2 90252
+hr 4 81 657170
+ir 2 2 90214
+be 4 125 1198800
+sn 3 3 120402
+gq 2 2 90228
+ge 4 72 942006
+tw 3 3 135317
+cu 3 73 771507
+am 4 79 483798
+gh 3 70 676591
+at 1 63 609351
+vn 3 3 91308
+bg 1 68 587569
+dz 2 2 90232
+hu 1 62 315023
+za 3 129 666022
+ar 2 2 90232
+se 6 63 552048
+nz 1 63 318609
+sk 2 2 90254
+pe 4 4 180482
+ve 1 1 44511
+END_DOMAIN
+
+# Cluster ID - Pages - Hits - Bandwidth
+BEGIN_CLUSTER 0
+END_CLUSTER
+
+# Login - Pages - Hits - Bandwidth - Last visit
+# The 10 first Pages must be first (order not required for others)
+BEGIN_LOGIN 0
+END_LOGIN
+
+# Robot ID - Hits - Bandwidth - Last visit - Hits on robots.txt
+# The 25 first Hits must be first (order not required for others)
+BEGIN_ROBOT 12
+slurp 9710 75871764 20111027091503 119
+spider 2253 60300804 20111031235045 133
+bot[\s_+:,\.\;\/\\-] 1505 41070266 20111031223411 329
+googlebot 1476 53093130 20111031190817 54
+crawl 802 24610203 20111024093213 12
+[\s_+:,\.\;\/\\-]bot 476 10657224 20111031233729 182
+robot 274 5836534 20111031074542 38
+ia_archiver 99 2977382 20111031232857 11
+discovery 58 2584240 20111027161354 0
+unknown 52 54748 20111031135019 52
+no_user_agent 40 1430091 20111030235954 2
+netcraft 1 44511 20111028173742 0
+END_ROBOT
+
+# Worm ID - Hits - Bandwidth - Last visit
+# The 5 first Hits must be first (order not required for others)
+BEGIN_WORMS 0
+END_WORMS
+
+# EMail - Hits - Bandwidth - Last visit
+# The 20 first Hits must be first (order not required for others)
+BEGIN_EMAILSENDER 0
+END_EMAILSENDER
+
+# EMail - Hits - Bandwidth - Last visit
+# The 20 first hits must be first (order not required for others)
+BEGIN_EMAILRECEIVER 0
+END_EMAILRECEIVER
+
+# Files type - Hits - Bandwidth - Bandwidth without compression - Bandwidth after compression
+BEGIN_FILETYPES 13
+css 11565 13562280 0 0
+png 1785 87468665 0 0
+org 1 32026 0 0
+pdf 22 16939527 0 0
+swf 1 1400 0 0
+php 50 1605247 0 0
+html 824 34849160 0 0
+jpg 9 35869 0 0
+docx 1 96379 0 0
+js 7217 25616864 0 0
+doc 1 125440 0 0
+Unknown 1949 76381865 0 0
+gif 67 43736 0 0
+END_FILETYPES
+
+# Downloads - Hits - Bandwidth
+BEGIN_DOWNLOADS 14
+/robots.txt 932 0 1116092
+/sites/otsamerica.org/files/news-docs/Volos_2010-2011_en.pdf 13 24 14887820
+/meetings/OTSA_2008-Program.pdf 11 0 370340
+/sites/otsamerica.org/files/pages-docs/2011/OTSA-2011-Program.pdf 9 0 1720989
+/sites/otsamerica.org/files/pages-docs/2011/2011-July-OTSA-MembershipLetter.pdf 9 0 1564677
+/sites/otsamerica.org/files/pages-docs/2011/OTSA-2011-Call.pdf 7 2 1481080
+/sites/otsamerica.org/files/pages-docs/2011/2011-May-OTSA-MembershipLetter.pdf 6 0 1046352
+/sites/otsamerica.org/files/general/2011/OTSA-Draft-Bylaws.pdf 5 0 178135
+/sites/otsamerica.org/files/news-docs/CAREE-conf.pdf 5 3 654642
+/sites/otsamerica.org/files/pages-docs/2011/2011-1st-OTSA-MembershipLetter.pdf 5 0 745225
+/sites/otsamerica.org/files/OTSA-2011-Registration_1.doc 5 0 627200
+/sites/otsamerica.org/files/pages-docs/2011/Submitting-abstract.doc 4 0 133120
+/sites/otsamerica.org/files/member_cvs/AndreiPsarev_cv_July11.pdf 1 5 1029412
+/sites/otsamerica.org/files/member_cvs/combined%20CV.pdf 1 2 970904
+END_DOWNLOADS
+
+# OS ID - Hits
+BEGIN_OS 21
+blackberry 2
+linuxandroid 291
+linuxredhat 1
+winxp 7594
+winlong 1781
+win2000 62
+winunknown 5
+win95 5
+win2003 118
+j2me 137
+wince 4
+winnt 137
+java 75
+linuxubuntu 9
+win98 9
+linux 1103
+win7 6425
+winme 15
+win16 5
+macosx 5248
+Unknown 502
+END_OS
+
+# Browser ID - Hits
+BEGIN_BROWSER 89
+msie6.0 1515
+firefox3.6 89
+chrome10.0.650.0 66
+firefox3.0.1 279
+opera9.311 2
+msie4.01 6
+safari4.0.5 5
+safari5.0.6 212
+curl 1
+safari5.0.2 263
+msie8.0 2999
+firefox2.0.0.14 1
+opera7.60 5
+netscape3.0 1
+msie7.0 2143
+opera9.64 1
+wget 11
+opera9.0 1
+docomo 1
+safari5.1.1 716
+firefox1.5.0.7 2
+msie5.01 1
+opera7.11 2
+opera9.01 1
+firefox3.5.2 132
+firefox2.0.0.6 1
+firefox3.6.4 1
+firefox7.0.1 1940
+firefox3.6.23 1295
+netscape0.6 4
+firefox3.5.5 63
+mozilla 290
+safari5.0.4 60
+netscape5.0 10
+netscape4.0 2
+chrome11.0.696.60 1
+chrome15.0.874.106 349
+safari 137
+firefox5.0 67
+chrome3.0.195.3 88
+firefox4.0.1 186
+android 291
+firefox7.0 49
+chrome13.0.782.220 179
+firefox8.0 64
+opera9.00 7
+chrome12.0.742.112 1
+firefox3.5.3 3
+msie3.02 4
+opera9.80 206
+links 8
+netscape4.76 5
+chrome4.1.249.1036 79
+firefox6.0.2 708
+opera9.601 1
+chrome13.0.782.112 68
+firefox3.5.8 16
+msie8.0.6001.18241 1
+chrome10.0.648.204 11
+msie2.0 9
+msie5.0 91
+firefox3.6.10 63
+msie9.0 1503
+firefox1.5 2
+Unknown 233
+opera7.54 1
+chrome14.0.835.202 1706
+safari5.0.5 425
+firefox3.6.14 69
+blackberry 2
+chrome14.0.835.186 68
+opera8.00 1
+chrome12.0.742 733
+firefox3.6.2 163
+chrome9.0.597 98
+msie5.5 32
+chrome12.0.742.122 139
+netscape4.79 9
+firefox2.0.0.11 6
+firefox3.0.6 73
+firefox1.5.0.10 1
+safari4.0.4 2
+safari5.1 2282
+firefox6.0 122
+firefox3.6.12 68
+chrome14.0.835.187 523
+chrome15.0.874.58 73
+firefox3.6.8 245
+firefox3.6.13 136
+END_BROWSER
+
+# Screen size - Hits
+BEGIN_SCREENSIZE 0
+END_SCREENSIZE
+
+# Unknown referer OS - Last visit date
+BEGIN_UNKNOWNREFERER 29
+google 20111027002838
+Mozilla/5.0_(compatible;_ScoutJet;__http://www.scoutjet.com/) 20111026162809
+IS_Alpha/Nutch-1.1 20111019055158
+Zend_Http_Client 20111006135630
+\ 20111023182858
+DoCoMo/2.0_P900i(c100;TB;W24H11)_(compatible;_ichiro/mobile_goo;__http://help.goo.ne.jp/help/article/1142/) 20111021102113
+nutch-1.3/Nutch-1.3 20111025002951
+pflab_(co2h2onacl@gmail.com) 20111013134728
+Mozilla/4.0_(compatible;_http://search.thunderstone.com/texis/websearch/about.html) 20111016023627
+findlinks/2.0.2_(_http://wortschatz.uni-leipzig.de/findlinks/) 20111026174147
+Python-urllib/2.6 20111008122735
+facebookexternalhit/1.0_(_http://www.facebook.com/externalhit_uatext.php) 20111025231305
+Aghaven/Nutch-1.2_(www.aghaven.com) 20111025175405
+Wget/1.9_cvs-stable_(Red_Hat_modified) 20111020062226
+findlinks/2.1.3_(_http://wortschatz.uni-leipzig.de/findlinks/) 20111025124423
+Covario-IDS/1.0_(Covario;_http://www.covario.com/ids;_support_at_covario_dot_com) 20111003141007
+Wget/1.11.4_Red_Hat_modified 20111004192913
+Mozilla/3.0_(compatible) 20111031040835
+start.exe 20111025162625
+User-Agent:_Drupal_(_http://drupal.org/) 20111029141447
+cmsworldmap.com 20111021105236
+Mozilla/4.0 20111029072816
+tagsdir.org/0.8_(_http://tagsdir.org/directory/) 20111006204935
+Mozilla/5.0_(en-us)_AppleWebKit/534.14_(KHTML,_like_Gecko;_Google_Wireless_Transcoder)_Chrome/9.0.597_Safari/534.14 20111018152145
+Mozilla/5.0_(compatible;_DNSValidation/5.1;_http://www.dnsvalidation.com/) 20111016045452
+facebookexternalhit/1.1_(_http://www.facebook.com/externalhit_uatext.php) 20111025231259
+Mozilla/4.0_(compatible;_ICS) 20111015071843
+firefox 20111028114858
+PHP/5.3.6 20111027002838
+END_UNKNOWNREFERER
+
+# Unknown referer Browser - Last visit date
+BEGIN_UNKNOWNREFERERBROWSER 19
+google 20111027002838
+IS_Alpha/Nutch-1.1 20111019055158
+Zend_Http_Client 20111006135630
+\ 20111023182858
+nutch-1.3/Nutch-1.3 20111025002951
+pflab_(co2h2onacl@gmail.com) 20111013134728
+Python-urllib/2.6 20111008122735
+facebookexternalhit/1.0_(_http://www.facebook.com/externalhit_uatext.php) 20111025231305
+Aghaven/Nutch-1.2_(www.aghaven.com) 20111025175405
+Covario-IDS/1.0_(Covario;_http://www.covario.com/ids;_support_at_covario_dot_com) 20111003141007
+start.exe 20111025162625
+User-Agent:_Drupal_(_http://drupal.org/) 20111029141447
+cmsworldmap.com 20111021105236
+tagsdir.org/0.8_(_http://tagsdir.org/directory/) 20111006204935
+facebookexternalhit/1.1_(_http://www.facebook.com/externalhit_uatext.php) 20111025231259
+Java/1.6.0_22 20111010230040
+firefox 20111028114858
+Java/1.6.0_04 20111029203651
+PHP/5.3.6 20111027002838
+END_UNKNOWNREFERERBROWSER
+
+# Origin - Pages - Hits 
+BEGIN_ORIGIN 6
+From0 1097 1515
+From1 3 3
+From2 176 184
+From3 104 165
+From4 1446 21661
+From5 0 0
+END_ORIGIN
+
+# Search engine referers ID - Pages - Hits
+BEGIN_SEREFERRALS 7
+google 159 166
+search 4 4
+bing 4 5
+virgilio 3 3
+yandex 3 3
+ask 2 2
+yahoo 1 1
+END_SEREFERRALS
+
+# External page referers - Pages - Hits
+# The 25 first Pages must be first (order not required for others)
+BEGIN_PAGEREFS 59
+http://www.duq.edu/theology/faculty/bordeianu.cfm 8 8
+http://extrabot.com/help/frukikijijojo.htm 4 4
+http://oca.org/directories/organizations/the-orthodox-theological-society-in-america 4 4
+http://orthodoxwiki.org/Orthodox_Theological_Society_in_America 3 3
+http://www.prazdnichnaya.com/Novyj-god-3/Ded-Moroz-47/ 3 3
+http://www.razdavai.com/members/gambler-2173/ 3 3
+http://assemblyofbishops.org/ministries/endorsed-organizations 3 3
+http://www.webmasters-paradise.com 3 3
+http://power1.ru 3 3
+http://www.scoba.us/ministries.html 3 3
+http://all-lasik-centers.com 3 3
+http://www.goarch.org/resources/links 3 3
+http://www.assemblyofbishops.org/ministries/endorsed-organizations 2 2
+http://fileburg.ru 2 2
+http://ball1.ru 2 2
+http://les-ru.com 2 2
+http://sdelatmebel.info 2 2
+http://www.romarch.org/pags.php 2 2
+http://ocampr.org 2 2
+http://geogid.info 2 2
+http://www.hchc.edu/hellenic/campus_life/vocation/osi.html 2 2
+http://www.johnjillions.ca 2 2
+http://www.if-20.com 2 2
+http://www.antiochian.org/links 2 2
+http://assemblyofbishops.org/links 2 2
+http://individual.utoronto.ca/jskira/links.html 1 1
+http://www.opticalalchemy.com 1 1
+http://www.ocl.org/index.cfm 1 1
+http://translate.googleusercontent.com/translate_c 0 61
+http://www.stgeorgeto.org 1 1
+http://www.seoheap.com 1 1
+http://ucg-ua.com 1 1
+http://gfaq.ru 1 1
+http://www.tourclubfavorit.ru 1 1
+http://aoiusa.org/blog/#tab2/ 1 1
+http://www.dailystrength.org/people/903182/journal 1 1
+http://129.252.240.20/links 1 1
+http://www.antiochian.org/node/26373 1 1
+http://www.webstatschecker.com/stats/domain/otsamerica.org 1 1
+http://www.uni-bamberg.de/ev-syst/forschung/orthodox-theology/redaktion/ 1 1
+http://www.facebook.com/l.php 1 1
+http://www.teissl.info 1 1
+http://www.johnjillions.ca/publications.htm 1 1
+http://ocampr.org/conference/ 1 1
+http://www.roea.org/orthodoxresources.html 1 1
+http://xn--80axfdgdkc.xn--p1ai 1 1
+http://www.searchqu.com/web 1 1
+http://www.greekorthodoxchurch.org 1 1
+http://www.assemblyofbishops.org/links 1 1
+http://www.hchc.edu/hellenic/campus_life/vocation/osi/1097/1103.html 1 1
+http://ocampr.org/bioethics/ 1 1
+http://prank.su 1 1
+http://ocampr.org/links-2/ 1 1
+http://www.world-mmo.com 1 1
+http://ball1.ru 1 1
+http://www.roznica.com.ua/m1/ 2 2
+http://www.scoba.us/ministries/endorsed-organizations.html 2 2
+http://trinidadsammet48.skyrock.com/3036718907-A-Family-Dental-Care-and-Its-Romance-to-Cardiovascular-Disease.html 1 1
+http://www.johnjillions.ca/books_papers.htm 1 1
+END_PAGEREFS
+
+# Search keyphrases - Number of search
+# The 10 first number of search must be first (order not required for others)
+BEGIN_SEARCHWORDS 110
+orthodox+theology 12
+orthodox+theological+society 10
+naps+2012 8
+otsa 5
+aar+annual+meeting+2012 3
+naps+conference+2012 3
+otsamerica.org 3
+family+and+children+pappas+patristic 3
+welcome+for+theological+meetings 3
+orthodox+theological+society+in+america 3
+naps+conference 3
+ot+sa 3
+annual+meeting+aar 2
+apophasis+in+orthodox+religion 2
+orthodox+society 2
+orthodox+theological+studies+of+america 2
+iaodt 2
+site+www.otsamerica.org+50+goddard+ave. 2
+pappas+patristic+institute 2
+orthodox+theological+society+of+america 2
+international+association+of+orthodox+dogmatic+theologians 2
+50+goddard+www.otsamerica.org 2
+theology+academic+conferences 2
+gregory+of+nyssa+homilies#sclient=psy-ab 1
+theology+conference+december+2011+in+europe 1
+what+is+the+patristic+doctrine 1
+florovsky+review+bulgakov 1
+anton+vrame 1
+orthodox+society+america+academic 1
+patristic+theological+society 1
+contemporary+trinity 1
+orthodox+society+biblical+studies 1
+contemporary+orthodox+theology 1
+the+florovsky+fund 1
+theological+society+of+america 1
+academic+conference+in+princeton+university+on+october+2011 1
+holy+cross+pappas+patristic+institute+conference 1
+hagiography+orthodo 1
+%ce%b2%cf%8c%ce%bb%ce%bf%cf%82+event+%ce%bd%ce%bf%ce%ad%ce%bc%ce%b2%cf%81%ce%b9%ce%bf%cf%82+2011 1
+professional+society+christian+spirituality 1
+radu+bordeianu+%e2%80%9corthodox-catholic+dialogue+retrieving+eucharistic+ecclesiology+%e2%80%9d+jes+44+2009+239-65. 1
+calculation+of+the+date+of+passover 1
+socha+eastern+orthodox 1
+commonplace+expressions 1
+eucharistic+ecclesiology 1
+holy+cross+orthodox+seminary+conference+september+2011 1
+scholarship+orthodox+theology 1
+theology+academic+conferences+2012 1
+boston+october+2011+gospels+new+testament+papers+abstracts+conference 1
+theological+quarterly+downloads+trinity 1
+pioneers+of+byzantine+studies+in+america 1
+theologically+orthodox+christian 1
+pappas+patristic+insitute+thematic+conference 1
+christopher+d+l+johnson 1
+hesychastic+role 1
+orthodox+theological+association 1
+orthodox+theological+society+bulletin 1
+orthodox+association+grant 1
+2012+www.otsamerica.org 1
+orthodox+conference+in+bulgaria+2012 1
+2011+annual+meeting+of+the+orthodox+theological+society+in+america 1
+ocampr 1
+christian+tradition+and+the+integration+of+europe%252c+leuven+and+brussels+program 1
+theological+anthropology+in+orthodox 1
+american+society+s 1
+s+st.+vladimir+s+theological+quarterly+2011 1
+orthodox+theological+texts 1
+midrash+on+luke 1
+pappas+patristics+institute+thematic+conference 1
+societies+in+america 1
+christian+orthodox+theology+society 1
+orthodox+theological+society+of+america. 1
+naps+2012+conference 1
+orthodox+political+theology 1
+academic+conference+study+of+christianity 1
+jesus+prayer 1
+annual+meeting+feb+2012+chicago 1
+naps+may+2012 1
+orthodox+eastern+evolution 1
+expression+god+willing!+in+orthodox 1
+orthodox+theology+congress+2012 1
+2011+orthodox+lectures 1
+homepage 1
+orthodox+theology+society+in+america 1
+le+corps+du+christ+vivant+une+interpre%cc%81tation+orthodoxe+de+l%e2%80%99e%cc%81glise 1
+contemplation+jesus+prayer 1
+the+meditative+prayer+practices+known+as+hesychasm+and+the+jesus+prayer+have+played+an+important+role 1
+international+meetings+on+orthodox+churches+in+usa+2012 1
+jesus+prayer+orthodox 1
+what+is+orthodox+theological 1
+otsa+orthodox 1
+pappas+patristic+institute+thematic+conference 1
+north+american+theological+society 1
+orthodox+political+theory 1
+association+for+the+study+of+eastern+christian+history+and+culture 1
+christopher+d.l.+johnson 1
+what+is+acadimic+field+of+study 1
+naps2012 1
+the+orthodox+theological+society+in+america 1
+what+is+the+aar+meeting%3f 1
+orthodox+theological+society+america+academic 1
+the+body+of+the+living+christ 1
+societas+liturgica 1
+academic+conference+new+york+november+2011 1
+orthodox+theologal+society+of+america 1
+christianity+growth+20th+century 1
+volos+academy 1
+pappas+patristic+conference 1
+perry+hamalis+ethics 1
+orthodox+theological+scholars+association 1
+END_SEARCHWORDS
+
+# Search keywords - Number of search
+# The 25 first number of search must be first (order not required for others)
+BEGIN_KEYWORDS 198
+orthodox 66
+theological 35
+society 32
+theology 22
+2012 22
+of 19
+conference 19
+america 16
+in 16
+naps 16
+the 12
+patristic 11
+pappas 10
+2011 9
+academic 8
+annual 7
+meeting 7
+and 7
+otsa 6
+association 6
+aar 6
+www.otsamerica.org 5
+christian 5
+institute 5
+prayer 5
+florovsky 2
+congress 1
+date 1
+le 1
+theologically 1
+europe%252c 1
+program 1
+north 1
+johnson 2
+44 1
+history 1
+contemporary 2
+what 4
+god 1
+princeton 1
+important 1
+gregory 1
+vivant 1
+living 1
+hesychasm 1
+political 2
+ave. 2
+role 2
+vladimir 1
+bulletin 1
+contemplation 1
+is 4
+biblical 1
+quarterly 2
+expressions 1
+ecclesiology 2
+have 1
+december 1
+christ 2
+2009 1
+goddard 4
+midrash 1
+volos 1
+orthodoxe 1
+%ce%bd%ce%bf%ce%ad%ce%bc%ce%b2%cf%81%ce%b9%ce%bf%cf%82 1
+st. 1
+d.l. 1
+practices 1
+vrame 1
+dialogue 1
+hagiography 1
+insitute 1
+review 1
+radu 1
+otsamerica.org 3
+known 1
+culture 1
+luke 1
+willing! 1
+may 1
+nyssa 1
+s 3
+%e2%80%9d 1
+leuven 1
+fund 1
+%e2%80%9corthodox-catholic 1
+century 1
+commonplace 1
+growth 1
+papers 1
+interpre%cc%81tation 1
+hesychastic 1
+pioneers 1
+jes 1
+churches 1
+as 1
+evolution 1
+eastern 3
+ot 3
+europe 1
+international 3
+une 1
+feb 1
+thematic 3
+l%e2%80%99e%cc%81glise 1
+du 1
+meetings 4
+hamalis 1
+children 3
+d 1
+bulgaria 1
+on 3
+iaodt 2
+scholarship 1
+theologal 1
+academy 1
+study 3
+dogmatic 2
+jesus 4
+integration 1
+brussels 1
+anton 1
+november 1
+welcome 3
+family 3
+acadimic 1
+boston 1
+october 2
+trinity 2
+socha 1
+body 1
+theologians 2
+professional 1
+societies 1
+20th 1
+gospels 1
+corps 1
+bulgakov 1
+50 4
+%ce%b2%cf%8c%ce%bb%ce%bf%cf%82 1
+seminary 1
+eucharistic 2
+byzantine 1
+site 2
+ocampr 1
+liturgica 1
+bordeianu 1
+meeting%3f 1
+american 2
+an 1
+retrieving 1
+cross 2
+usa 1
+orthodo 1
+meditative 1
+expression 1
+sa 3
+new 2
+field 1
+downloads 1
+christopher 2
+perry 1
+for 4
+239-65. 1
+event 1
+ethics 1
+chicago 1
+homepage 1
+york 1
+lectures 1
+theory 1
+de 1
+patristics 1
+calculation 1
+scholars 1
+spirituality 1
+conferences 3
+passover 1
+september 1
+grant 1
+played 1
+america. 1
+tradition 1
+apophasis 2
+studies 4
+societas 1
+naps2012 1
+holy 2
+university 1
+religion 2
+texts 1
+doctrine 1
+testament 1
+l 1
+anthropology 1
+christianity 2
+abstracts 1
+homilies#sclient=psy-ab 1
+END_KEYWORDS
+
+# Errors - Hits - Bandwidth
+BEGIN_ERRORS 6
+403 348 8328731
+302 168 0
+206 7 637216
+500 6779 98076868
+301 154 0
+404 828 22039977
+END_ERRORS
+
+# URL with 404 errors - Hits - Last URL referer
+BEGIN_SIDER_404 192
+/pdfs/2010/2010-OTSA-Program.doc 2 -
+/annual-meetings/2003.html 5 -
+/mysql//scripts/setup.php 2 otsamerica.org/mysql//scripts/setup.php
+//phpMyAdmin-2.8.0-beta1/scripts/setup.php 3 -
+/content/ 1 -
+//sqlweb/scripts/setup.php 3 -
+//templates/beez/templateDetails.xml 2 -
+/dbadmin//scripts/setup.php 2 otsamerica.org/dbadmin//scripts/setup.php
+/pdfs/2009/OTSA-2009-Abstracts.pdf) 3 -
+/misc/'+e.iframeSrc+' 2 -
+//phpMyAdmin-2.8.0.2/scripts/setup.php 2 -
+//phpMyAdmin-2/scripts/setup.php 3 -
+/wp-content/plugins/portable-phpmyadmin/wp-pma-mod/index.php 1 -
+/annual.html 4 -
+/misc/]} 2 -
+//phpMyAdmin-2.6.1/scripts/setup.php 4 -
+//phpMyAdmin-2.6.2-beta1/scripts/setup.php 4 -
+//phpMyAdmin-2.2.6/scripts/setup.php 3 -
+//phpMyAdmin-2.6.0-pl1/scripts/setup.php 4 -
+/otsanews/announcements.php 13 -
+//phpMyAdmin-2.7.0-pl2/scripts/setup.php 2 -
+/pdfs/2009/OTSA-2009-Reg.pdf 1 -
+//phpMyAdmin-2.6.2-pl1/scripts/setup.php 2 -
+/pma//scripts/setup.php 2 otsamerica.org/pma//scripts/setup.php
+/sites/all/libraries/superfish/+d.src+ 11 http://otsamerica.org/sites/all/libraries/superfish/+d.src+
+//phpMyAdmin-2.7.0-beta1/scripts/setup.php 3 -
+//phpMyAdmin-2.6.4-pl2/scripts/setup.php 2 -
+/otsanews/OTSANEWSfall06.pdf 3 -
+//phpMyAdmin-2.6.0-beta1/scripts/setup.php 4 -
+//phpmanager/scripts/setup.php 4 -
+//phpMyAdmin-2.6.1-rc2/scripts/setup.php 3 -
+//phpadmin/README 1 -
+//phpMyAdmin-2.7.0-pl1/scripts/setup.php 2 -
+/ojs/ojs/ 1 -
+/inprint/index.php 14 -
+//phpMyAdmin-2.6.0-alpha2/scripts/setup.php 2 -
+//phpMyAdmin-2.8.0.1/scripts/setup.php 4 -
+//web/phpMyAdmin/scripts/setup.php 4 -
+//admn/scripts/setup.php 3 -
+//phpmyadmin1/scripts/setup.php 3 -
+//webdb/scripts/setup.php 1 -
+//phpMyAdmin-2.8.0/scripts/setup.php 2 -
+//admm/scripts/setup.php 3 -
+/store//admin/file_manager.php/login.php 1 -
+//mysql-admin/scripts/setup.php 3 -
+//phpMyAdmin-2.7.0-rc1/scripts/setup.php 4 -
+//phpmyadmin/README 1 -
+/wp-login.php 6 otsamerica.org/wp-login.php
+//phpMyAdmin-2.6.3-rc1/scripts/setup.php 4 -
+//mysqladmin/README 1 -
+/www.orientecristiano.com 9 -
+//pma/scripts/setup.php 3 -
+/pdfs/Orthodoxy%20&%20Environment%20Conference%20Schedule%202007.pdf 1 -
+/pdfs/2009/OTSA-2009-Call.pdf 2 -
+/pdfs/2011/OTSA-2011-Call.docx 3 -
+//phpMyAdmin-2.6.4-rc1/scripts/setup.php 3 -
+//phpmyadmin/scripts/setup.php 5 -
+//phpMyAdmin-2.8.2/scripts/setup.php 2 -
+//ojs/ojs/ 1 -
+//webadmin/scripts/setup.php 2 -
+/sites/otsamerica.org/files/pages-docs/2011/OTSA2011Program.pdf 3 -
+/reg.asp 3 http://www.otsamerica.org/
+/misc/, 2 -
+//phpMyAdmin-2.5.1/scripts/setup.php 2 -
+/shop//admin/file_manager.php/login.php 1 -
+/pdfs/OTSA-2008-Registration-Form.pdf 2 -
+//phpMyAdmin-2.6.2-rc1/scripts/setup.php 8 -
+/about/officers.php 10 -
+/membership.php 2 -
+//mysqladmin/scripts/setup.php 5 -
+/pdfs/2010/OTSA-2010-Registration.doc 1 -
+//phpMyAdmin-2.8.0-rc2/scripts/setup.php 3 -
+/mysqladmin//scripts/setup.php 2 otsamerica.org/mysqladmin//scripts/setup.php
+//databaseadmin/scripts/setup.php 2 -
+/myadmin//scripts/setup.php 2 otsamerica.org/myadmin//scripts/setup.php
+//myadmin/scripts/setup.php 2 -
+//phpMyAdmin-2.6.0/scripts/setup.php 4 -
+http://www.otsamerica.org/otsanews/current.php 2 http://www.otsamerica.org/otsanews/current.php
+/pdfs/2009/OTSA-2009-Prog.doc 3 -
+/site-help/otsanews/current.php 1 http://otsamerica.org/otsanews/current.php
+/otsanews/pdfs/2009/OTSA-2009-Abstracts.pdf 1 -
+//phpMyAdmin-2.6.3-pl1/scripts/setup.php 4 -
+/crossdomain.xml 1 http://s.nsdsvc.com/App/DddWrapper.swf
+//pma2005/scripts/setup.php 3 -
+/pdfs/calls-other/Templeton-Orthodoxy_Science.pdf 6 -
+//phpMyAdmin-2.5.6-rc1/scripts/setup.php 3 -
+//dbadmin/scripts/setup.php 3 -
+/about/faq.php 17 -
+//phpMyAdmin-2.6.0-pl2/scripts/setup.php 3 -
+/otsanews/pdfs/2009/OTSA-2009-Prog.doc 1 -
+/administrator/index.php 1 -
+/pdfs/2010/2010-OTSA-Program.pdf 3 -
+//phpMyAdmin-2.8.0.3/scripts/setup.php 1 -
+//phpMyAdmin-2.6.0-rc1/scripts/setup.php 3 -
+//phpMyAdmin-2.6.0-rc2/scripts/setup.php 3 -
+/otsanews/current.phpindex.php 1 http://www.otsamerica.org/otsanews/current.phpindex.php
+//phpMyAdmin-2.6.4/scripts/setup.php 2 -
+//phpMyAdmin-2.6.2/scripts/setup.php 3 -
+//phpMyAdmin-2.6.0-alpha/scripts/setup.php 2 -
+/phpmyadmin//scripts/setup.php 2 otsamerica.org/phpmyadmin//scripts/setup.php
+/otsanews/ 2 -
+/pdfs/2011/OTSA-2011-Call.pdf 2 -
+/misc/)h.html(f 2 -
+//mysqlmanager/scripts/setup.php 4 -
+/current.php 5 http://www.otsamerica.org/current.php
+/sites/all/modules/extlink/node/10 1 -
+/sitemap.xml 3 -
+/about/online-membership-application 14 -
+//scripts/setup.php 1 -
+//phpMyAdmin-2.8.1-rc1/scripts/setup.php 4 -
+//php-myadmin/scripts/setup.php 3 -
+http://www.otsamerica.org/about/faq.php 1 http://www.otsamerica.org/about/faq.php
+//phpMyAdmin-2.6.0-beta2/scripts/setup.php 2 -
+//phpMyAdmin-2.5.5-rc1/scripts/setup.php 3 -
+//phpMyAdmin-2.8.1/scripts/setup.php 2 -
+//php-my-admin/scripts/setup.php 5 -
+//phpadmin/scripts/setup.php 3 -
+//mysql/README 1 -
+/faq.php 4 -
+/A2EB891D63C8/avg_ls_dom.js 1 -
+/scripts/setup.php 2 otsamerica.org/scripts/setup.php
+/pdfs/OTSANews-Winter07.pdf 4 -
+//phpMyAdmin-2.8.0-rc1/scripts/setup.php 1 -
+/wp-login.phpindex.php 3 www.otsamerica.org/wp-login.phpindex.php
+/phpadmin//scripts/setup.php 2 otsamerica.org/phpadmin//scripts/setup.php
+/pdfs/2010/OTSA-2010-Call.docx 3 -
+//PMA2005/scripts/setup.php 3 -
+/pix/diamond-black.gif 1 -
+//phpMyAdmin-2.5.7-pl1/scripts/setup.php 3 -
+//phpMyAdmin-2.2.3/scripts/setup.php 4 -
+/pdfs/2011/Submitting-abstract.docx 4 -
+/contact.html 1 -
+/contact.php 7 -
+//phpmy-admin/scripts/setup.php 1 -
+//p/m/a/scripts/setup.php 2 -
+/images/photos/IAODT-2009-group.jpg 2 -
+/about/membership.php 11 -
+//web/scripts/setup.php 2 -
+/indextest.php 4 -
+//sqlmanager/scripts/setup.php 3 -
+/mobile 1 -
+//websql/scripts/setup.php 5 -
+//phpmyadmin2/scripts/setup.php 3 -
+//phpMyAdmin-2.8.0.4/scripts/setup.php 3 -
+/pdfs/calls-other/Sophia2009.pdf 3 -
+//phpMyAdmin-2.5.5-pl1/scripts/setup.php 3 -
+//phpMyAdmin-2.5.7/scripts/setup.php 2 -
+/about/faq_56c9dad251a1edde3f9dee82071c860c.php 1 -
+//phpMyAdmin-2.7.0/scripts/setup.php 1 -
+//phpMyAdmin-2.5.5-rc2/scripts/setup.php 2 -
+//pma/README 1 -
+//phpMyAdmin-2.6.1-pl1/scripts/setup.php 2 -
+/images/books/plekon_hh2009.png 3 -
+//phpMyAdmin-2.5.5/scripts/setup.php 3 -
+//xampp/phpmyadmin/scripts/setup.php 3 -
+/pix/cr-bull.gif 1 -
+//phpMyAdmin-2.5.4/scripts/setup.php 4 -
+/ojs/ojs/public/index.html 1 -
+/pdfs/OTSA_2008-Registration_Form.doc 2 http://www.otsamerica.org/pdfs/OTSA_2008-Registration_Form.doc
+/muieblackcat 1 -
+/pdfs/2010/OTSA-2010-Registration.pdf 6 -
+//phpMyAdmin-2.6.0-rc3/scripts/setup.php 3 -
+//phpMyAdmin-2.6.0-pl3/scripts/setup.php 2 -
+//phpMyAdmin-2.6.1-rc1/scripts/setup.php 2 -
+//db/scripts/setup.php 3 -
+//phpMyAdmin-2.6.4-pl3/scripts/setup.php 2 -
+/news-amp-events/annoucement 1 -
+//phpMyAdmin-2.5.6-rc2/scripts/setup.php 3 -
+/otsanews/resolutions.php 11 -
+//phpMyAdmin-2.6.3/scripts/setup.php 6 -
+/ojs/ojs/public/site 1 -
+/ojs/ojs/index.php 1 -
+/pdfs/CallForPapers_Pappas_student_2008.page.pdf 1 -
+/pdfs/2010/OTSA-2010-Call.pdf 8 -
+//phpMyAdmin-2.5.6/scripts/setup.php 4 -
+//phpMyAdmin-2.6.1-pl2/scripts/setup.php 3 -
+/dbase//scripts/setup.php 2 otsamerica.org/dbase//scripts/setup.php
+/sites/otsamerica.org/files/index.001.png 1 -
+/pdfs/2009/OTSA-2009-Abstracts.pdf 5 -
+//typo3/phpmyadmin/scripts/setup.php 1 -
+//phpMyAdmin-2.6.4-pl4/scripts/setup.php 3 -
+//phpMyAdmin-2.6.1-pl3/scripts/setup.php 3 -
+/otsanews/index.php 7 -
+/wp-content/plugins/wp-phpmyadmin/phpmyadmin/index.php 1 -
+/news.html 2 -
+//phpMyAdmin/scripts/setup.php 7 -
+//mysql/scripts/setup.php 2 -
+/sites/all/libraries/superfish/jquery.hoverintent.minified.js 1 -
+/pdfs/2011/Submitting-abstract.doc 4 -
+/phpmyadmin/index.php 1 -
+/otsanews/current.php 243 http://latinasnatches.com
+//pma2O11/README 1 -
+END_SIDER_404
+
+# Host - Pages - Hits - Bandwidth - Last visit date - [Start date of last visit] - [Last page of last visit]
+# [Start date of last visit] and [Last page of last visit] are saved only if session is not finished
+# The 25 first Hits must be first (order not required for others)
+BEGIN_VISITOR 877
+69.84.207.147 85 85 3422250 20111014015550
+71.224.209.90 82 82 3033728 20111005022646
+134.198.193.64 72 206 2717428 20111017132637
+38.99.97.89 67 67 2407867 20111026162809
+38.99.97.125 51 51 1884233 20111001072825
+174.55.12.97 48 217 4688152 20111014235752
+38.99.97.217 48 48 1808538 20111015165428
+38.100.21.21 47 47 1811461 20111017024645
+41.196.92.148 45 45 1716444 20111007081452
+218.213.132.169 44 45 1853886 20111013124825
+173.242.115.152 44 44 1670632 20111009165544
+41.207.31.184 44 44 1630024 20111025172825
+41.155.10.136 44 44 1670632 20111006224216
+70.80.203.174 44 267 2789958 20111029073354
+66.45.245.39 43 43 1582833 20111022042016
+204.236.243.89 41 41 1587490 20111001153642
+38.99.96.123 39 39 1201645 20111026084826
+194.58.30.129 31 31 0 20111031070548
+87.63.193.186 29 237 2136659 20111017134104
+68.163.45.245 28 106 1593668 20111020222010
+46.21.144.176 28 28 1058159 20111028061744
+92.85.46.242 27 27 1015503 20111024113144
+50.130.135.60 26 271 2878207 20111031111429
+69.134.202.17 25 179 2093470 20111010215643
+193.105.210.137 23 23 865559 20111010210053
+205.188.116.73 0 4 8029 
+213.49.253.180 3 78 674400 20111023080351
+41.208.137.58 1 1 45812 20111005034204
+62.1.122.3 2 64 382131 20111005053201
+64.12.117.19 0 1 399 
+209.85.224.89 0 17 20925 
+205.188.116.141 0 1 4750 
+64.12.116.15 0 2 2226 
+95.173.183.68 5 5 228203 20111011020259
+111.13.8.59 1 1 30139 20111026024812
+114.46.158.133 1 1 45065 20111002130149
+205.188.116.5 0 9 9721 
+85.118.226.155 3 3 94450 20111031041523
+93.80.243.70 0 2 1352 
+201.240.241.88 2 2 90234 20111018211854
+82.145.211.26 1 65 359554 20111020045039
+218.213.26.180 1 1 44511 20111021102113
+111.13.8.54 4 4 176146 20111025094545
+120.36.191.29 4 4 180552 20111018235854
+166.147.64.225 21 160 1580150 20111012223713
+95.27.97.205 0 1 550 
+69.28.58.22 2 2 91624 20111015021519
+122.174.72.128 9 9 400599 20111016042735
+199.15.234.133 13 13 625715 20111012155729
+89.73.211.50 0 57 282782 
+209.85.228.92 0 3 28670 
+207.126.164.190 5 5 225700 20111026174028
+68.151.114.76 4 79 656851 20111021041205
+205.188.116.70 0 1 98 
+69.245.164.86 1 62 315482 20111011163501
+198.54.202.250 0 7 11938 
+209.85.224.91 0 16 207119 
+184.73.6.147 1 1 45810 20111014142727
+209.85.228.86 0 4 191572 
+208.80.194.32 2 2 90323 20111029231234
+98.185.60.95 3 64 373541 20111030154112
+205.188.117.69 0 2 2497 
+46.17.100.243 7 7 298934 20111026054134
+178.173.128.11 2 2 90214 20111019005227
+58.61.164.139 3 63 325260 20111010013519
+95.26.39.226 0 1 22767 
+149.255.33.226 1 1 44511 20111020185521
+112.198.231.161 1 63 318609 20111014234835
+176.195.241.239 0 1 995 
+175.42.40.248 8 8 345189 20111018082742
+222.77.234.230 4 4 180480 20111010160702
+1.53.15.164 2 2 60872 20111010214647
+70.122.83.209 1 68 587569 20111025204459
+66.31.114.107 2 75 624421 20111023195344
+91.210.104.30 12 12 503290 20111027111411
+95.166.24.156 6 6 273970 20111011002854
+89.123.34.75 15 24 645953 20111029203651
+46.17.96.64 15 15 604766 20111030105338
+193.190.253.150 1 47 524400 20111020181941
+117.27.138.176 1 1 73562 20111025234411
+95.26.250.34 0 2 7333 
+64.12.117.67 0 1 200 
+76.1.247.35 3 127 734892 20111009082025
+115.241.248.32 10 78 1154177 20111030031758
+182.68.178.79 2 121 444553 20111018012307
+122.174.123.98 9 9 400599 20111022061448
+111.13.8.20 2 2 88353 20111017004102
+122.161.67.2 2 63 343578 20111022073849
+188.27.184.192 1 1 45812 20111004123353
+98.126.161.186 6 6 268878 20111031124556
+79.130.86.201 1 63 331899 20111024101037
+216.83.62.162 1 1 45812 20111006175330
+218.186.15.10 9 9 408200 20111023103833
+99.191.120.63 8 82 608393 20111009230432
+94.180.152.137 6 6 268766 20111025053654
+74.125.78.83 0 13 14426 
+70.157.73.64 1 58 317782 20111012020828
+64.12.116.71 0 1 698 
+24.216.64.27 1 61 332386 20111007232028
+128.118.36.236 13 127 615622 20111018125216
+95.26.7.192 0 3 4812 
+98.234.93.14 4 52 686649 20111020121632
+72.131.12.182 11 153 1790134 20111002213404
+184.22.136.228 4 4 182499 20111004073347
+200.55.162.194 3 73 771507 20111015100728
+86.104.56.25 2 2 90321 20111024204526
+107.22.18.221 10 10 396148 20111031140108
+207.210.234.227 2 2 82692 20111004202434
+64.12.116.142 0 1 404 
+220.255.2.238 0 3 184687 
+46.17.98.217 3 3 137437 20111013131201
+64.12.117.77 0 3 10581 
+79.117.147.196 1 68 588870 20111015144345
+209.85.226.81 0 18 42568 
+193.106.136.41 12 12 534123 20111031100159
+178.162.190.73 1 1 44511 20111031024933
+61.18.170.81 0 30 40105 
+209.85.226.93 0 6 13362 
+64.12.116.203 0 1 273 
+74.125.76.87 0 3 2471 
+176.14.36.65 0 2 35768 
+209.85.224.99 0 7 17114 
+205.188.116.197 0 1 268 
+64.12.116.199 0 1 342 
+139.18.2.17 2 2 91714 20111015115951
+187.76.111.74 0 4 185623 
+216.226.131.181 2 2 89022 20111030185613
+205.188.116.136 0 1 201 
+95.26.55.117 0 2 6900 
+173.208.143.82 2 2 0 20111022035745
+109.230.244.132 1 1 45811 20111002061048
+205.188.117.78 0 1 142 
+205.188.116.13 0 3 2356 
+205.188.116.7 0 1 241 
+71.189.254.145 1 1 44511 20111031040835
+173.231.56.238 0 1 923050 
+119.97.222.34 1 1 45812 20111011130005
+72.215.157.114 1 1 45812 20111008155953
+64.12.117.69 0 1 111 
+91.132.55.131 1 62 330503 20111030052207
+173.13.222.49 2 70 351367 20111003211319
+205.188.116.137 0 1 361 
+79.142.73.169 2 2 81550 20111013225928
+75.150.104.17 3 72 378349 20111019122607
+74.125.78.89 0 7 6444 
+205.188.117.14 0 2 1585 
+109.230.244.120 5 5 226507 20111024181323
+82.137.13.243 1 64 313784 20111007170626
+98.238.133.174 1 1 45812 20111007233433
+174.58.16.231 0 1 191221 
+209.85.228.87 0 8 12737 
+96.31.87.108 1 1 45065 20111013085312
+205.188.116.201 1 4 46280 20111008030604
+74.125.78.80 2 14 254224 20111027140437
+64.31.52.130 1 1 73562 20111031042703
+207.210.234.226 1 1 44511 20111025175405
+68.48.246.148 0 57 282782 
+205.188.116.144 0 2 1847 
+64.27.0.121 1 1 45812 20111004140025
+111.13.8.19 2 2 59979 20111024184608
+64.12.116.9 0 2 1026 
+95.28.115.86 0 1 144 
+77.36.46.230 1 70 590494 20111015121924
+95.134.69.135 2 2 91624 20111011070044
+182.68.44.129 3 64 373098 20111022090523
+74.125.78.81 0 19 14878 
+69.64.84.80 1 70 587888 20111025193004
+69.74.234.178 15 225 1968573 20111010160358
+111.13.8.18 3 3 120550 20111004215146
+50.17.7.149 9 9 280917 20111017225124
+173.11.74.233 1 63 504726 20111005203237
+68.3.126.71 2 62 378002 20111014134433
+75.196.74.227 2 71 617967 20111007180354
+209.85.224.83 0 18 13632 
+72.196.134.113 1 61 331743 20111013160900
+184.107.226.226 1 1 45812 20111004192913
+74.125.42.84 1 1 45560 20111018152144
+64.12.117.9 0 1 109 
+176.195.247.244 1 64 590756 20111022175938
+209.85.224.82 0 6 5589 
+64.12.116.210 0 1 1066 
+64.12.112.193 0 1 661 
+165.190.39.149 20 494 3799564 20111006114134
+220.160.191.27 1 1 45812 20111009074220
+119.177.15.238 2 2 90248 20111020215945
+65.82.99.253 4 68 411081 20111026204423
+184.22.182.90 0 3 2769150 
+64.12.116.13 0 2 1915 
+74.125.76.83 0 3 1012 
+111.13.8.58 1 1 29035 20111008030007
+74.125.78.86 0 14 10601 
+151.203.33.82 1 70 587888 20111024134615
+213.207.46.242 2 2 90228 20111019002424
+77.20.40.89 2 2 90324 20111019083553
+87.97.243.172 1 68 587569 20111022093453
+174.59.190.125 1 62 314511 20111011014852
+86.104.56.202 1 1 45812 20111008023300
+198.54.202.234 0 8 10718 
+177.42.103.94 1 1 44511 20111028233158
+71.224.68.171 5 90 891265 20111006212833
+68.35.32.172 7 83 809579 20111011181945
+209.20.69.196 3 3 136135 20111024114032
+111.13.8.50 2 2 62156 20111020011816
+72.15.145.20 1 61 329784 20111026204317
+64.12.116.201 0 1 820 
+205.188.116.198 0 1 1162 
+72.221.122.158 2 73 816714 20111001183844
+24.101.113.160 3 204 1766610 20111005155228
+97.123.87.157 2 65 346223 20111011222550
+116.203.203.39 1 68 587569 20111018233304
+69.107.68.81 1 69 589330 20111003205505
+111.13.8.22 3 3 96730 20111026032905
+67.181.89.99 2 2 89022 20111029181447
+65.30.185.78 4 67 421555 20111020124709
+209.85.226.82 1 18 61175 20111013030225
+62.75.214.17 2 2 90260 20111021162213
+209.85.226.92 0 3 858 
+74.125.78.92 0 6 3690 
+46.17.96.75 7 7 318648 20111016090410
+64.12.116.73 0 1 1436 
+205.188.117.77 0 5 23623 
+174.51.154.147 1 1 44511 20111021204335
+95.24.90.151 0 2 1298 
+124.115.6.20 0 32 25362 
+64.12.117.11 0 1 907 
+209.85.224.90 0 5 7020 
+46.73.199.76 0 1 1827 
+220.255.1.182 0 5 8071 
+141.161.133.112 1 62 317617 20111031030720
+208.80.194.33 2 2 90323 20111020214950
+220.161.150.70 8 8 350270 20111024101235
+124.115.5.11 2 2 91622 20111014062310
+74.125.78.82 0 8 8325 
+58.22.146.188 2 2 90304 20111018135002
+204.83.173.100 1 142 316552 20111006133719
+75.214.5.69 1 70 587889 20111031153250
+125.74.69.3 1 1 44511 20111019055158
+69.171.228.245 0 1 183228 
+68.39.143.11 1 61 329784 20111027085010
+99.112.66.190 4 71 726306 20111012173205
+107.20.79.234 8 8 338129 20111003141007
+122.177.171.221 3 132 749654 20111027010528
+222.77.238.250 2 2 90236 20111011220503
+196.210.185.208 2 66 352532 20111015022608
+74.125.76.86 0 5 13308 
+209.85.224.98 0 5 10111 
+61.213.110.210 1 1 44511 20111017012600
+101.224.82.44 5 5 225054 20111025044025
+203.147.106.81 6 88 854345 20111021230633
+59.60.120.201 6 6 260033 20111026001510
+220.255.1.222 0 5 4791 
+208.80.194.37 1 1 44511 20111019115800
+209.85.228.84 0 8 90786 
+61.18.170.79 1 1 31201 20111004210122
+195.72.157.164 1 1 45812 20111008211144
+77.122.26.192 8 8 363696 20111011171755
+41.79.48.4 2 2 90228 20111018180620
+208.80.194.30 1 1 45812 20111011041513
+67.142.175.27 1 81 1049671 20111001105309
+205.188.117.17 0 3 1586 
+216.104.15.134 0 1 6604 
+108.20.242.219 1 68 588870 20111009183308
+205.188.116.77 0 3 653 
+67.183.134.74 2 73 667496 20111006050047
+24.62.158.188 1 64 316552 20111015200603
+203.193.158.210 2 2 90234 20111019002953
+125.255.18.148 2 79 741570 20111001192204
+61.18.186.135 0 1 196 
+121.215.187.216 2 73 633831 20111028212309
+64.12.116.8 0 1 886 
+124.115.6.21 0 35 42852 
+109.230.223.85 18 18 816775 20111028213153
+94.96.98.156 6 96 806854 20111009204824
+82.137.208.58 1 68 587569 20111027064914
+59.57.15.89 12 12 514502 20111022154230
+196.20.65.211 2 2 90232 20111019011112
+95.26.151.155 0 2 35224 
+184.59.167.96 1 64 317857 20111001214827
+205.188.116.143 11 14 595452 20111008030703
+92.62.160.59 0 1 923050 
+218.208.97.226 2 32 346544 20111020220000
+208.101.8.197 2 2 90254 20111021162210
+31.3.225.147 5 5 224255 20111025232914
+98.70.130.218 9 9 286612 20111031000050
+64.191.88.80 2 2 90260 20111021161859
+95.28.106.29 1 1 45812 20111010010415
+220.255.1.38 0 1 154 
+205.188.116.19 0 5 14510 
+77.73.1.240 2 2 91624 20111008120242
+112.111.185.134 2 2 90333 20111018235547
+38.99.96.172 4 4 180648 20111026044038
+174.89.49.252 3 72 663410 20111016001244
+64.12.116.134 0 1 3262 
+193.105.210.108 6 6 274018 20111002060740
+107.20.70.69 1 1 44511 20111017104305
+118.98.160.155 2 2 90234 20111018230851
+213.7.40.168 1 62 329194 20111015070026
+190.41.82.224 2 2 90248 20111021162006
+75.56.194.156 5 81 456152 20111007193358
+220.255.1.205 0 9 5666 
+129.177.239.137 1 62 316233 20111019121006
+46.73.37.5 0 2 1507 
+205.188.116.71 0 2 1140 
+71.84.71.12 8 80 781575 20111017020358
+64.12.116.200 0 1 142 
+94.69.13.44 0 13 1862641 
+74.104.125.87 1 68 588870 20111012224726
+46.49.48.185 1 68 588959 20111001052835
+74.125.76.82 1 3 49061 20111001143642
+209.85.228.93 0 1 109 
+31.214.145.205 1 1 44511 20111027165827
+96.56.15.170 0 57 282782 
+209.85.224.87 0 14 20792 
+209.85.228.94 0 2 634 
+69.171.228.250 0 1 183228 
+209.147.97.191 3 73 654472 20111022150823
+122.95.18.189 1 1 45071 20111020220826
+178.73.194.96 6 6 269266 20111020121620
+89.172.11.235 4 81 657170 20111019053638
+157.55.17.81 0 1 173853 
+209.85.226.95 0 4 6787 
+216.55.169.159 1 1 44511 20111031081139
+96.235.184.155 2 71 633704 20111029145919
+46.73.148.71 0 1 186 
+109.206.181.133 1 1 44511 20111022115420
+74.125.78.93 0 13 19458 
+189.161.19.4 1 61 329784 20111018122137
+205.188.117.7 0 4 61242 
+217.147.235.30 0 4 218214 
+1.80.16.91 1 1 45812 20111006203258
+95.166.24.52 6 6 274002 20111011233226
+174.132.16.36 16 16 0 20111029074939
+71.206.171.61 1 68 588870 20111005134936
+205.188.117.76 0 1 1313 
+64.12.116.67 0 2 2889 
+94.67.46.144 1 63 334501 20111006150728
+72.167.203.72 1 1 45812 20111007211143
+205.188.117.71 0 2 413 
+31.192.105.2 9 9 412308 20111013092133
+213.100.167.23 0 57 282782 
+60.63.33.195 1 1 45812 20111013085304
+59.60.121.208 8 8 349605 20111028001645
+220.255.2.202 0 2 1055 
+205.188.117.5 0 3 4961 
+64.12.116.16 0 1 5235 
+96.57.102.154 4 187 1059133 20111011142111
+74.125.78.88 0 13 201725 
+94.180.187.141 6 6 268800 20111016232513
+209.85.224.97 0 12 195480 
+64.12.117.16 0 1 561 
+67.189.229.178 1 68 588869 20111002200921
+209.85.228.85 0 7 14397 
+174.142.19.206 6 6 268777 20111031061006
+182.68.254.57 2 64 371647 20111013002345
+89.123.32.159 15 24 651306 20111010230040
+220.255.2.246 0 3 12526 
+221.183.16.129 2 2 89022 20111029072816
+72.148.223.145 3 68 418800 20111011152350
+145.253.185.59 4 259 2072383 20111010035924
+58.186.49.31 1 1 30436 20111010140614
+205.188.116.205 2 4 80171 20111008030235
+58.22.147.184 2 2 90278 20111026121957
+122.72.20.222 2 2 90246 20111020220740
+199.255.199.1 1 1 44511 20111016071030
+95.24.145.155 0 1 983 
+64.12.116.77 0 1 255 
+64.15.155.237 1 1 45812 20111005183743
+70.177.64.250 1 68 587569 20111025231652
+139.18.13.202 1 1 44511 20111025124423
+188.231.197.12 14 14 629845 20111028180840
+88.190.244.124 4 4 294248 20111029161322
+109.166.138.186 2 69 629981 20111022084421
+174.149.104.20 2 68 359745 20111012222121
+92.81.134.125 1 62 313465 20111020012014
+188.165.226.149 1 1 35738 20111025172555
+205.188.116.199 0 2 2971 
+64.12.116.140 0 2 547 
+41.214.63.28 2 2 74590 20111006221606
+69.171.228.247 0 1 183228 
+81.181.254.218 1 61 329537 20111023194835
+74.95.226.121 5 76 724601 20111005073717
+180.241.113.6 1 1 45071 20111021165659
+46.42.133.191 0 1 3683 
+70.76.67.13 1 68 588870 20111009004339
+64.12.116.135 0 1 309 
+193.41.187.234 3 126 361403 20111013085930
+69.171.224.244 0 2 366456 
+208.80.194.28 1 1 44511 20111027105643
+124.115.6.19 0 30 26735 
+198.54.202.218 0 4 2977 
+196.25.255.218 0 5 8217 
+61.143.198.112 1 1 44511 20111016233028
+220.255.2.178 0 6 5310 
+188.40.124.153 1 1 44511 20111021105236
+50.56.57.175 9 9 372624 20111026204541
+94.229.36.82 2 2 90254 20111021165925
+66.61.90.125 1 62 315927 20111018153512
+86.93.14.44 1 68 587569 20111029043137
+178.18.112.140 1 1 44511 20111027010602
+64.134.237.177 2 63 343292 20111009170539
+209.85.224.88 0 11 83926 
+91.204.190.5 1 60 314996 20111003202928
+205.188.117.75 0 3 1880 
+189.112.189.28 1 1 45811 20111002130145
+150.70.75.33 1 41 363540 20111014142930
+74.125.76.85 0 3 2419 
+67.165.73.9 1 68 588868 20111014072942
+200.109.108.137 1 1 44511 20111028033710
+167.1.146.100 2 72 621376 20111019155213
+209.85.226.94 0 4 102301 
+205.188.116.20 0 1 49308 
+70.161.158.193 6 80 825550 20111025131840
+180.241.112.50 1 1 45181 20111021165824
+95.22.100.99 1 1 44511 20111028213549
+141.217.203.131 1 61 329786 20111031195743
+187.75.51.26 1 1 45812 20111010120903
+122.162.82.246 2 80 681720 20111006012527
+195.191.54.176 1 1 36944 20111006224520
+27.159.229.21 5 5 215498 20111024034227
+89.182.18.198 1 1 44511 20111026174147
+72.28.2.194 1 70 841634 20111024105234
+107.10.15.242 1 68 588869 20111002011232
+46.73.47.112 0 1 8081 
+188.27.144.144 5 66 434055 20111012014243
+218.24.196.122 6 6 260047 20111024134634
+205.188.117.66 0 1 385 
+71.92.251.120 1 68 588870 20111007125927
+178.137.128.245 10 10 445110 20111031051424
+95.25.101.108 0 1 564 
+70.113.68.22 1 63 322301 20111030154631
+99.120.77.90 5 78 776371 20111018145531
+70.16.98.93 1 70 589188 20111002212934
+209.85.226.80 0 22 21725 
+182.68.214.21 2 65 379152 20111031004844
+205.188.116.134 13 16 1626593 20111008030016
+124.115.6.18 0 84 77600 
+79.117.125.214 3 66 424167 20111027030826
+75.75.105.34 1 63 332705 20111009170101
+50.19.180.20 4 4 156637 20111016114742
+173.79.80.218 2 69 632080 20111021210312
+200.117.239.246 2 2 90232 20111019001538
+58.22.146.45 3 3 136132 20111013085709
+74.125.78.90 0 8 188941 
+209.85.226.84 0 4 49538 
+205.188.117.12 0 2 4777 
+64.136.204.32 1 63 318469 20111003102027
+109.230.251.168 6 6 274013 20111010004849
+199.15.234.132 12 12 610203 20111012222518
+199.15.234.30 1 1 45812 20111006093906
+148.144.175.101 3 65 680095 20111011094806
+205.188.117.70 1 2 49378 20111008030527
+187.40.124.94 0 57 99367 
+136.165.198.29 1 70 587888 20111024095807
+205.188.116.68 0 6 17653 
+220.162.66.156 1 1 44511 20111027021806
+80.94.164.141 6 6 210552 20111023044956
+71.169.156.136 1 74 348260 20111017174040
+98.126.251.202 2 2 89022 20111025011422
+205.188.117.9 1 3 9730 20111008024501
+220.255.1.42 2 3 60621 20111012003602
+200.251.58.190 2 2 90248 20111020220750
+205.188.117.6 0 3 6212 
+64.12.116.6 0 1 235 
+64.12.117.8 0 2 5183 
+111.13.8.16 4 4 182591 20111025223348
+64.12.116.69 0 1 185 
+188.138.83.141 1 1 45812 20111004065251
+91.140.111.5 2 72 626682 20111019193406
+46.0.106.39 4 4 181834 20111005220723
+74.125.78.84 0 19 43615 
+209.85.228.82 0 9 26970 
+74.125.78.91 0 7 6310 
+208.80.194.59 1 1 44512 20111031133950
+80.99.177.89 1 62 315023 20111010154712
+41.234.204.137 2 2 90244 20111021161829
+205.188.116.79 0 1 800 
+62.24.252.133 0 1 923050 
+124.115.1.8 3 63 325260 20111010061142
+196.25.255.250 0 1 573 
+220.255.2.209 0 3 1249 
+209.85.224.96 1 13 66322 20111021163321
+173.34.219.191 1 68 588870 20111003001714
+208.80.194.60 1 1 45813 20111013194008
+69.28.58.27 1 1 44511 20111018134910
+208.80.194.63 2 2 90324 20111031133638
+58.68.130.201 1 1 45901 20111001054433
+41.32.171.155 1 61 584366 20111003112050
+173.51.137.68 1 63 583582 20111007084839
+95.25.55.110 0 1 5677 
+12.181.153.82 1 70 589189 20111010140456
+205.188.117.19 0 2 1055 
+79.112.59.149 1 1 46905 20111015071843
+69.230.54.149 11 88 924616 20111028054552
+41.218.246.85 3 70 676591 20111024105747
+220.181.51.111 2 2 73760 20111028145800
+123.125.67.216 3 3 134834 20111027185814
+64.12.117.5 0 2 2427 
+95.25.158.171 0 1 2624 
+178.79.188.115 1 1 45812 20111011010628
+205.188.116.196 2 5 92850 20111008021854
+174.122.51.251 2 2 89022 20111027002838
+202.46.14.101 2 2 91624 20111013075517
+205.188.117.65 0 3 14588 
+112.111.186.179 2 2 90226 20111021013530
+205.188.116.80 0 1 51227 
+205.188.112.172 0 9 8480 
+205.188.117.10 1 2 4232 20111008022636
+194.81.33.10 4 246 700605 20111018121920
+178.250.113.226 1 62 314724 20111014110706
+205.188.116.131 1 4 113612 20111008023218
+204.236.208.175 1 1 45810 20111014144229
+95.220.159.116 0 1 30666 
+122.72.1.131 2 2 90244 20111020221320
+208.103.232.89 1 64 317106 20111030025253
+80.239.242.159 2 68 668468 20111001140736
+205.188.116.17 0 1 1202 
+194.44.171.194 1 61 180272 20111010081429
+107.22.14.51 1 1 44511 20111025194805
+121.73.87.183 1 63 318609 20111031224451
+64.31.60.138 6 6 246443 20111025014733
+89.178.152.52 1 64 590756 20111022140347
+110.88.120.197 1 1 96379 20111019210637
+74.125.76.84 0 7 19511 
+205.188.116.11 0 1 1202 
+222.3.74.140 1 1 45812 20111008194019
+80.53.80.226 3 77 687466 20111030164736
+64.231.186.129 0 114 565564 
+205.188.116.208 1 2 61056 20111008030509
+64.12.116.7 0 1 7851 
+184.72.93.163 9 9 354766 20111017225010
+74.125.75.3 1 1 29424 20111005145245
+68.68.44.62 5 5 215595 20111024234341
+93.72.106.55 0 1 923050 
+124.115.4.212 4 4 183248 20111004145827
+111.13.8.23 1 1 30370 20111011223217
+209.85.228.80 0 13 27836 
+76.73.68.44 2 2 90252 20111020220141
+64.12.117.14 0 1 1400 
+72.49.214.45 1 68 588870 20111011233529
+209.85.224.80 1 7 37243 20111006125017
+108.16.229.90 3 68 423567 20111004161841
+59.96.42.141 21 98 1330377 20111026032017
+62.149.1.75 1 1 44511 20111020104250
+209.85.226.87 0 10 8174 
+198.145.116.13 2 7 265752 20111017002538
+220.255.1.193 1 7 64508 20111012003538
+205.188.116.65 0 3 8167 
+64.12.116.65 0 1 1407 
+109.230.213.113 4 4 146907 20111028073515
+74.125.78.95 0 9 23528 
+123.125.67.217 2 2 90323 20111027185812
+178.63.231.56 6 6 274120 20111005004335
+69.58.178.59 11 11 375407 20111009174357
+50.37.100.230 7 74 854635 20111027232433
+94.23.18.220 6 6 273985 20111009145433
+24.103.172.68 1 1 54521 20111006131337
+222.76.235.244 3 3 136089 20111010102035
+64.12.117.71 0 2 413 
+74.125.78.85 0 9 373107 
+196.25.255.210 0 7 7332 
+205.188.117.15 0 7 4923 
+38.99.98.123 2 2 89022 20111019164317
+222.186.55.189 5 5 224283 20111024173850
+209.85.224.85 0 7 213333 
+89.178.31.123 1 1 44511 20111020004843
+50.19.145.128 10 10 330398 20111016111836
+46.198.33.142 0 3 1997363 
+209.29.196.10 16 161 1202502 20111028131117
+123.161.80.174 1 1 45812 20111010090828
+205.188.116.9 0 2 947 
+77.92.233.198 3 3 134833 20111031094722
+220.181.51.108 3 3 110640 20111028145841
+71.176.27.218 1 62 333105 20111006212933
+111.13.8.55 1 1 28778 20111007141716
+66.213.29.2 1 68 587569 20111017195416
+64.12.117.12 0 1 382 
+222.47.33.161 2 2 90313 20111005010411
+220.255.1.241 0 7 8412 
+220.181.51.109 1 1 36880 20111026102508
+209.85.228.95 0 3 8404 
+61.18.170.78 0 30 62851 
+161.6.105.33 1 62 329194 20111018151743
+206.196.111.204 1 1 45812 20111006204935
+69.171.229.247 1 1 44511 20111025231259
+111.13.8.51 2 2 60331 20111019071129
+168.143.90.114 8 8 258490 20111008110329
+74.125.78.94 0 16 43014 
+195.162.68.28 1 1 44511 20111029221010
+209.85.226.85 0 12 191532 
+58.179.233.70 4 80 706596 20111026223606
+74.50.100.14 2 2 90254 20111021165906
+64.12.116.68 0 1 1894 
+209.85.224.95 2 13 65548 20111031093514
+205.188.116.69 2 3 7278 20111008022900
+95.28.107.39 0 2 2138 
+205.188.116.133 0 3 6712 
+72.89.111.153 9 88 923328 20111024152511
+99.156.70.202 2 63 343748 20111024103206
+93.174.93.148 7 7 233000 20111026162103
+95.26.7.129 0 1 961 
+64.12.116.198 0 1 1162 
+67.186.34.122 3 64 402176 20111013183808
+64.233.172.17 1 1 44511 20111025182306
+205.188.117.18 0 6 4817 
+66.161.213.179 2 2 90228 20111019003926
+61.18.186.130 0 2 183504 
+152.9.161.253 1 64 329513 20111003153929
+205.188.116.202 1 2 121716 20111008022211
+66.212.196.194 1 59 322549 20111031210903
+63.114.195.253 1 61 330381 20111027155035
+66.116.153.122 1 1 44511 20111020041333
+118.67.78.136 5 5 215514 20111021124238
+99.133.145.106 1 62 333105 20111006112535
+69.171.228.251 0 1 183228 
+70.231.231.87 1 68 588870 20111007141935
+209.85.228.83 0 13 17414 
+75.166.123.65 1 5 49927 20111013074423
+24.170.200.209 15 166 1632463 20111010145021
+93.80.41.162 0 1 550 
+208.80.194.36 2 2 90323 20111019114151
+91.144.177.97 9 9 405699 20111020223022
+207.108.37.89 1 61 329784 20111024142406
+95.28.69.243 0 1 5240 
+77.20.40.169 2 2 91624 20111012021129
+209.85.224.94 0 13 11436 
+46.4.221.189 1 1 45812 20111015184245
+216.104.15.142 0 4 52918 
+95.26.250.72 0 2 7489 
+208.91.113.20 1 1 44512 20111031121138
+77.79.8.192 2 2 90252 20111021165932
+141.105.65.153 12 12 541518 20111031170613
+95.220.147.195 0 1 13314 
+60.2.227.12 2 2 90236 20111018225229
+71.167.233.40 10 110 903072 20111004004421
+207.46.12.204 1 36 85937 20111007072248
+112.111.166.56 4 4 180559 20111029061223
+205.188.117.72 0 1 573 
+95.27.170.209 0 1 1435 
+64.12.116.132 0 2 1944 
+173.98.145.111 1 75 694330 20111029120233
+205.188.116.16 0 5 8229 
+114.80.93.71 3 63 325260 20111010031830
+182.68.230.100 2 70 405128 20111010094112
+81.177.144.176 4 4 180508 20111021162138
+64.231.187.194 0 171 848346 
+205.188.116.132 0 2 1944 
+216.172.152.9 1 1 44960 20111027220017
+220.255.2.248 0 3 3694 
+220.255.1.95 0 1 1852 
+81.64.163.191 2 64 373415 20111019081538
+59.58.114.175 5 5 222880 20111005222631
+58.168.231.171 1 70 589189 20111007064411
+74.117.177.166 2 76 741443 20111006135636
+150.70.64.198 0 6 20230 
+124.115.1.7 3 63 325260 20111010085154
+67.99.177.2 6 77 790879 20111027125245
+58.22.146.144 2 2 90304 20111013234831
+205.132.248.252 2 2 90258 20111021165356
+208.54.39.172 4 80 837618 20111009161359
+205.188.117.8 1 5 36952 20111008030621
+72.79.177.55 1 70 589189 20111003150548
+209.85.224.81 1 14 79107 20111009212347
+89.245.244.92 1 1 35738 20111003141955
+209.85.228.88 0 4 2846 
+60.7.133.197 2 2 90254 20111020221227
+67.108.223.130 2 62 380016 20111007143423
+209.85.224.86 0 10 12282 
+75.101.233.4 12 12 520188 20111016113518
+136.165.106.30 2 134 905451 20111018075531
+74.125.42.80 2 2 88715 20111018151951
+74.142.118.25 5 72 720006 20111027130153
+74.237.179.11 1 68 587569 20111016193712
+205.188.116.6 0 2 315 
+205.188.116.140 1 4 31791 20111008022036
+205.188.116.78 8 10 320339 20111008030702
+69.161.2.194 1 69 325460 20111007003111
+216.245.222.114 10 10 442406 20111029082825
+205.188.117.68 0 1 886 
+82.76.204.103 1 1 44511 20111016045452
+95.28.155.7 0 1 2681 
+76.127.238.117 1 63 318621 20111010093238
+95.27.137.138 0 2 81576 
+178.137.161.178 4 4 180646 20111016230704
+80.83.123.107 1 1 45812 20111003164834
+31.214.169.126 4 4 179399 20111023003626
+209.85.226.86 0 12 30075 
+174.51.214.64 1 68 588870 20111006010503
+209.85.228.81 0 16 14664 
+24.180.96.167 5 82 704283 20111015201500
+79.107.9.102 3 72 668877 20111012130857
+95.27.25.216 0 1 707 
+137.54.23.40 1 61 313614 20111014152216
+69.167.203.146 2 32 346512 20111019005326
+41.203.64.129 1 1 45812 20111008164950
+184.18.63.1 14 153 1334732 20111012140129
+114.44.70.109 2 2 90252 20111021161801
+69.162.92.42 5 5 224263 20111025022535
+130.160.78.162 1 58 311042 20111018141750
+71.60.72.14 1 68 587570 20111031235817
+205.188.117.13 0 2 6636 
+64.12.117.73 0 2 28458 
+205.188.117.67 0 3 1083 
+188.21.188.174 1 63 609351 20111019074448
+192.231.177.18 2 72 620389 20111014083733
+141.105.66.97 2 2 81550 20111012234904
+209.85.226.91 0 9 15666 
+78.187.123.253 2 2 90236 20111018233412
+120.43.20.45 5 5 215861 20111027025409
+74.125.46.80 1 1 29599 20111015204002
+131.111.241.102 2 63 342020 20111004092126
+74.125.76.80 0 9 8049 
+121.26.225.70 2 2 90232 20111018150311
+109.169.64.7 5 5 224253 20111028033739
+95.220.164.7 1 1 44511 20111028162010
+205.188.116.139 0 1 328 
+209.85.228.90 0 10 11032 
+196.25.255.246 0 3 6008 
+170.29.64.4 1 70 847212 20111022165302
+208.80.194.71 2 2 91624 20111009211426
+109.230.245.193 1 1 44511 20111028125003
+205.188.116.66 0 1 196 
+205.188.117.73 0 6 142258 
+50.57.83.240 2 2 90035 20111006004958
+209.85.224.93 0 8 5681 
+108.83.60.48 2 64 360016 20111013212751
+182.68.145.177 2 63 344437 20111003003006
+64.12.117.65 0 1 7333 
+75.109.140.25 1 61 331383 20111004202327
+72.89.193.108 1 8 33449 20111008031934
+64.12.116.144 0 2 1847 
+62.152.9.196 1 62 315927 20111017091912
+205.188.116.130 0 1 276 
+205.188.116.15 0 6 7020 
+209.85.226.89 1 6 273571 20111001061506
+220.255.1.239 0 4 9782 
+205.188.116.138 0 1 733 
+184.107.223.82 1 1 44511 20111028114858
+166.147.66.60 1 1 44511 20111025231246
+209.85.226.83 0 19 407132 
+208.80.194.58 1 1 45902 20111001122019
+107.22.36.9 1 1 44511 20111022113504
+124.169.87.132 1 62 316233 20111026064932
+67.123.113.105 4 72 151094 20111026183853
+204.124.183.74 2 2 71476 20111018173308
+208.80.194.34 2 2 89022 20111023102444
+128.147.0.41 3 76 1094111 20111007153832
+205.188.116.200 0 1 214 
+176.8.24.46 2 2 90877 20111005081839
+74.125.78.87 0 7 9157 
+134.2.47.111 0 1 923050 
+83.11.80.209 1 1 44511 20111031081522
+67.188.193.209 1 63 330101 20111031014220
+220.255.2.247 0 2 4669 
+79.112.89.60 1 68 588868 20111014042455
+184.72.202.21 4 4 179345 20111030102445
+208.80.194.61 1 1 45812 20111012120417
+150.70.172.106 0 33 422001 
+209.85.228.89 2 15 77274 20111021163410
+141.105.66.46 2 2 89022 20111018203330
+205.188.116.195 0 2 1726 
+74.125.75.1 0 96 657401 
+119.147.6.60 3 63 294108 20111010002256
+204.15.122.39 4 4 0 20111029141447
+92.255.207.109 0 1 1658 
+187.85.179.68 2 2 90258 20111021170047
+46.42.128.156 0 1 1472 
+64.12.117.74 0 1 442 
+95.24.253.193 0 1 3945 
+188.165.214.179 2 2 80249 20111027114809
+74.108.99.218 1 61 332386 20111005100213
+65.42.208.133 0 57 282782 
+209.85.228.91 0 8 3672 
+118.97.17.154 2 2 90240 20111020215825
+24.13.155.213 3 79 690387 20111015163809
+111.13.8.21 4 4 155901 20111011063528
+198.54.202.246 0 3 27772 
+205.188.116.75 0 1 2922 
+209.85.226.88 0 5 1690 
+1.86.37.150 1 1 45812 20111012170208
+200.178.116.34 1 1 44511 20111023003549
+69.28.58.19 1 1 44511 20111024151619
+196.25.255.214 0 2 1110 
+216.245.209.10 1 1 45812 20111007032933
+64.12.117.72 0 2 183801 
+64.12.116.139 0 2 706 
+95.28.8.223 0 1 184 
+114.80.93.73 2 2 91622 20111014043231
+70.240.73.117 1 68 587569 20111024145206
+46.17.98.215 6 6 254150 20111011070712
+123.125.67.215 1 1 44511 20111019183816
+88.190.241.211 1 1 73562 20111021174945
+119.235.53.228 2 2 90236 20111019005041
+196.201.85.137 1 1 45812 20111006020614
+74.125.76.81 1 2 52180 20111001143650
+184.172.186.26 1 1 44511 20111028144101
+113.128.102.33 2 2 90234 20111019011225
+58.61.164.39 5 65 416882 20111014055121
+187.115.202.171 2 2 90250 20111020220110
+140.180.12.67 1 61 329784 20111030135829
+173.224.120.21 1 1 45812 20111004193213
+173.208.198.12 1 1 45812 20111005134405
+109.123.70.47 2 2 90236 20111018190115
+98.254.109.62 1 75 694330 20111018084152
+69.14.138.44 1 68 588870 20111009204540
+130.160.178.191 1 58 311042 20111026100217
+64.233.172.34 1 86 452046 20111014224814
+76.92.215.182 1 68 588870 20111006233736
+98.206.161.50 6 78 822594 20111019214335
+209.85.224.92 1 7 41292 20111021215919
+71.184.48.70 1 70 589189 20111006103810
+199.8.81.101 1 68 588870 20111004160021
+220.161.116.138 2 2 90230 20111010011610
+80.239.242.177 1 72 695753 20111028104807
+111.13.8.17 1 1 46627 20111012185646
+77.162.18.114 1 62 333387 20111022072552
+89.241.146.149 0 11 1797316 
+208.80.194.26 10 10 454308 20111029233007
+198.54.202.195 0 6 8152 
+205.188.117.80 1 3 47134 20111008021541
+72.95.154.123 1 68 588869 20111002115925
+216.104.15.130 0 4 19458 
+71.201.206.176 13 151 1609039 20111005203529
+206.183.1.74 1 8 79936 20111016023626
+50.17.179.0 1 1 45810 20111014150329
+109.230.244.133 2 2 90323 20111017133649
+93.80.41.36 0 1 991 
+95.134.31.198 2 2 89022 20111019095951
+209.85.226.90 1 12 245395 20111013030225
+205.188.116.74 6 9 212520 20111008030731
+205.188.116.209 0 3 601 
+216.185.4.2 1 1 44511 20111027050732
+198.54.202.194 0 7 185136 
+208.80.194.35 1 1 44511 20111024170527
+208.80.194.29 9 9 403201 20111027111325
+196.25.255.194 0 2 4056 
+201.86.129.47 2 2 90258 20111021170107
+123.181.249.217 2 2 90234 20111018171751
+74.83.88.186 2 72 625403 20111012205740
+188.40.84.81 2 76 738841 20111023182856
+205.188.116.8 1 2 5004 20111008024000
+187.66.106.113 2 2 90232 20111019005735
+213.160.235.30 2 2 90252 20111021170042
+198.54.202.214 1 8 39501 20111031101152
+46.185.27.249 5 5 223798 20111030090005
+95.221.119.59 0 1 5113 
+58.61.164.140 3 63 328380 20111010023657
+93.80.255.250 0 1 2035 
+110.234.118.27 8 98 858568 20111027024012
+24.39.214.194 0 57 282782 
+74.108.29.192 1 70 589189 20111015032001
+205.188.116.203 0 2 4765 
+46.241.142.194 4 79 483798 20111002142845
+190.24.195.238 2 2 90230 20111019003654
+86.104.56.212 1 1 44511 20111028015022
+205.188.117.16 0 1 561 
+205.188.116.10 0 1 1202 
+64.124.98.9 2 37 411343 20111010045834
+69.28.58.20 3 3 136225 20111025002951
+64.125.188.26 17 154 2094501 20111012174744
+76.219.230.67 2 71 646122 20111003135633
+209.85.224.84 0 6 6555 
+69.67.130.53 6 6 274003 20111003085806
+95.220.166.67 0 2 1637 
+64.231.184.116 0 228 1131128 
+77.107.157.159 6 6 268791 20111028171411
+208.80.194.64 1 1 44511 20111026120644
+205.188.116.67 0 2 1803 
+94.180.137.53 0 1 4481 
+99.149.26.66 2 77 579019 20111024130139
+176.14.8.75 1 64 590756 20111022222309
+122.174.170.118 9 9 413109 20111001034859
+91.207.6.58 1 1 44511 20111030161004
+64.12.117.15 0 1 816 
+64.12.117.13 0 1 1038 
+216.169.233.147 3 49 589539 20111020131722
+75.119.218.238 2 2 90242 20111021165908
+109.186.65.199 2 2 89022 20111026213611
+END_VISITOR
+
+# Date - Pages - Hits - Bandwidth - Visits
+BEGIN_DAY 31
+20111001 148 723 10726920 29
+20111002 55 875 8915643 23
+20111003 51 987 7641959 19
+20111004 51 739 7119717 26
+20111005 150 925 11158379 28
+20111006 94 1154 10445353 28
+20111007 76 935 8431607 24
+20111008 100 582 9600850 44
+20111009 125 996 10938272 30
+20111010 156 1665 15306068 41
+20111011 60 582 8390986 25
+20111012 109 1030 9586987 27
+20111013 88 644 7123145 32
+20111014 164 1009 14783265 23
+20111015 78 767 7353477 19
+20111016 66 211 3853053 20
+20111017 187 798 10120827 22
+20111018 75 1278 9709487 36
+20111019 70 640 6895689 33
+20111020 80 520 10022867 31
+20111021 60 419 4867155 31
+20111022 76 729 7783475 19
+20111023 25 339 3255650 11
+20111024 97 783 9769275 32
+20111025 90 560 8195744 27
+20111026 144 611 8536686 30
+20111027 57 729 6319439 28
+20111028 91 381 6286255 24
+20111029 92 582 6638126 25
+20111030 37 548 4496352 19
+20111031 74 751 6915442 32
+END_DAY
+
+# Session range - Number of visits
+BEGIN_SESSION 7
+1h+ 5
+5mn-15mn 33
+30s-2mn 80
+15mn-30mn 18
+2mn-5mn 30
+0s-30s 656
+30mn-1h 16
+END_SESSION
+
+# URL - Pages - Bandwidth - Entry - Exit
+# The 25 first Pages must be first (order not required for others)
+BEGIN_SIDER 247
+/ 813 34379005 528 469
+/user/register 195 8796514 38 23
+/welcome 112 5162480 2 23
+/publications/all 107 3217276 8 13
+/meetings 84 3016760 34 20
+/publications 73 2854476 5 7
+/about 61 1790885 6 9
+/news 48 2023699 1 8
+/news/societies 44 3297362 19 14
+/about/officers 43 1464486 3 6
+/about/membership 42 1286621 3 4
+/about/faq 37 1192016 2 6
+/news/2011/naps-2012-annual-meeting 36 1673584 17 15
+/contact/secretary 34 1003513 6 4
+/content/23 34 1168119 1 3
+/news/upcoming 28 1543334 2 3
+/about/otsa-laws 28 814167 1 2
+/meetings/all/papers 28 1244410 1 2
+/news/2011/2011-aar-annual-meeting 28 1280944 5 7
+/meetings/all 27 826470 1 4
+/news/2011/body-living-christ-patristic-doctrine-church 27 1272888 5 9
+/news/2011/pappas-patristic-institute-2011-annual-thematic-conference-family-and-children-patristic 26 1320342 9 8
+/publications/2010/globalization-hesychasm-and-jesus-prayer-contesting-contemplation 25 780025 10 11
+/tags/news-amp-events/academic-conference 25 1105100 8 9
+/meetings/2011 24 848240 14 15
+/node/18 1 30450 0 0
+/node/15 2 58594 0 0
+/admin/store/orders/44/edit 2 86814 0 0
+/meetings/2011/sessions/annual-florovsky-lecture 2 63424 1 2
+/news/2011/pilgrims-and-pioneers-growth-orthodox-christianity-20th-century-america 1 45625 0 1
+/meetings/2011/details/2011-annual-meeting 4 134488 0 1
+/contact 16 476660 4 3
+/users/frchristopherbender 1 39000 0 0
+/news/2011/orthodox-christian-tradition-and-integration-europe 3 142715 1 1
+/contact/ 1 29494 0 0
+/meetings/2011/papers/%E2%80%9Ccomplete-inversion-values%E2%80%9D-questioning-scandalousness-st-symeon-emesa 1 32146 0 0
+/register/florovsky-fund-contribution 2 60404 1 0
+/sites/all/modules/mollom/mollom-captcha-player.swf 1 1400 0 0
+/users/frmed529 1 40693 0 0
+/admin/store/orders/13/invoice 2 77324 0 0
+/news/2011/2011-aar-annual- 1 60245 0 0
+/admin/store/orders/44/invoice 1 38574 0 0
+/search/node/mail%40otsamerica.org 1 32026 0 0
+/news/2011/programme-volos-academy-theological-studies-2010-2011 22 1057574 8 5
+/sites/otsamerica.org/files/pages-docs/2011/Submitting-abstract.docx 1 96379 1 1
+/tags/focus/theology-and-political-theory 2 65254 2 1
+/taxonomy/autocomplete/field_soc_membership/AAR 1 13 0 0
+/user/234/edit 3 362132 0 0
+/node/add/paper 1 37683 0 0
+/news/archived 18 1007322 1 1
+/publications/2009/orthodox-catholic-dialogue-retrieving-eucharistic-ecclesiology 17 517650 3 2
+/meetings/2005.php 3 84687 1 0
+/search/node/mail 3 103371 0 0
+/meetings/2010 3 98508 0 0
+/news/resolutions 19 879988 1 1
+/mollom/captcha/audio/form-b3HiYq6FYiBK6k4Fslktf2Jr9bOzkvNwJeYrY_O59nc/1110294f914578dbd4 1 1427 0 0
+/tags/focus/hagiography 1 29521 1 1
+/location/autocomplete/us/Quebe 2 4 0 0
+/meetings/2011/papers/weighing-glory-luminous-body-new-testament-writings 3 98799 0 0
+/user/232/publications/all 1 30517 0 0
+/admin/store/orders/34/payments 2 46077 0 0
+/location/autocomplete/ca/queb 1 19 0 0
+/news/2011/eastern-europe-still-matters 1 47352 0 0
+/admin/store/orders/5 3 82439 0 0
+/user/reset/231/1318297678/OGs_8EG_wOOd_uvQex__8xpeIrW9uodjGKZothCkC1c 1 25806 0 0
+/meetings/2011/schedule 2 111168 0 0
+/users/gabriel-c-rochelle 2 82984 0 0
+/tags/societies/north-american-patristics-society 1 27595 0 0
+/register/2011-annual-meeting 5 193445 1 1
+/users/pthamalis 1 37601 0 0
+/meetings/2011/sessions/session-i-orthodoxy-and-warfare 2 63110 0 0
+/location/autocomplete/us/oklah 1 23 0 0
+/meetings/2010/schedule 1 29361 0 0
+/users/nikfer 1 37601 0 0
+/meetings/call.phpindex.php 1 36993 0 0
+/admin/store/orders/33/invoice 1 38687 0 0
+/node/106 1 30436 0 0
+/forums/103 1 50518 0 0
+/admin/store/orders 5 193494 0 0
+/meetings/2011/papers/patristic-gender-anthropology-elisabeth-behr-sigel 4 129204 1 1
+/js/admin_menu/cache/0cd854f896f4b700730d81a6fafe1aec 1 1891 0 0
+/meetings/2009-call.php 3 84837 0 3
+/admin/store/orders/33/delete 1 21416 0 0
+/js/admin_menu/cache/58949ad1f628d85491c71e53014f7674 1 1891 0 0
+/meetings/2003.php 3 84687 0 0
+/publications/submitted/changing-churches-orthodox-roman-catholic-lutheran-theological-conversation 3 89253 1 1
+/publications/sophia-apophasis-and-communion-trinity-contemporary-orthodox-theology 23 700028 7 8
+/system/ajax 9 70524 1 1
+/users/crina 1 37595 0 0
+/user/password 22 596490 1 2
+/taxonomy/autocomplete/field_soc_membership/AA 1 27 0 0
+/tags/focus/theology-and-anthropology 5 147995 4 1
+/tags/focus/ethics-social 1 29734 1 1
+/news/2011/2011-registration-available 21 930676 0 1
+/node/110 1 30139 0 0
+/admin/store/orders/33 3 83201 0 0
+/location/autocomplete/us/ok 1 23 0 0
+/node/8 1 44781 1 1
+/admin/store/orders/13/invoice/print 1 6400 0 0
+/node/10 4 127948 0 1
+/node/105 1 31201 0 0
+/admin/store/orders/37 1 27320 0 0
+/tags/news-amp-events/annoucement 1 31477 0 0
+/file/ajax/field_member_photo/und/0/form-ms_lnCIFaRXAVO3DodopjXjRFfaMT8sQZMk03ZEGUhk 1 4710 1 1
+/tags/societies/ocampr 1 28423 1 1
+/file/ajax/field_member_photo/und/0/form-vt-o0CaI82BQkPzDlKtJMs4ooNo9kI7iG0DuiwgISbs 1 3942 1 1
+/tags/societies/orthodox-theological-society-america 1 27619 0 1
+/news/2011/human-cloning 2 88880 0 0
+/node/77 1 31457 1 0
+/node/4 2 92658 0 0
+/news/societies/ 2 90202 0 1
+/users/rhaddad 1 37562 0 0
+/location/autocomplete/us/North%20Carol 1 35 0 0
+/node/6 1 44025 0 0
+/node/11 1 30370 0 0
+/location/autocomplete/ca/qu 1 19 0 0
+/js/admin_menu/cache/06b89b417b2ce809d6a109fa408b9a99 1 3070 0 0
+/meetings/2011/papers/according-whole-ecclesiological-vision-elisabeth-behr-sigel 2 64146 0 0
+/users/gregoryroeber 1 44316 0 0
+/meetings/all/list 2 61166 0 0
+/location/autocomplete/us/Quebec 2 4 0 0
+/file/ajax/field_member_photo/und/0/form-P1Jg0CdgUFr7ig200PQCv1Mb0AgHZj8DPEJSvwiapWg 1 4714 1 0
+/user/230/edit 14 1742999 2 2
+/user 15 669637 0 6
+/meetings/2011/papers/marriage-and-eucharist-restoring-canonical-tradition 2 66606 0 0
+/location/autocomplete/ca/que 1 19 0 0
+/admin/store/orders/5/payments 2 46044 0 0
+/publications/2011/god-willing-really-note-ambiguities-interfaith-expression 18 556110 3 4
+/publications/all/keywords 18 553031 0 1
+/publications/2010/joy-embodied-virtue-toward-ordination-women-eastern-orthodox-priesthood 3 90543 0 0
+/users/hercules2919 8 314266 1 1
+/node/12 2 93812 2 2
+/meetings/2006.php 3 84687 0 0
+/user/login 3 135522 0 0
+/search/node/strongylis 1 31411 1 1
+/location/autocomplete/ca/quebec 1 19 0 0
+/admin/store/orders/view 10 375264 0 0
+/admin/store/orders/44/log 1 21613 0 0
+/users/dwagschal 1 37915 0 0
+/user/237/edit 6 729502 0 0
+/user/211/edit 2 267283 0 0
+/user/reset/234/1318872846/Rr2fxO8HXiBJvKZ-0F6w2pWfkOGW0FS1mnlmzyAM-r4 1 25806 0 0
+/location/autocomplete/us/Q 2 4 0 0
+/meetings/2011/papers/virtuous-invitations-orthodoxy-and-religious-freedom 4 130968 1 1
+/node/8/ 2 89562 1 0
+/location/autocomplete/us/North%20Carolina 1 35 0 0
+/user/217/orders/44 1 33123 1 1
+/location/autocomplete/us/N 1 125 0 0
+/tags/societies/aar 1 29454 1 0
+/admin/store/orders/44/payments 2 46077 0 0
+/tags/societies/iaodt 5 142775 4 4
+/forum 2 90164 0 0
+/location/autocomplete/us/oklahoma 1 23 0 0
+/tags/societies/socha 1 30626 1 0
+/node/1 2 93848 1 2
+/meetings/index.php/schedule 1 55642 1 0
+/user/reset/230/1318054835/G41yWhGjOt4lR0cPt8gl8i3hZGu4crFHZUdeIL2S3HU 1 25810 1 0
+/meetings/2011/papers/\xe2\x80\x9ccomplete-inversion-values\xe2\x80\x9d-questioning-scandalousness-st-symeon-emesa 1 32146 0 1
+/admin/store/orders/34 3 83111 0 0
+/tags/societies/logos 1 28793 0 0
+/meetings/2002.php 3 84687 0 0
+/views/ajax 10 62800 0 4
+/meetings/ 1 35738 0 0
+/taxonomy/term/53 3 132612 0 0
+/location/autocomplete/ca/quebe 1 19 0 0
+/meetings/2011/papers/texts-and-tradition-orthodox-theology-and-canon-law 4 127080 1 3
+/user/232/edit 2 243773 0 0
+/location/autocomplete/us/No 1 119 0 0
+/user/reset/224/1317857487/xmIC4H3FBstbmPvuF_Ve0CNoIJeYxJorIwVJACjlZz8 1 25813 0 0
+/publications/all/authors 24 716747 1 2
+/tags/societies/otsa 1 32985 1 1
+/forums/laws-and-membership 1 39851 0 0
+/location/autocomplete/it/Florence 1 2 0 0
+/meetings/2011/papers/frs-georges-florovsky-and-sergey-bulgakov-conflict-typologies-concerning 7 221326 1 3
+/meetings/index.php/meetings/index.php 1 37044 0 1
+/admin/store/orders/44 4 109638 0 0
+/location/autocomplete/us/Qu 2 4 0 0
+/meetings/2007.php 3 84687 0 0
+/publications/2010/nicholas-afanasiev-church-holy-spirit 5 149955 1 1
+/users/apsarev 2 86475 0 1
+/users/woloschak 1 39966 0 1
+/search/node/Fr.cleopas%20strongylis 1 31482 1 1
+/location/autocomplete/it/F 1 115 0 0
+/location/autocomplete/ca/q 1 19 0 0
+/node/51 2 87426 0 1
+/user/231/edit 6 732352 0 0
+/tags/societies/asch 1 28774 0 0
+/publications/2011/compatibility-principles-biological-evolution-eastern-orthodoxy 24 723336 3 7
+/admin/store/orders/32 3 83560 0 0
+/location/autocomplete/us/okla 1 23 0 0
+/mollom/captcha/image/form-b3HiYq6FYiBK6k4Fslktf2Jr9bOzkvNwJeYrY_O59nc/1110294f914578dbd4 1 392 0 0
+/tags/societies/north-american-academy-liturgy 1 27589 0 1
+/location/autocomplete/us/o 2 110 0 0
+/tags/focus/patristics 1 29524 1 0
+/admin/store/orders/33/edit 1 43567 0 0
+/location/autocomplete/us/oo 1 2 0 0
+/meetings/all/florovsky 23 722016 4 4
+/meetings/2011/papers/entering-glory-god-luke-24-christian-midrash-genesis-3 3 95274 3 2
+/meetings/wp-login.php 1 36944 1 1
+/tags/news-amp-events/resolutions 1 30355 0 0
+/meetings/2009.php 3 84687 0 0
+/news/2011/towards-common-date-easter 3 135511 0 0
+/meetings/2004.php 3 84687 0 0
+/publications/2011/missions-and-prophecy-ecumenical-attitudes-post-communist-romania 6 175782 2 1
+/user/reset/237/1319882138/_ZdWxpelhEMx5mj1K6SPkYb-ExKLP8LlhJDF5cljUig 1 25809 0 0
+/node/3 2 95644 0 0
+/meetings/2008_addendum.php 7 198233 1 1
+/admin/store/orders/13 2 55072 0 0
+/location/autocomplete/us/North%20Caro 1 35 0 0
+/user/224/edit 2 243360 0 0
+/node/98 1 44882 0 0
+/user/reset/211/1317605075/cnY1A2omiDebjqodOFtVSXLTMSKvyXm8u4y_IA-QxD4 2 51612 0 0
+/user/ 2 89934 1 2
+/file/ajax/field_member_cv/und/0/form-vt-o0CaI82BQkPzDlKtJMs4ooNo9kI7iG0DuiwgISbs 2 7093 1 1
+/admin/store/orders/33/payment_details/check 1 0 0 0
+/admin/store/orders/44/payment_details/check 2 0 0 0
+/tags/societies/inasec 1 28873 0 0
+/tags/societies/societas-liturgica 1 28304 1 1
+/location/autocomplete/us/PA 1 17 0 0
+/user/230/my-publications 1 59566 1 1
+/meetings/2001.php 3 84687 0 1
+/tags/societies/american-academy-religion 1 27564 0 0
+/admin/store/orders/32/payments 2 46097 0 0
+/user/register/ 3 135225 1 1
+/node/54 1 28955 0 0
+/meetings/2008.php 3 84687 0 0
+/search/user/mail 1 31930 0 0
+/tags/meeting-sessions/paper 1 45784 1 1
+/node/9 18 518004 1 1
+/location/autocomplete/us/Que 2 4 0 0
+/admin/store/orders/33/payments 3 69334 0 0
+/contact/websupport 20 588480 2 10
+/node/23 5 170905 3 3
+/node/7 1 45560 0 0
+/user/233/edit 4 513048 0 0
+/admin/store 5 121755 0 0
+/members/directory 17 1070053 0 1
+/news/2011/submit-paper 19 843353 2 2
+/forum/active 1 38863 0 0
+/index.php 10 449013 2 6
+/tags/meeting-sessions/florovsky-lecture 1 28633 1 0
+/user/reset/233/1318650029/BMzAQj5KNLzTfsJeH6og7xR-xbRQ0yiTlJP0WdwPdow 1 25806 0 0
+/node/5 1 51076 0 0
+/node/48 1 30895 0 0
+/location/autocomplete/us/P 1 75 0 0
+/user/reset/232/1318473231/bga6a5u_iReQHNpMc47u4TfzyiZZ2niBQOzb9uCMY-A 1 25810 0 0
+/site-help/account-validation 15 438438 2 4
+END_SIDER

@@ -1,0 +1,15 @@
+name = PDF Invoice
+description = "Adds a invoice view, which can be exported as a PDF."
+dependencies[] = commerce_order
+dependencies[] = views_pdf
+dependencies[] = views_view_field
+package = Commerce
+core = 7.x
+
+
+; Information added by drupal.org packaging script on 2011-05-06
+version = "7.x-1.x-dev"
+core = "7.x"
+project = "commerce_pdf_invoice"
+datestamp = "1304640295"
+

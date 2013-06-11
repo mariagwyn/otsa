@@ -55,6 +55,11 @@ function login_one_time_menu() {
  * Retrieve a pipe delimited string of autocomplete suggestions.
  */
 function login_one_time_autocomplete_users($autocomplete = '') {
+  // If the request has a '/' in the search text, then the menu system will have
+  // split it into multiple arguments, recover the intended $autocomplete.
+  $args = func_get_args();
+  $autocomplete = implode('/', $args);
+
   drupal_json_output(login_one_time_user_options($autocomplete));
 }
 
@@ -534,21 +539,24 @@ function login_one_time_get_link($account, $path = NULL) {
  * Create email settings as part of user admin settings
  */
 function login_one_time_form_user_admin_settings_alter(&$form, &$form_state) {
-  $email_token_help = t('Available variables are:') . ' !username, !site, !password, !uri, !uri_brief, !mailto, !date, !login_uri, !edit_uri, !login_url.';
-  $form['email']['login_one_time'] = array(
+  //$email_token_help = t('Available variables are:') . ' !username, !site, !password, !uri, !uri_brief, !mailto, !date, !login_uri, !edit_uri, !login_url.';
+  $email_token_help = t('Available variables are:') . ' [site:name], [site:url], [user:name], [user:mail], [site:login-url], [site:url-brief], [user:edit-url], <strike>[user:one-time-login-url]</strike>, <strong>[user:login-one-time]</strong>, [user:cancel-url].';
+
+  $form['email_login_one_time'] = array(
     '#type' => 'fieldset',
     '#title' => t('Login one time e-mail'),
     '#collapsible' => TRUE,
     '#collapsed' => TRUE,
     '#description' => t('Customize login one time e-mail messages sent to users.') . ' ' . $email_token_help,
+    '#group' => 'email',
   );
-  $form['email']['login_one_time']['login_one_time_subject'] = array(
+  $form['email_login_one_time']['login_one_time_subject'] = array(
     '#type' => 'textfield',
     '#title' => t('Subject'),
     '#default_value' => login_one_time_mail_text('login_one_time_subject'),
     '#maxlength' => 180,
   );
-  $form['email']['login_one_time']['login_one_time_body'] = array(
+  $form['email_login_one_time']['login_one_time_body'] = array(
     '#type' => 'textarea',
     '#title' => t('Body'),
     '#default_value' => login_one_time_mail_text('login_one_time_body'),
@@ -575,9 +583,9 @@ function login_one_time_mail_text($key, $path = NULL, $language = NULL, $variabl
     // No override, return default string.
     switch ($key) {
       case 'login_one_time_subject':
-        return t('One-time login link for !username at !site', $variables, $options);
+        return t('One-time login link for [user:name] at [site:name]', $variables, $options);
       case 'login_one_time_body':
-        return t("!username,\n\nA request to give you a one-time login for your account has been made at !site.\n\nYou may now log in to !uri_brief by clicking on this link or copying and pasting it in your browser:\n\n!login_url\n\nThis is a one-time login, so it can be used only once.  It expires in two weeks and nothing will happen if it's not used.", $variables, $options);
+        return t("[user:name],\n\nA request to give you a one-time login for your account has been made at [site:name].\n\nYou may now log in to [site:url-brief] by clicking on this link or copying and pasting it in your browser:\n\n[user:login-one-time]\n\nThis is a one-time login, so it can be used only once.  It expires in two weeks and nothing will happen if it's not used.\n\n--  [site:name] team", $variables, $options);
     }
   }
 }
@@ -586,11 +594,20 @@ function login_one_time_mail_text($key, $path = NULL, $language = NULL, $variabl
  * Implements hook_mail().
  */
 function login_one_time_mail($key, &$message, $params) {
+   // This code handles a mixture of Drupal 6 legacy !variables and Drupal 7 tokens.
+
   $language = $message['language'];
   $path = &$params['path'];
   $variables = login_one_time_mail_tokens($params['account'], $language, $path);
-  $message['subject'] .= login_one_time_mail_text($key . '_subject', $path, $language, $variables);
-  $message['body'][] = login_one_time_mail_text($key . '_body', $path, $language, $variables);
+
+  $subject = login_one_time_mail_text($key . '_subject', $path, $language, $variables);
+  $body = login_one_time_mail_text($key . '_body', $path, $language, $variables);
+
+  $subject = token_replace($subject, array('user' => $params['account']));
+  $body = token_replace($body, array('user' => $params['account'], 'path' => $path));
+
+  $message['subject'] .= $subject;
+  $message['body'][] = $body;
 }
 
 /**
@@ -603,6 +620,8 @@ function login_one_time_mail($key, &$message, $params) {
  *  Language object to generate the tokens with.
  * @return
  *  Array of mappings from token names to values (for use with strtr()).
+ *
+ * @todo: To be deprecated.
  */
 function login_one_time_mail_tokens($account, $language, $path = NULL) {
   global $base_url;
@@ -653,7 +672,7 @@ function login_one_time_page($uid, $timestamp, $hashed_pass) {
     $account = user_load($uid);
     if ($timestamp < $current && isset($account) && $account->status == 1) {
       // Deny one-time login to blocked accounts.
-      if (drupal_is_denied('user', $account->name) || drupal_is_denied('mail', $account->mail)) {
+      if (drupal_is_denied(ip_address())) {
         drupal_set_message(t('You have tried to use a one-time login for an account which has been blocked.'), 'error');
         drupal_goto("<front>");
       }
@@ -868,7 +887,7 @@ function login_one_time_tokens($type, $tokens, $data = array(), $options = array
       switch ($name) {
         // Simple key values on the node.
         case 'login-one-time':
-          $replacements[$original] = login_one_time_get_link($account);
+          $replacements[$original] = login_one_time_get_link($account, $data['path']);
           break;
       }
     }
@@ -909,4 +928,51 @@ function login_one_time_force_permissions() {
     return TRUE;
   }
   return FALSE;
+}
+
+/**
+ * Implements hook_action_info().
+ */
+function login_one_time_action_info() {
+  return array(
+    'login_one_time_send_mail_action' => array(
+      'label' => t('Send a login one-time email.'),
+      'type' => 'user',
+      'configurable' => TRUE,
+      'triggers' => array('any'),
+    ),
+  );
+}
+
+/**
+ * Generates settings form for login_one_time_send_mail_action().
+ */
+function login_one_time_send_mail_action_form($context) {
+  $form['path'] = login_one_time_select_widget();
+  $form['path']['#title'] = t('Select a destination path');
+  unset($form['path']['#options']['login_one_time[current]']);
+
+  return $form;
+}
+
+/**
+ * Submit handler for login_one_time_send_mail_action_form().
+ *
+ * Returns an associative array of values which will be available in the
+ * $context when an action is executed.
+ */
+function login_one_time_send_mail_action_submit($form, $form_state) {
+  return array('path' => $form_state['values']['path']);
+}
+
+/**
+ * Action function for login_one_time_send_mail_action.
+ *
+ * @param $entity
+ *   The user object being acted upon.
+ * @param $context
+ *   Array with parameters for this action: depends on the trigger.
+ */
+function login_one_time_send_mail_action(&$account, $context = array()) {
+  login_one_time_send_mail($account, $context['path']); 
 }

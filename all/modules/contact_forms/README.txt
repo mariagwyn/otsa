@@ -1,4 +1,3 @@
-$Id: README.txt,v 1.9 2011/01/27 05:02:45 gpdinoz Exp $
 
 CONTACT_FORMS.MODULE
 
@@ -38,6 +37,12 @@ Installation
   3. Enable Contact Forms module
 
 
+Upgrading
+---------
+If you are upgrading from an older version of Contact Lists
+Disable and uninstall the old version then delete the contact_list folder
+before you upload and enable the new version.
+
 
 Usage
 -----
@@ -55,6 +60,26 @@ print l('Email Jill Jones', 'contact/Jill Jones');
 This page can be set as the fall back page if a contact/category
 path is entered that doesn't exist.
 
+
+Snippets
+--------
+1. The "old" contact/list page
+This will give you a list of links to the contact forms.
+
+<!-- start snippet -->
+<p>Who would you like to contact?</p>
+<?php
+  $result = db_query('SELECT * FROM {contact} ORDER BY weight, category');
+  print '<div id="contact-list">';
+  print '<div class="item-list"><ul>';
+  while ($contact = db_fetch_object($result)) {
+    $cleanurl = str_replace(' ', '_' ,$contact->category);
+    print '<li>'. l($contact->category , 'contact/'. $cleanurl) .'</li>';
+  }
+  print '</div>';
+  print '</div>';
+?>
+<!-- end snippet -->
 
 
 Credits

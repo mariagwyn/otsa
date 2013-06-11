@@ -1,0 +1,322 @@
+AWSTATS DATA FILE 7.0 (build 1.971)
+# If you remove this file, all statistics for date 201206 will be lost/reset.
+# Last config file used to build this data file was /home/otsameri/tmp/awstats/awstats.dev.otsamerica.org.conf.
+
+# Position (offset in bytes) in this file for beginning of each section for
+# direct I/O access. If you made changes somewhere in this file, you should
+# also remove completely the MAP section (AWStats will rewrite it at next
+# update).
+BEGIN_MAP 27
+POS_GENERAL 2012                
+POS_TIME 2677                
+POS_VISITOR 6217                
+POS_DAY 6859                
+POS_DOMAIN 3371                
+POS_LOGIN 3602                
+POS_ROBOT 3757                
+POS_WORMS 4032                
+POS_EMAILSENDER 4163                
+POS_EMAILRECEIVER 4306                
+POS_SESSION 7254                
+POS_SIDER 7450                
+POS_FILETYPES 4441                
+POS_DOWNLOADS 4634                
+POS_OS 4705                
+POS_BROWSER 4764                
+POS_SCREENSIZE 4910                
+POS_UNKNOWNREFERER 4984                
+POS_UNKNOWNREFERERBROWSER 5071                
+POS_ORIGIN 5153                
+POS_SEREFERRALS 5290                
+POS_PAGEREFS 5434                
+POS_SEARCHWORDS 5582                
+POS_KEYWORDS 5734                
+POS_MISC 2340                
+POS_ERRORS 5793                
+POS_CLUSTER 3458                
+POS_SIDER_404 5908                
+END_MAP
+
+# LastLine    = Date of last record processed - Last record line number in last log - Last record offset in last log - Last record signature value
+# FirstTime   = Date of first visit for history file
+# LastTime    = Date of last visit for history file
+# LastUpdate  = Date of last update - Nb of parsed records - Nb of parsed old records - Nb of parsed new records - Nb of parsed corrupted - Nb of parsed dropped
+# TotalVisits = Number of visits
+# TotalUnique = Number of unique visitors
+# MonthHostsKnown   = Number of hosts known
+# MonthHostsUnKnown = Number of hosts unknown
+BEGIN_GENERAL 8
+LastLine 20120701042925 30 4823 9452852659575
+FirstTime 0
+LastTime 20120629154052
+LastUpdate 20120701081437 30 0 29 0 0
+TotalVisits 32                  
+TotalUnique 15                  
+MonthHostsKnown 0                   
+MonthHostsUnknown 15                  
+END_GENERAL
+
+# Misc ID - Pages - Hits - Bandwidth
+BEGIN_MISC 10
+QuickTimeSupport 0 0 0
+JavaEnabled 0 0 0
+JavascriptDisabled 0 0 0
+PDFSupport 0 0 0
+WindowsMediaPlayerSupport 0 0 0
+AddToFavourites 0 21 0
+RealPlayerSupport 0 0 0
+TotalMisc 0 0 0
+DirectorSupport 0 0 0
+FlashSupport 0 0 0
+END_MISC
+
+# Hour - Pages - Hits - Bandwidth - Not viewed Pages - Not viewed Hits - Not viewed Bandwidth
+BEGIN_TIME 24
+0 0 0 0 58 60 244463
+1 0 0 0 64 66 222569
+2 0 0 0 68 69 240971
+3 0 0 0 83 85 295298
+4 0 0 0 94 99 548576
+5 0 0 0 81 81 240179
+6 0 0 0 94 94 340905
+7 0 0 0 79 85 329108
+8 0 0 0 71 71 263749
+9 35 35 0 85 86 275247
+10 60 60 0 50 51 172176
+11 42 42 0 148 152 452649
+12 65 76 253270 99 104 307110
+13 123 250 10266223 107 117 341599
+14 38 42 646827 67 68 196879
+15 24 35 0 78 82 282205
+16 14 14 0 42 44 163606
+17 2 2 0 58 60 215113
+18 0 0 0 53 55 201563
+19 0 0 0 75 89 266286
+20 22 134 3468858 84 90 313398
+21 0 0 0 73 74 268954
+22 0 0 0 70 71 245786
+23 0 0 0 76 76 259380
+END_TIME
+
+# Domain - Pages - Hits - Bandwidth
+# The 25 first Pages must be first (order not required for others)
+BEGIN_DOMAIN 1
+us 425 690 14635178
+END_DOMAIN
+
+# Cluster ID - Pages - Hits - Bandwidth
+BEGIN_CLUSTER 0
+END_CLUSTER
+
+# Login - Pages - Hits - Bandwidth - Last visit
+# The 10 first Pages must be first (order not required for others)
+BEGIN_LOGIN 0
+END_LOGIN
+
+# Robot ID - Hits - Bandwidth - Last visit - Hits on robots.txt
+# The 25 first Hits must be first (order not required for others)
+BEGIN_ROBOT 4
+googlebot 39 288972 20120629202042 32
+spider 5 3245 20120620153040 5
+bot[\s_+:,\.\;\/\\-] 1 1561 20120606171604 1
+robot 1 649 20120606043041 1
+END_ROBOT
+
+# Worm ID - Hits - Bandwidth - Last visit
+# The 5 first Hits must be first (order not required for others)
+BEGIN_WORMS 0
+END_WORMS
+
+# EMail - Hits - Bandwidth - Last visit
+# The 20 first Hits must be first (order not required for others)
+BEGIN_EMAILSENDER 0
+END_EMAILSENDER
+
+# EMail - Hits - Bandwidth - Last visit
+# The 20 first hits must be first (order not required for others)
+BEGIN_EMAILRECEIVER 0
+END_EMAILRECEIVER
+
+# Files type - Hits - Bandwidth - Bandwidth without compression - Bandwidth after compression
+BEGIN_FILETYPES 7
+css 102 206713 0 0
+php 4 13851 0 0
+png 92 1119476 0 0
+html 5 375803 0 0
+js 69 847602 0 0
+Unknown 416 12064525 0 0
+gif 2 7208 0 0
+END_FILETYPES
+
+# Downloads - Hits - Bandwidth
+BEGIN_DOWNLOADS 1
+/robots.txt 39 0 26223
+END_DOWNLOADS
+
+# OS ID - Hits
+BEGIN_OS 2
+macosx 363
+win7 327
+END_OS
+
+# Browser ID - Hits
+BEGIN_BROWSER 5
+firefox10.0.4 24
+chrome19.0.1084.53 135
+firefox10.0.5 303
+safari5.1.7 22
+chrome19.0.1084.56 206
+END_BROWSER
+
+# Screen size - Hits
+BEGIN_SCREENSIZE 0
+END_SCREENSIZE
+
+# Unknown referer OS - Last visit date
+BEGIN_UNKNOWNREFERER 0
+END_UNKNOWNREFERER
+
+# Unknown referer Browser - Last visit date
+BEGIN_UNKNOWNREFERERBROWSER 0
+END_UNKNOWNREFERERBROWSER
+
+# Origin - Pages - Hits 
+BEGIN_ORIGIN 6
+From0 339 343
+From1 0 0
+From2 0 0
+From3 0 0
+From4 86 347
+From5 0 0
+END_ORIGIN
+
+# Search engine referers ID - Pages - Hits
+BEGIN_SEREFERRALS 0
+END_SEREFERRALS
+
+# External page referers - Pages - Hits
+# The 25 first Pages must be first (order not required for others)
+BEGIN_PAGEREFS 0
+END_PAGEREFS
+
+# Search keyphrases - Number of search
+# The 10 first number of search must be first (order not required for others)
+BEGIN_SEARCHWORDS 0
+END_SEARCHWORDS
+
+# Search keywords - Number of search
+# The 25 first number of search must be first (order not required for others)
+BEGIN_KEYWORDS 0
+END_KEYWORDS
+
+# Errors - Hits - Bandwidth
+BEGIN_ERRORS 3
+302 13 0
+503 1812 6219117
+500 34 141439
+END_ERRORS
+
+# URL with 404 errors - Hits - Last URL referer
+BEGIN_SIDER_404 0
+END_SIDER_404
+
+# Host - Pages - Hits - Bandwidth - Last visit date - [Start date of last visit] - [Last page of last visit]
+# [Start date of last visit] and [Last page of last visit] are saved only if session is not finished
+# The 25 first Hits must be first (order not required for others)
+BEGIN_VISITOR 15
+50.76.110.73 75 228 11166153 20120613145518
+128.118.17.68 57 57 0 20120621140724
+128.118.17.40 56 56 0 20120627141737
+128.118.17.90 48 48 0 20120629154052
+128.118.17.10 38 38 0 20120628150737
+128.118.17.55 28 28 0 20120619170729
+128.118.17.111 24 24 0 20120605142303
+107.0.255.129 23 135 3469025 20120605121616
+128.118.17.106 22 22 0 20120625154520
+128.118.17.168 18 18 0 20120611150958
+128.118.36.169 14 14 0 20120614134633
+128.118.36.208 8 8 0 20120613101452
+128.118.36.228 6 6 0 20120608153109
+128.118.36.190 4 4 0 20120618121854
+128.118.36.177 4 4 0 20120606154712
+END_VISITOR
+
+# Date - Pages - Hits - Bandwidth - Visits
+BEGIN_DAY 17
+20120604 22 134 3468858 1
+20120605 25 25 167 2
+20120606 4 4 0 1
+20120607 0 11 253103 0
+20120608 6 6 0 2
+20120611 18 18 0 3
+20120613 83 214 10913050 3
+20120614 14 14 0 3
+20120618 4 4 0 1
+20120619 28 28 0 3
+20120620 28 28 0 3
+20120621 29 29 0 1
+20120625 22 22 0 3
+20120626 38 38 0 2
+20120627 18 29 0 2
+20120628 38 38 0 1
+20120629 48 48 0 1
+END_DAY
+
+# Session range - Number of visits
+BEGIN_SESSION 6
+1h+ 12
+5mn-15mn 1
+15mn-30mn 9
+0s-30s 2
+30s-2mn 1
+30mn-1h 7
+END_SESSION
+
+# URL - Pages - Bandwidth - Entry - Exit
+# The 25 first Pages must be first (order not required for others)
+BEGIN_SIDER 44
+/taxonomy/term/7/0/feed 164 0 1 28
+/taxonomy/term/6/0/feed 163 0 27 0
+/admin/modules 20 9678191 1 0
+/admin/reports/dblog 9 519045 0 0
+/admin/modules/uninstall/confirm 8 140361 0 0
+/admin/modules/list/confirm 5 487655 0 0
+/ 4 345266 2 0
+/admin/commerce/config/repair 4 68246 0 0
+/update.php 4 13851 0 0
+/admin/commerce 3 44895 0 0
+/admin/commerce/products/types 3 148884 0 0
+/admin/commerce/products/types/product/delete 2 28282 0 0
+/admin/reports/event/153 2 27072 0 0
+/admin/store 2 334 1 2
+/admin/index 2 200726 0 0
+/js/admin_menu/cache/657e044bd38d2803a80bcd1a6384c5c2 2 21210 0 0
+/js/admin_menu/cache/2d025a22aa6ce0864452f070c7ef0514 1 10121 0 0
+/admin/config 1 167 0 0
+/admin/modules/uninstall/ 1 30537 0 0
+/admin/reports/event/202 1 13373 0 0
+/js/admin_menu/cache/823d752459c051950630a3c0e2a21403 1 10170 0 0
+/admin/reports/event/235 1 17039 0 0
+/admin/reports/event/231 1 17221 0 0
+/admin/commerce/orders/carts 1 20111 0 1
+/js/admin_menu/cache/194fc44a165fbf57363999bc312866ed 1 10716 0 0
+/js/admin_menu/cache/f55c5bea3a95820d8d4d40a5c7386716 1 10424 0 0
+/js/admin_menu/cache/ffba1d7a9c367f61a3bae45683a80c93 1 10179 0 0
+/js/admin_menu/cache/0a026b6523347638dff8a9e706eb2be9 1 10645 0 0
+/admin/reports/event/204 1 13506 0 0
+/js/admin_menu/cache/182a0f230da7d783fa45e0935b09de7b 1 10530 0 0
+/admin/commerce/orders 1 20027 0 0
+/user/1/edit 1 234877 0 0
+/admin/commerce/config 1 16604 0 0
+/js/admin_menu/cache/6f4daa52037f0b04c686dc5a4d18445e 1 10133 0 0
+/js/admin_menu/cache/21aaee7a8ac0d39e93e4759b4bf58810 1 10725 0 0
+/admin/commerce/customer-profiles 1 20436 0 0
+/admin/reports/event/251 1 17670 0 1
+/js/admin_menu/cache/871db57420714b95f91c42c848c2506d 1 10788 0 0
+/admin/reports/event/155 1 13985 0 0
+/admin/modules/uninstall 1 146526 0 0
+/user/reset/1/1338855894/6F4fvDm6l--B7whP52WZK1zY18TcK61BWVojpqAA2J4 1 5130 0 0
+/js/admin_menu/cache/fff9e4a64f0834ebd4e3a2e902480ee9 1 10642 0 0
+/admin/modules/install 1 17716 0 0
+/js/admin_menu/cache/058ef5d13889a3edfd8517213c1312fe 1 10163 0 0
+END_SIDER

@@ -1,0 +1,655 @@
+AWSTATS DATA FILE 7.0 (build 1.971)
+# If you remove this file, all statistics for date 201207 will be lost/reset.
+# Last config file used to build this data file was /home/otsameri/tmp/awstats/awstats.otsamerica.org.conf.
+
+# Position (offset in bytes) in this file for beginning of each section for
+# direct I/O access. If you made changes somewhere in this file, you should
+# also remove completely the MAP section (AWStats will rewrite it at next
+# update).
+BEGIN_MAP 27
+POS_GENERAL 2008                
+POS_TIME 2679                
+POS_VISITOR 10205               
+POS_DAY 16554               
+POS_DOMAIN 3587                
+POS_LOGIN 4310                
+POS_ROBOT 4465                
+POS_WORMS 5072                
+POS_EMAILSENDER 5203                
+POS_EMAILRECEIVER 5346                
+POS_SESSION 17359               
+POS_SIDER 17543               
+POS_FILETYPES 5481                
+POS_DOWNLOADS 5698                
+POS_OS 7041                
+POS_BROWSER 7202                
+POS_SCREENSIZE 8023                
+POS_UNKNOWNREFERER 8097                
+POS_UNKNOWNREFERERBROWSER 8713                
+POS_ORIGIN 8884                
+POS_SEREFERRALS 9022                
+POS_PAGEREFS 9209                
+POS_SEARCHWORDS 9519                
+POS_KEYWORDS 9688                
+POS_MISC 2341                
+POS_ERRORS 9764                
+POS_CLUSTER 4166                
+POS_SIDER_404 9896                
+END_MAP
+
+# LastLine    = Date of last record processed - Last record line number in last log - Last record offset in last log - Last record signature value
+# FirstTime   = Date of first visit for history file
+# LastTime    = Date of last visit for history file
+# LastUpdate  = Date of last update - Nb of parsed records - Nb of parsed old records - Nb of parsed new records - Nb of parsed corrupted - Nb of parsed dropped
+# TotalVisits = Number of visits
+# TotalUnique = Number of unique visitors
+# MonthHostsKnown   = Number of hosts known
+# MonthHostsUnKnown = Number of hosts unknown
+BEGIN_GENERAL 8
+LastLine 20120801000824 271 47878 12217096204742
+FirstTime 0
+LastTime 20120729064931
+LastUpdate 20120801080600 271 0 270 0 0
+TotalVisits 15                  
+TotalUnique 14                  
+MonthHostsKnown 0                   
+MonthHostsUnknown 229                 
+END_GENERAL
+
+# Misc ID - Pages - Hits - Bandwidth
+BEGIN_MISC 10
+QuickTimeSupport 0 0 0
+JavaEnabled 0 0 0
+JavascriptDisabled 0 0 0
+PDFSupport 0 0 0
+WindowsMediaPlayerSupport 0 0 0
+AddToFavourites 0 248 0
+RealPlayerSupport 0 0 0
+TotalMisc 0 0 0
+DirectorSupport 0 0 0
+FlashSupport 0 0 0
+END_MISC
+
+# Hour - Pages - Hits - Bandwidth - Not viewed Pages - Not viewed Hits - Not viewed Bandwidth
+BEGIN_TIME 24
+0 0 188 4333691 980 1110 5078050
+1 0 123 2717107 943 1054 5266685
+2 0 14 272076 820 928 4418819
+3 0 44 1001388 826 937 4422930
+4 0 61 6308856 845 952 5190358
+5 0 35 3370868 834 951 5497194
+6 2 59 1441571 756 879 5209798
+7 0 94 3592668 841 956 4961875
+8 0 130 3142511 869 996 4716933
+9 1 190 6113927 738 942 5278466
+10 4 97 5319537 991 1129 5775005
+11 1 208 4561658 915 1049 4856602
+12 4 104 2914578 855 978 4720412
+13 0 155 4180469 785 907 5458059
+14 0 174 6744903 845 986 5365540
+15 1 161 7583698 903 1027 4941204
+16 1 178 5293673 973 1106 4984393
+17 21 216 4188944 993 1127 4880526
+18 1 88 1867745 852 994 5253294
+19 6 118 3209565 803 931 5283219
+20 1 105 1741890 899 1023 4645767
+21 0 66 1730434 698 805 3897543
+22 1 108 2552842 772 888 4070747
+23 0 61 1302794 952 1066 5519576
+END_TIME
+
+# Domain - Pages - Hits - Bandwidth
+# The 25 first Pages must be first (order not required for others)
+BEGIN_DOMAIN 34
+us 32 2149 53454635
+ua 3 34 768233
+eg 3 3 106741
+fr 2 4 403709
+de 2 2 43955
+gr 1 46 4456503
+nl 1 3 335611
+il 0 11 250347
+pt 0 11 250347
+rs 0 1 1846100
+cn 0 5 609061
+ru 0 23 683922
+sy 0 11 250347
+ro 0 43 1003973
+in 0 11 250347
+id 0 22 500694
+et 0 22 500694
+br 0 10 252932
+me 0 13 258057
+cy 0 1 923050
+fi 0 11 250347
+lt 0 1 272
+ke 0 11 250347
+be 0 11 250347
+ge 0 1 1829305
+jp 0 24 720786
+au 0 33 1676676
+gb 0 48 2278443
+ch 0 14 2014699
+at 0 11 250347
+eu 0 26 980123
+ca 0 139 2424845
+pl 0 11 250347
+se 0 11 422799
+END_DOMAIN
+
+# Cluster ID - Pages - Hits - Bandwidth
+BEGIN_CLUSTER 0
+END_CLUSTER
+
+# Login - Pages - Hits - Bandwidth - Last visit
+# The 10 first Pages must be first (order not required for others)
+BEGIN_LOGIN 0
+END_LOGIN
+
+# Robot ID - Hits - Bandwidth - Last visit - Hits on robots.txt
+# The 25 first Hits must be first (order not required for others)
+BEGIN_ROBOT 12
+[\s_+:,\.\;\/\\-]bot 1008 1858224 20120731224901 1002
+bot[\s_+:,\.\;\/\\-] 561 3124085 20120731201947 535
+unknown 436 623140 20120731230445 436
+spider 354 2198674 20120731201044 180
+googlebot 111 6514241 20120731232019 53
+ia_archiver 62 890071 20120719094315 4
+crawl 46 1193017 20120731151338 28
+slurp 40 810236 20120724120138 1
+robot 18 14418 20120731235650 18
+no_user_agent 17 85444 20120728172604 16
+discovery 9 5841 20120728130432 9
+msnbot\-media 1 649 20120728111349 1
+END_ROBOT
+
+# Worm ID - Hits - Bandwidth - Last visit
+# The 5 first Hits must be first (order not required for others)
+BEGIN_WORMS 0
+END_WORMS
+
+# EMail - Hits - Bandwidth - Last visit
+# The 20 first Hits must be first (order not required for others)
+BEGIN_EMAILSENDER 0
+END_EMAILSENDER
+
+# EMail - Hits - Bandwidth - Last visit
+# The 20 first hits must be first (order not required for others)
+BEGIN_EMAILRECEIVER 0
+END_EMAILRECEIVER
+
+# Files type - Hits - Bandwidth - Bandwidth without compression - Bandwidth after compression
+BEGIN_FILETYPES 8
+css 1498 5979426 0 0
+png 263 41505580 0 0
+html 6 80269 0 0
+js 944 12488152 0 0
+docx 7 496651 0 0
+pdf 26 19372861 0 0
+Unknown 31 825476 0 0
+gif 2 526 0 0
+END_FILETYPES
+
+# Downloads - Hits - Bandwidth
+BEGIN_DOWNLOADS 17
+/robots.txt 2279 0 3228287
+/sites/otsamerica.org/files/news-docs/Volos_2010-2011_en.pdf 19 69 21802761
+/sites/otsamerica.org/files/pages-docs/2011/OTSA-2011-Call.pdf 7 2 1481080
+/sites/otsamerica.org/files/pages-docs/2011/2010-OTSA-Program.pdf 4 0 720216
+/sites/otsamerica.org/files/pages-docs/2011/OTSA-2010-Call.pdf 3 2 761752
+/sites/otsamerica.org/files/pages-docs/2011/OTSA-2009-Call.pdf 3 0 189987
+/sites/otsamerica.org/files/pages-docs/2011/OTSA-2009-Abstracts.pdf 3 0 482403
+/sites/otsamerica.org/files/general/2011/OTSA-Draft-Bylaws.pdf 2 0 71254
+/sites/otsamerica.org/files/pages-docs/2011/2011-1st-OTSA-MembershipLetter.pdf 2 0 298090
+/sites/otsamerica.org/files/news-docs/CAREE-conf.pdf 1 0 109107
+/sites/otsamerica.org/files/pages-docs/2011/2011-May-OTSA-MembershipLetter.pdf 1 0 174392
+/sites/otsamerica.org/files/OTSA-2011-Registration_1.doc 1 0 125440
+/sites/otsamerica.org/files/pages-docs/2011/2011-July-OTSA-MembershipLetter.pdf 1 0 173853
+/sites/otsamerica.org/files/pages-docs/2011/Submitting-abstract.doc 1 0 33280
+/sites/otsamerica.org/files/pages-docs/2011/2005-OTSA-BusinessMeeting_Minutes.pdf 1 2 196136
+/sites/otsamerica.org/files/pages-docs/2011/OTSA-2009-Prog.pdf 1 0 83072
+/sites/otsamerica.org/files/pages-docs/2011/2004-OTSA-BusinessMeeting_Minutes.pdf 1 0 88845
+END_DOWNLOADS
+
+# OS ID - Hits
+BEGIN_OS 11
+linuxandroid 11
+winlong 254
+winxp 704
+win2000 1
+linux 2
+win7 879
+macosx 892
+winme 2
+linuxcentos 22
+win2003 69
+Unknown 16
+END_OS
+
+# Browser ID - Hits
+BEGIN_BROWSER 50
+msie6.0 18
+safari5.0.3 11
+firefox4.0.1 23
+safari4.1.3 11
+android 11
+firefox3.0.1 11
+firefox8.0 11
+safari5.0 11
+safari5.1.6 11
+safari5.0.6 10
+lynx 1
+firefox3.6.26 22
+opera9.80 51
+chrome19.0.1084.56 64
+links 2
+safari5.0.2 10
+msie8.0 453
+iphone 23
+firefox13.0.1 316
+chrome20.0.1132.47 146
+msie7.0 215
+chrome16.0.912.4 11
+firefox9.0.1 22
+msie9.0 327
+Unknown 5
+chrome20.0.1132.43 22
+firefox11.0 22
+safari5.1.3 11
+firefox13.0 11
+safari3.1.2 1
+safari6.0 40
+firefox3.5.2 11
+chrome9.0.597 7
+chrome20.0.1132.57 233
+firefox12.0 36
+chrome12.0.742.122 11
+safari5.1.7 288
+firefox3.0.3 1
+mozilla 1
+chrome16.0.912.77 11
+firefox10.0.4 11
+firefox14.0.1 94
+firefox5.0.1 11
+firefox3.6.28 11
+firefox6.0 2
+safari5.1 178
+firefox3.0.19 12
+chrome19.0.1084.52 19
+firefox10.0.5 11
+firefox3.6.13 1
+END_BROWSER
+
+# Screen size - Hits
+BEGIN_SCREENSIZE 0
+END_SCREENSIZE
+
+# Unknown referer OS - Last visit date
+BEGIN_UNKNOWNREFERER 6
+Mozilla/5.0_(compatible;_Ezooms/1.0;_ezooms.bot@gmail.com) 20120724132651
+findlinks/2.0.2_(_http://wortschatz.uni-leipzig.de/findlinks/) 20120725164325
+Mozilla/5.0_(en-us)_AppleWebKit/534.14_(KHTML,_like_Gecko;_Google_Wireless_Transcoder)_Chrome/9.0.597_Safari/534.14 20120714145235
+facebookexternalhit/1.0_(_http://www.facebook.com/externalhit_uatext.php) 20120721013612
+findlinks/2.6_(_http://wortschatz.uni-leipzig.de/findlinks/) 20120711150810
+Lynx/2.8.5rel.1_libwww-FM/2.14FC_SSL-MM/1.4.1b_OpenSSL/0.9.7d-dev 20120722150628
+END_UNKNOWNREFERER
+
+# Unknown referer Browser - Last visit date
+BEGIN_UNKNOWNREFERERBROWSER 1
+facebookexternalhit/1.0_(_http://www.facebook.com/externalhit_uatext.php) 20120721013612
+END_UNKNOWNREFERERBROWSER
+
+# Origin - Pages - Hits 
+BEGIN_ORIGIN 6
+From0 10 105
+From1 0 0
+From2 3 20
+From3 3 3
+From4 28 2724
+From5 0 0
+END_ORIGIN
+
+# Search engine referers ID - Pages - Hits
+BEGIN_SEREFERRALS 4
+google 1 14
+search 0 3
+bing 2 2
+yandex 0 1
+END_SEREFERRALS
+
+# External page referers - Pages - Hits
+# The 25 first Pages must be first (order not required for others)
+BEGIN_PAGEREFS 2
+http://en.wikipedia.org/wiki/Orthodox_Theological_Society_in_America 2 2
+http://oca.org/directories/organizations/the-orthodox-theological-society-in-america 1 1
+END_PAGEREFS
+
+# Search keyphrases - Number of search
+# The 10 first number of search must be first (order not required for others)
+BEGIN_SEARCHWORDS 1
+ostamerica.org 2
+END_SEARCHWORDS
+
+# Search keywords - Number of search
+# The 25 first number of search must be first (order not required for others)
+BEGIN_KEYWORDS 1
+ostamerica.org 2
+END_KEYWORDS
+
+# Errors - Hits - Bandwidth
+BEGIN_ERRORS 5
+302 18 0
+503 20782 101966964
+206 2 29237
+500 1 0
+301 2 0
+END_ERRORS
+
+# URL with 404 errors - Hits - Last URL referer
+BEGIN_SIDER_404 0
+END_SIDER_404
+
+# Host - Pages - Hits - Bandwidth - Last visit date - [Start date of last visit] - [Last page of last visit]
+# [Start date of last visit] and [Last page of last visit] are saved only if session is not finished
+# The 25 first Hits must be first (order not required for others)
+BEGIN_VISITOR 229
+107.0.255.129 20 91 1762574 20120724175357
+50.76.110.73 7 35 281675 20120712121613
+93.74.96.36 3 23 505864 20120725120119
+41.233.142.161 3 3 106741 20120703101442
+37.59.131.236 2 2 43601 20120729064931
+46.229.160.208 1 3 335611 20120726124423
+184.6.45.78 1 14 338715 20120723201735
+209.249.63.119 1 1 66712 20120725170752
+94.68.179.104 1 34 751041 20120702091759
+130.83.167.153 1 1 22357 20120711150810
+157.55.18.46 1 1 66712 20120720181800
+75.57.117.140 1 1 66712 20120721122556
+207.226.183.118 1 1 66712 20120723221820
+77.20.4.67 1 1 21598 20120725164325
+80.195.38.188 0 13 428846 
+71.99.93.173 0 11 250347 
+69.119.250.51 0 11 262369 
+97.81.67.19 0 30 1273496 
+205.188.116.73 0 1 7716 
+98.14.232.120 0 11 250347 
+79.115.1.77 0 10 252932 
+97.91.171.160 0 44 1001388 
+108.91.116.32 0 11 262369 
+70.112.78.125 0 11 250347 
+174.109.126.59 0 11 262369 
+216.161.235.194 0 10 252932 
+74.103.26.68 0 11 250347 
+89.75.154.108 0 11 250347 
+66.62.194.227 0 11 250347 
+68.250.191.201 0 13 262688 
+217.212.230.20 0 11 422799 
+67.243.188.98 0 11 262369 
+213.55.72.13 0 11 250347 
+110.139.22.228 0 22 500694 
+71.201.44.118 0 10 252932 
+69.171.237.3 0 1 183228 
+205.188.116.79 0 1 4838 
+50.130.135.60 0 20 505864 
+69.120.229.181 0 11 262369 
+69.95.189.130 0 13 250666 
+24.0.107.91 0 11 262369 
+151.213.52.249 0 10 252932 
+108.172.168.169 0 16 295401 
+81.196.143.111 0 11 250347 
+205.188.117.19 0 1 2203 
+120.151.17.243 0 11 250347 
+205.188.116.66 0 1 1196 
+205.188.116.143 0 2 187416 
+107.45.222.93 0 11 250347 
+176.221.151.107 0 12 1829305 
+72.161.217.89 0 10 252932 
+140.192.196.145 0 1 923050 
+69.171.237.4 0 1 183228 
+75.97.111.39 0 26 501332 
+76.94.99.7 0 11 250347 
+24.189.134.77 0 11 262369 
+80.2.161.112 0 13 423268 
+67.185.237.81 0 13 272003 
+199.213.117.87 0 13 263993 
+150.70.172.101 0 3 184091 
+76.88.156.234 0 11 250347 
+213.55.105.211 0 11 250347 
+174.226.129.212 0 11 262369 
+64.134.71.44 0 10 264839 
+213.22.225.160 0 11 250347 
+176.92.39.130 0 1 923050 
+184.63.70.60 0 11 262369 
+71.20.218.247 0 11 250347 
+74.38.149.53 0 11 250347 
+74.13.226.178 0 11 250347 
+174.45.113.9 0 11 250347 
+62.38.155.154 0 10 264839 
+107.9.21.26 0 1 923050 
+71.105.56.30 0 11 250347 
+157.55.112.215 0 10 57930 
+71.81.151.125 0 11 250347 
+76.121.133.184 0 11 262369 
+109.92.50.237 0 19 1846100 
+130.179.127.44 0 11 250347 
+67.87.194.43 0 11 262369 
+24.34.9.208 0 12 277177 
+72.131.12.182 0 11 250347 
+81.218.141.168 0 11 250347 
+150.70.172.106 0 1 2833 
+68.21.196.140 0 10 252932 
+80.239.242.206 0 26 980123 
+131.130.74.159 0 11 250347 
+50.19.77.67 0 22 512716 
+69.171.229.251 0 1 183228 
+74.15.112.135 0 10 0 
+59.57.14.86 0 5 609061 
+76.93.70.136 0 11 250347 
+58.175.72.225 0 11 250347 
+24.29.206.209 0 33 751041 
+89.27.57.20 0 11 250347 
+157.242.205.163 0 10 252932 
+50.74.62.234 0 13 250666 
+129.139.1.69 0 13 251971 
+209.22.221.73 0 13 251971 
+74.125.18.154 0 1 7716 
+74.125.78.93 0 6 197992 
+69.230.167.25 0 17 457686 
+68.41.93.7 0 11 250347 
+62.117.115.58 0 22 500694 
+96.18.87.102 0 11 250347 
+136.167.71.92 0 11 262369 
+98.100.198.100 0 11 250347 
+68.175.92.188 0 13 272003 
+98.101.223.218 0 11 262369 
+67.187.98.73 0 75 1506262 
+75.195.221.96 0 13 250666 
+205.188.116.7 0 1 4635 
+24.98.2.105 0 23 524925 
+173.86.40.127 0 22 444405 
+128.197.68.51 0 1 923050 
+50.33.195.78 0 11 262369 
+64.235.72.84 0 29 500694 
+24.239.105.150 0 11 262369 
+71.226.166.38 0 11 250347 
+69.174.58.20 0 13 423268 
+193.73.242.1 0 28 2014699 
+69.171.229.247 0 1 183228 
+64.125.188.25 0 11 422799 
+195.251.32.37 0 28 3440623 
+174.54.14.114 0 11 250347 
+67.85.35.185 0 11 262369 
+71.58.103.7 0 11 250347 
+204.58.204.13 0 13 423268 
+66.61.73.88 0 11 250347 
+65.52.111.205 0 9 56597 
+216.64.190.118 0 22 500694 
+117.197.243.30 0 11 250347 
+150.70.97.43 0 4 132346 
+66.183.104.81 0 22 512716 
+171.159.64.10 0 13 251971 
+151.203.13.237 0 13 250666 
+67.190.2.169 0 27 576499 
+41.81.11.150 0 11 250347 
+184.39.11.159 0 11 250347 
+157.55.112.229 0 9 56597 
+99.160.9.5 0 11 250347 
+108.7.210.105 0 10 252932 
+60.231.213.148 0 10 252932 
+94.108.178.234 0 11 250347 
+69.254.240.246 0 22 262369 
+94.23.225.68 0 2 360108 
+70.27.239.11 0 13 67438 
+108.207.121.134 0 18 250347 
+150.70.172.201 0 1 95434 
+78.155.53.11 0 13 258057 
+174.93.135.228 0 3 9132 
+76.251.100.41 0 7 205708 
+71.126.239.152 0 10 264839 
+66.68.47.154 0 12 1173397 
+70.253.89.40 0 22 250347 
+208.81.37.18 0 11 250347 
+69.211.8.147 0 20 505864 
+69.112.132.239 0 22 500694 
+65.52.108.54 0 6 54901 
+69.74.234.178 0 63 1581624 
+99.133.145.106 0 2 1846100 
+66.188.54.74 0 11 262369 
+150.70.172.107 0 1 14019 
+94.174.116.47 0 1 923050 
+70.22.202.78 0 13 263993 
+166.250.35.237 0 13 32486 
+199.8.81.101 0 11 250347 
+173.19.80.202 0 7 205708 
+108.35.221.128 0 10 264839 
+171.161.160.10 0 26 503942 
+217.196.166.38 0 11 262369 
+108.56.204.236 0 11 250347 
+71.231.250.252 0 11 250347 
+174.51.232.151 0 13 272003 
+205.188.116.18 0 1 32493 
+65.87.105.3 0 13 250666 
+78.158.11.226 0 1 272 
+74.15.112.176 0 5 24111 
+24.185.21.241 0 11 250347 
+69.171.224.3 0 1 183228 
+69.183.235.188 0 22 500694 
+208.191.227.110 0 11 250347 
+150.70.75.33 0 1 20060 
+24.192.73.157 0 11 250347 
+64.197.96.170 0 41 785676 
+97.79.21.181 0 11 262369 
+128.206.140.94 0 10 252932 
+205.188.112.129 0 3 10076 
+74.90.158.61 0 11 422799 
+157.55.112.221 0 12 80765 
+95.28.120.125 0 1 183228 
+98.111.53.239 0 13 262688 
+99.235.204.245 0 11 250347 
+75.9.135.85 0 11 262369 
+1.124.85.70 0 1 923050 
+184.88.119.133 0 33 787107 
+94.15.182.249 0 10 252932 
+140.147.11.238 0 10 252932 
+219.125.94.134 0 13 272003 
+67.7.206.11 0 11 250347 
+65.52.111.220 0 1 2203 
+66.87.82.63 0 8 252522 
+205.188.117.8 0 1 216 
+96.233.102.113 0 1 183228 
+205.188.117.16 0 1 1182 
+66.87.117.228 0 11 262369 
+165.134.140.20 0 76 1751233 
+86.179.192.109 0 11 250347 
+79.113.221.72 0 11 250347 
+64.139.70.174 0 13 250666 
+70.122.85.33 0 13 250666 
+65.52.111.83 0 12 80765 
+174.126.194.173 0 30 553223 
+72.14.171.11 0 13 250666 
+96.29.106.137 0 13 251971 
+174.18.31.29 0 11 250347 
+94.53.210.176 0 11 250347 
+65.246.88.3 0 13 250666 
+166.248.13.249 0 10 252932 
+67.172.28.247 0 22 524738 
+108.49.207.112 0 11 262369 
+38.100.21.18 0 10 104921 
+72.128.73.223 0 11 250347 
+68.149.66.196 0 11 250347 
+76.185.196.250 0 15 445721 
+96.39.117.118 0 4 17563 
+82.137.208.60 0 11 250347 
+65.52.111.250 0 9 56597 
+201.46.178.96 0 10 252932 
+END_VISITOR
+
+# Date - Pages - Hits - Bandwidth - Visits
+BEGIN_DAY 31
+20120701 0 280 6133223 0
+20120702 1 130 5562431 1
+20120703 3 120 2468181 1
+20120704 0 77 5390763 0
+20120705 0 86 1901258 0
+20120706 0 109 2818290 0
+20120707 0 80 3448031 0
+20120708 0 48 1208784 0
+20120709 0 72 3456981 0
+20120710 0 188 3643719 0
+20120711 7 136 2508395 2
+20120712 1 125 3440205 1
+20120713 0 86 3127864 0
+20120714 0 57 1393277 0
+20120715 0 86 2437061 0
+20120716 0 33 781421 0
+20120717 0 124 2962713 0
+20120718 0 64 2043875 0
+20120719 0 132 4998801 0
+20120720 1 67 1580816 1
+20120721 1 59 1526038 1
+20120722 0 1 272 0
+20120723 2 84 1918973 2
+20120724 20 196 4846046 1
+20120725 5 51 3758051 3
+20120726 1 102 5236781 1
+20120727 0 65 1565517 0
+20120728 0 40 1011728 0
+20120729 2 38 857298 1
+20120730 0 31 3195761 0
+20120731 0 10 264839 0
+END_DAY
+
+# Session range - Number of visits
+BEGIN_SESSION 5
+1h+ 1
+5mn-15mn 1
+30s-2mn 1
+2mn-5mn 1
+0s-30s 11
+END_SESSION
+
+# URL - Pages - Bandwidth - Entry - Exit
+# The 25 first Pages must be first (order not required for others)
+BEGIN_SIDER 21
+/user/login 7 102999 4 4
+/ 6 80269 3 2
+/sites/otsamerica.org/files/pages-docs/2012/The%20Orthodox%20Theological%20Society%20will%20hold%20its%202012%20Annual%20Meeting%20September%2020.docx 6 400272 6 6
+/admin 3 47199 0 0
+/admin/store 3 58989 0 0
+/admin/structure 2 34120 0 0
+/admin/store/settings/payment/method/paypal_wps 2 47593 1 2
+/admin/store/orders/2 2 366 0 1
+/admin/store/settings/payment 1 24584 0 0
+/admin/structure/context/list/About/export 1 17022 0 0
+/admin/store/products/attributes/3/edit 1 19759 0 0
+/register 1 33703 0 0
+/users/zotsaadmin 1 42294 0 0
+/admin/structure/context/list/About/edit 1 195302 0 0
+/admin/store/orders/view 1 74791 0 0
+/meetings 1 38467 0 0
+/admin/structure/context 1 22396 0 0
+/admin/store/products/view 1 192 0 0
+/admin/index 1 46592 0 0
+/admin/store/products/attributes 1 19108 0 0
+/sites/otsamerica.org/files/pages-docs/2011/Submitting-abstract.docx 1 96379 1 0
+END_SIDER

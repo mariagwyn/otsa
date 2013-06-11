@@ -63,10 +63,10 @@ a:active {
 
 /* Specific Typography
 -------------------------------------------------------------- */
-h2 {font: 1.5em Georgia, "Times New Roman", serif; letter-spacing: 1px; margin: .5em 0; color: #325180;}
-h3 {font: bold 1em Verdana, Arial, sans-serif; letter-spacing: 2px;
+h2 {font: 1.5em Georgia, "Times New Roman", serif; margin: .5em 0; color: #325180;}
+h3 {font: bold 1em Verdana, Arial, sans-serif;
   text-transform: none;}
-h4 {font: bold 1.1em Georgia, "Times New Roman", serif; letter-spacing: 1px;}
+h4 {font: bold 1.1em Georgia, "Times New Roman", serif;}
 h5 {font: normal Verdana, Arial, sans-serif;}
 h6 {font: bold Verdana, Arial, sans-serif; color: #325180;}
 #site-name {
@@ -527,9 +527,21 @@ blockquote a:link {
 /* Typography and backgrounds for all form buttons 
 http://www.colorzilla.com/gradient-editor/#9eb8df+0,9eb8df+0,5a82bf+9,566d8f+25,5a83bf+84,9eb8df+100;Custom
 */
-.button-submit {display:inline-block;}
-a.button-submit ,a:link.button-submit , a:visited.button-submit  {color: #fff;} 
-form input.form-submit, .button-submit {
+.button-submit, .line-item-summary-view-cart a, .line-item-summary-checkout a, .field-name-field-register-now a {display:inline-block;}
+a.button-submit, 
+a:link.button-submit , 
+a:visited.button-submit, 
+.line-item-summary-view-cart a:hover, 
+.line-item-summary-checkout a:hover, 
+.field-name-field-register-now a:hover, 
+.line-item-summary-view-cart a:visited, 
+.line-item-summary-checkout a:visited, 
+.field-name-field-register-now a:visited  
+{color: #fff;} 
+form input.form-submit, .button-submit, 
+.line-item-summary-view-cart a, 
+.line-item-summary-checkout a, 
+.field-name-field-register-now a {
 	background: #9eb8df; /* Old browsers */
 	background: -moz-linear-gradient(top, #9eb8df 0%, #5a82bf 9%, #566d8f 25%, #5a83bf 84%, #9eb8df 100%); /* FF3.6+ */
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#9eb8df), color-stop(9%,#5a82bf), color-stop(25%,#566d8f), color-stop(84%,#5a83bf), color-stop(100%,#9eb8df)); /* Chrome,Safari4+ */
@@ -558,7 +570,13 @@ form input.form-submit:hover,
 form input.form-submit.hover,
 form input.form-submit:focus,
 .button-submit:hover,
-.button-submit:focus {
+.button-submit:focus,
+.line-item-summary-view-cart a:hover, 
+.line-item-summary-checkout a:hover, 
+.field-name-field-register-now a:hover,
+.line-item-summary-view-cart a:focus, 
+.line-item-summary-checkout a:focus, 
+.field-name-field-register-now a:focus{
 	background: #ffd690; /* Old browsers */
 	background: -moz-linear-gradient(top, #ffd690 0%, #ffc86b 27%, #ffc86b 100%); /* FF3.6+ */
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffd690), color-stop(27%,#ffc86b), color-stop(100%,#ffc86b)); /* Chrome,Safari4+ */
@@ -692,7 +710,18 @@ caption {padding: 0.75em; font: 1.5em Georgia, Times, serif;
 
 /* Views
 /-------------------------------------------------------------- */
-.views-row {margin: 0 0 1em 0;}
+.views-row {margin: 0 0 0 0;}
+div[id^="block-views-otsa_roles-block"].block {margin-bottom: .25em;}
+div[id^="block-views-otsa_roles-block"] h2 {font-size: 1em;}
+div[id^="block-views-otsa_roles-block"] h3 {font-size: 1em;}
+
+.view-id-meeting_schedule .view-content {margin-top: 2em;}
+.view-id-meeting_schedule .view-grouping-header {font-weight: bold; font-size: 1em;}
+.view-id-meeting_schedule .view-grouping-header .date-display-single {}
+.view-id-meeting_schedule caption {padding: .5em 0; font-size: 1.4em; border: none;}
+
+.addressfield-container-inline.name-block {font-weight:bold;}
+
 /* Biblio
 /-------------------------------------------------------------- */
 .block .content-inner-inner .content-content .inner .content ul.biblio-export-buttons {display:block; margin:.7em 0 0 0; font-size:.9em;}
@@ -748,28 +777,10 @@ margin: 1em 0 1em 0;
     margin: 0 10px 0 0;
     width: 26px;
 }
-/* Ubercart
+/* Commerce
 /-------------------------------------------------------------- */
+.form-item-checkout-donate-commerce-donate-amount-und-select input#edit-checkout-donate-commerce-donate-amount-und-select-none {display:none;}
 
-.order-pane-table thead th {
-  background-color: #9EB8DF;
-  border-color: #5A82BF;
-  border-style: solid;
-  border-width: 0px 0px 3px 0px;
-  font-weight: bold;
-  padding: 4px 8px;
-}
-.order-pane thead {
-background-color: #9EB8DF;
-}
-.order-pane-table tr {
-  border-color: #bbb;
-  border-style: solid;
-  border-width: 0px 0px 1px 0px;
-}
-
-.view-uc-products .views-view-grid td {border-width:0; padding:1em 3em 0 0;}
-.view-uc-products .views-view-grid td.col-last {padding:1em 0 0 0;}
 .node-product-kit .product-qty {display:none;}
 
 .form-item-panes-payment-payment-method {}
@@ -1062,6 +1073,9 @@ top: 80px;
 right: 10px;
 }
 
+/*****  VIEWS Settings *****/
+
+
 .in-maintenance #site-name {margin-left: 250px;}
 .in-maintenance #main-inner {width:960px;}
 .in-maintenance #content-region {margin-left:250px; width:720px;}
@@ -1071,3 +1085,5 @@ right: 10px;
 .contact-link-icon-custom {display:block;}
 td.views-field-name {width:10em;}
 .not-logged-in li#menu-2005-1 {display:none;} /* hide forum */
+
+#pid-meetings-2012-schedule h1.title:after {content: " [DRAFT]";}

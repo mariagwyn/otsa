@@ -1,0 +1,2336 @@
+AWSTATS DATA FILE 7.0 (build 1.971)
+# If you remove this file, all statistics for date 201205 will be lost/reset.
+# Last config file used to build this data file was /home/otsameri/tmp/awstats/awstats.otsamerica.org.conf.
+
+# Position (offset in bytes) in this file for beginning of each section for
+# direct I/O access. If you made changes somewhere in this file, you should
+# also remove completely the MAP section (AWStats will rewrite it at next
+# update).
+BEGIN_MAP 27
+POS_GENERAL 2008                
+POS_TIME 2693                
+POS_VISITOR 31218               
+POS_DAY 59007               
+POS_DOMAIN 3712                
+POS_LOGIN 4837                
+POS_ROBOT 4992                
+POS_WORMS 5646                
+POS_EMAILSENDER 5777                
+POS_EMAILRECEIVER 5920                
+POS_SESSION 60001               
+POS_SIDER 60220               
+POS_FILETYPES 6055                
+POS_DOWNLOADS 6396                
+POS_OS 8142                
+POS_BROWSER 8442                
+POS_SCREENSIZE 10131               
+POS_UNKNOWNREFERER 10205               
+POS_UNKNOWNREFERERBROWSER 12460               
+POS_ORIGIN 13375               
+POS_SEREFERRALS 13530               
+POS_PAGEREFS 13736               
+POS_SEARCHWORDS 19216               
+POS_KEYWORDS 21470               
+POS_MISC 2354                
+POS_ERRORS 22832               
+POS_CLUSTER 4693                
+POS_SIDER_404 22987               
+END_MAP
+
+# LastLine    = Date of last record processed - Last record line number in last log - Last record offset in last log - Last record signature value
+# FirstTime   = Date of first visit for history file
+# LastTime    = Date of last visit for history file
+# LastUpdate  = Date of last update - Nb of parsed records - Nb of parsed old records - Nb of parsed new records - Nb of parsed corrupted - Nb of parsed dropped
+# TotalVisits = Number of visits
+# TotalUnique = Number of unique visitors
+# MonthHostsKnown   = Number of hosts known
+# MonthHostsUnKnown = Number of hosts unknown
+BEGIN_GENERAL 8
+LastLine 20120601000133 910 175298 4860796583557
+FirstTime 20120501001222
+LastTime 20120531235751
+LastUpdate 20120601080547 910 0 909 0 0
+TotalVisits 5258                
+TotalUnique 637                 
+MonthHostsKnown 0                   
+MonthHostsUnknown 713                 
+END_GENERAL
+
+# Misc ID - Pages - Hits - Bandwidth
+BEGIN_MISC 10
+QuickTimeSupport 0 0 0
+JavaEnabled 0 0 0
+JavascriptDisabled 0 0 0
+PDFSupport 0 0 0
+WindowsMediaPlayerSupport 0 0 0
+AddToFavourites 0 1155 0
+RealPlayerSupport 0 0 0
+TotalMisc 0 0 0
+DirectorSupport 0 0 0
+FlashSupport 0 0 0
+END_MISC
+
+# Hour - Pages - Hits - Bandwidth - Not viewed Pages - Not viewed Hits - Not viewed Bandwidth
+BEGIN_TIME 24
+0 465 1053 24264355 586 721 10163318
+1 661 1390 37559950 555 749 9922820
+2 383 887 20945507 609 777 12016596
+3 385 806 17799339 638 786 12335615
+4 355 854 17269582 653 804 12045652
+5 488 1030 24754183 476 623 8705179
+6 400 1059 25083594 611 772 11956868
+7 412 1098 23931636 558 698 10833294
+8 358 872 18399324 439 562 8064723
+9 440 1093 22225699 362 486 5904799
+10 640 1638 36562554 681 854 12522984
+11 521 1331 30293352 497 691 10127576
+12 688 1646 32885776 828 1049 19423293
+13 640 1238 22532918 449 619 9054236
+14 446 1375 29534297 374 558 7670456
+15 452 1469 32161388 485 668 9256740
+16 400 1121 23368184 521 703 8699165
+17 419 1263 27256282 798 960 15183858
+18 488 1158 25605076 1050 1221 25094060
+19 591 1436 33730382 874 1052 18939507
+20 458 1296 26957769 420 591 7796999
+21 392 1169 25587861 471 616 8377833
+22 403 1123 24376562 739 922 13831192
+23 460 1106 22639909 559 711 11604120
+END_TIME
+
+# Domain - Pages - Hits - Bandwidth
+# The 25 first Pages must be first (order not required for others)
+BEGIN_DOMAIN 58
+us 5533 16133 353021102
+ie 1803 5475 119574000
+eu 1292 1362 12235810
+sg 1261 2703 50548010
+cn 404 432 12669248
+ro 193 384 8891376
+ua 188 299 7989201
+ru 128 173 5327478
+ca 88 419 8502292
+fr 47 48 1909979
+gb 44 145 6095980
+de 39 44 1009699
+sa 37 37 1362984
+cz 37 50 1489751
+nl 26 46 1312245
+lv 25 25 799707
+vn 23 23 211495
+co 19 63 1144324
+se 18 18 1222695
+no 12 63 1297495
+hk 12 12 354071
+br 12 12 246592
+gr 11 69 1121448
+jp 9 33 1281967
+au 9 46 801899
+pt 1 1 0
+il 4 24 563880
+tr 5 5 130550
+rs 3 43 8690491
+eg 1 19 548647
+ph 5 62 1552186
+kr 7 7 193062
+mx 2 36 805936
+ci 3 3 89733
+sy 1 14 90047
+in 4 26 570871
+ec 1 1 24962
+id 4 18 333123
+lb 4 19 282314
+th 2 2 56670
+et 0 1 1813332
+si 3 3 96978
+al 2 15 266072
+fi 0 13 253999
+be 1 15 259880
+cl 1 1 25064
+tw 2 2 39296
+gh 1 1 32323
+at 4 4 136332
+ee 1 1 37092
+bg 2 22 548628
+zw 2 2 62213
+pk 2 2 65341
+pl 1 1 31400
+ar 2 2 63192
+ng 2 16 263578
+ae 1 1 24962
+sk 1 15 263183
+END_DOMAIN
+
+# Cluster ID - Pages - Hits - Bandwidth
+BEGIN_CLUSTER 0
+END_CLUSTER
+
+# Login - Pages - Hits - Bandwidth - Last visit
+# The 10 first Pages must be first (order not required for others)
+BEGIN_LOGIN 0
+END_LOGIN
+
+# Robot ID - Hits - Bandwidth - Last visit - Hits on robots.txt
+# The 25 first Hits must be first (order not required for others)
+BEGIN_ROBOT 13
+bot[\s_+:,\.\;\/\\-] 3971 49438788 20120531235534 498
+spider 2754 34637834 20120531224358 88
+[\s_+:,\.\;\/\\-]bot 2668 57146647 20120531230119 673
+crawl 2004 60591673 20120530174515 22
+googlebot 1366 16036760 20120531144951 44
+robot 1283 18695658 20120531202922 64
+unknown 560 798464 20120531233237 560
+msnbot 109 1499841 20120505034139 7
+discovery 65 675452 20120523072931 12
+slurp 30 547812 20120525145041 0
+no_user_agent 25 482891 20120530151639 7
+ia_archiver 2 3122 20120529153738 2
+netcraft 1 32326 20120503133721 0
+END_ROBOT
+
+# Worm ID - Hits - Bandwidth - Last visit
+# The 5 first Hits must be first (order not required for others)
+BEGIN_WORMS 0
+END_WORMS
+
+# EMail - Hits - Bandwidth - Last visit
+# The 20 first Hits must be first (order not required for others)
+BEGIN_EMAILSENDER 0
+END_EMAILSENDER
+
+# EMail - Hits - Bandwidth - Last visit
+# The 20 first hits must be first (order not required for others)
+BEGIN_EMAILRECEIVER 0
+END_EMAILRECEIVER
+
+# Files type - Hits - Bandwidth - Bandwidth without compression - Bandwidth after compression
+BEGIN_FILETYPES 14
+css 5830 22412139 0 0
+png 6317 366813294 0 0
+pdf 29 18868361 0 0
+txt 1 19151 0 0
+swf 2 2800 0 0
+php 287 9720766 0 0
+html 8178 65676938 0 0
+docx 24 1813781 0 0
+xml 7 437452 0 0
+jpg 10 136225 0 0
+js 4879 63784730 0 0
+doc 10 460288 0 0
+Unknown 2847 68395323 0 0
+gif 90 94937 0 0
+END_FILETYPES
+
+# Downloads - Hits - Bandwidth
+BEGIN_DOWNLOADS 24
+/robots.txt 1970 0 2755970
+/sites/otsamerica.org/files/news-docs/Volos_2010-2011_en.pdf 12 218 17730884
+/sites/otsamerica.org/files/general/2011/OTSA-Draft-Bylaws.pdf 7 0 249389
+/sites/otsamerica.org/files/pages-docs/2011/OTSA%202008%20-%20Program.pdf 6 2 1706523
+/meetings/OTSA_2008-Program.pdf 6 0 87682
+/sites/otsamerica.org/files/pages-docs/2011/OTSA-2009-Prog.pdf 6 0 498432
+/sites/otsamerica.org/files/pages-docs/2011/OTSA-2011-Call.pdf 5 0 925675
+/sites/otsamerica.org/files/pages-docs/2011/OTSA-2011-Program.pdf 5 2 1147326
+/sites/otsamerica.org/files/pages-docs/2011/OTSA-2010-Call.pdf 4 0 761752
+/sites/otsamerica.org/files/pages-docs/2011/Treas2009.doc 4 0 94208
+/sites/otsamerica.org/files/pages-docs/2011/OTSA-2009-Call.pdf 4 0 253316
+/sites/otsamerica.org/files/pages-docs/2011/2010-OTSA-Program.doc 4 0 501760
+/sites/otsamerica.org/files/pages-docs/2011/Submitting-abstract.doc 4 0 133120
+/sites/otsamerica.org/files/pages-docs/2011/OTSA-2009-Abstracts.pdf 4 0 643204
+/sites/otsamerica.org/files/news-docs/CAREE-conf.pdf 3 0 327321
+/sites/otsamerica.org/files/pages-docs/2011/2010-OTSA-Program.pdf 3 0 540162
+/sites/otsamerica.org/files/pages-docs/2011/Treas2006.doc 3 0 72192
+/sites/otsamerica.org/files/pages-docs/2011/Treas2003.doc 1 0 21504
+/sites/otsamerica.org/files/pages-docs/2011/2011-May-OTSA-MembershipLetter.pdf 1 0 174392
+/sites/otsamerica.org/files/pages-docs/2011/2011-1st-OTSA-MembershipLetter.pdf 1 0 149045
+/sites/otsamerica.org/files/pages-docs/2011/2009-OTSA-BusinessMeeting_Minutes.pdf 1 0 62849
+/sites/otsamerica.org/files/pages-docs/2011/Treas2004.doc 1 0 22016
+/sites/otsamerica.org/files/member_cvs/McDowell%20-%20CV.pdf 1 0 91293
+//CHANGELOG.txt 1 0 19151
+END_DOWNLOADS
+
+# OS ID - Hits
+BEGIN_OS 23
+blackberry 1
+linuxandroid 86
+macintosh 3
+winlong 617
+winxp 3128
+symbian 24
+win2000 121
+linuxfedora 1
+winvista 3
+winunknown 10
+win95 19
+wince 9
+win2003 223
+winnt 207
+java 251
+win98 12
+linuxubuntu 19
+linux 58
+win7 2881
+win16 2
+macosx 1910
+winme 25
+Unknown 19123
+END_OS
+
+# Browser ID - Hits
+BEGIN_BROWSER 109
+firefox3.6.24 10
+msie6.0 650
+firefox3.8 1
+firefox3.0.1 57
+chrome4.0.221.7 1
+firefox3.0.14 3
+safari4.0.5 30
+msie4.01 3
+chrome6.0.400.0 2
+safari5.0.6 139
+curl 1
+safari5.0.2 36
+msie8.0 1284
+firefox2.0.0.14 1
+opera7.60 3
+netscape3.0 2
+msie7.0 795
+firefox9.0.1 19
+firefox3.6.27 1
+opera9.64 2
+wget 1
+docomo 12
+chrome16.0.912.21 19
+w3c_validator 1
+netscape 7
+firefox1.5.0.7 2
+msie5.01 6
+opera7.11 11
+firefox13.0 45
+chrome15.0.874.120 15
+opera9.01 3
+firefox3.5.2 14
+firefox2.0.0.6 1
+firefox7.0.1 280
+firefox12.0 1079
+chrome19.0.1084.46 420
+firefox3.6.23 26
+netscape0.6 3
+firefox3.5.5 6
+mozilla 416
+safari5.0.4 20
+netscape6.0 7
+netscape4.0 8
+firefox3.6.3 7
+firefox3.0.10 1
+firefox10.0.2 47
+safari 25
+firefox3.0.15 4
+firefox5.0 20
+chrome18.0.1025.162 245
+firefox4.0.1 62
+android 86
+safari3.1.1 1
+opera9.00 20
+chrome12.0.742.112 1
+firefox2.0.0.12 6
+firefox3.5.3 2
+msie3.02 9
+opera9.80 81
+links 6
+iphone 42
+netscape4.76 6
+firefox6.0.2 12
+netscape0.91 3
+firefox2.0.0.9 12
+safari4.1 5
+firefox3.5.8 16
+msie8.0.6001.18241 1
+safari5.1.5 344
+msie2.0 9
+firefox3.6.9 1
+msie5.0 106
+msie9.0 1001
+firefox3.6.10 1
+opera7.54 5
+Unknown 19000
+firefox3.0.8 1
+firefox11.0 261
+safari5.0.5 34
+blackberry 1
+netscape4.61 3
+firefox3.0.4 2
+safari3.1.2 1
+opera8.00 12
+chrome12.0.742 20
+firefox3.6.17 326
+opera8.01 8
+msie5.5 36
+chrome18.0.1025.165 27
+chrome12.0.742.122 22
+chrome18.0.1025.168 561
+safari5.1.7 54
+netscape4.79 12
+firefox3.0.5 1
+firefox3.0.3 1
+firefox10.0.4 15
+firefox1.5.0.10 1
+safari5.1.2 74
+firefox3.0.6 2
+firefox5.0.1 2
+firefox6.0 1
+safari5.1 332
+firefox3.6.12 6
+firefox2.0.0.16 4
+msie 1
+opera9.52 2
+firefox3.0.19 19
+chrome19.0.1084.52 260
+firefox3.6.13 2
+END_BROWSER
+
+# Screen size - Hits
+BEGIN_SCREENSIZE 0
+END_SCREENSIZE
+
+# Unknown referer OS - Last visit date
+BEGIN_UNKNOWNREFERER 37
+DoCoMo/2.0_P900i(c100;TB;W24H11)_(compatible;_ichiro/mobile_goo;__http://search.goo.ne.jp/option/use/sub4/sub4-1/) 20120522092342
+Mozilla/5.0_(compatible;_OpenindexShallowSpider/Nutch-1.5-dev;__http://www.openindex.io/en/webmasters/spider.html) 20120517021715
+Mozilla/6.0 20120524064309
+findlinks/2.0.2_(_http://wortschatz.uni-leipzig.de/findlinks/) 20120511113028
+Mozilla/4.0_(compatible;_Blog_Search;) 20120531175123
+Mozilla/3.0_(compatible) 20120526221504
+facebookplatform/1.0_(_http://developers.facebook.com) 20120522221709
+User-Agent:_Drupal_(_http://drupal.org/) 20120531220842
+W3C_Validator/1.3 20120501191301
+Mozilla/4.0 20120521053304
+YahooCacheSystem 20120510152720
+facebookexternalhit/1.1_(_http://www.facebook.com/externalhit_uatext.php) 20120531012359
+Mozilla/4.0_(compatible;_ICS) 20120515112956
+nutch-1.4/Nutch-1.4 20120505041654
+\ 20120526080813
+Mozilla/5.0_(compatible;_ScoutJet;__http://www.scoutjet.com/) 20120514151306
+Ruby 20120526080823
+Nuance/Tegic_Linguistics_Team 20120507005256
+findlinks/2.5_(_http://wortschatz.uni-leipzig.de/findlinks/) 20120504154322
+Mozilla/5.0_(compatible;_Blekkobot;_ScoutJet;__http://blekko.com/about/blekkobot) 20120515025054
+Mozilla/5.0_(compatible;_AcoonBot/4.10.8;__http://www.acoon.de/robot.asp) 20120516030041
+Python-urllib/2.6 20120503154228
+Mozilla/5.0_(compatible;_Baiduspider/2.0;__http://www.baidu.com/search/spider.html) 20120518071135
+facebookexternalhit/1.0_(_http://www.facebook.com/externalhit_uatext.php) 20120526144941
+YottaaMonitor 20120531235751
+findlinks/2.6_(_http://wortschatz.uni-leipzig.de/findlinks/) 20120523081351
+coccoc 20120523202039
+Mozilla/5.0_(compatible;_Mail.RU/2.0) 20120526224851
+CCBot/1.0_(_http://www.commoncrawl.org/bot.html) 20120518071145
+Wget/1.9_cvs-stable_(Red_Hat_modified) 20120524062849
+GSLFbot 20120529133854
+Mozila/5.0_(compatible;_StudioFACA_Search;__http://www.studiofaca.com/) 20120503125400
+mozilla 20120524213536
+Mnogosearch-3.1.21 20120514182533
+Mozilla/5.0_(compatible;_Seznam_screenshot-generator_2.0;__http://fulltext.sblog.cz/screenshot/) 20120520002214
+Mozilla/4.0_(compatible;) 20120508171254
+Mozilla/5.0_(compatible;_Dow_Jones_Searchbot) 20120521194205
+END_UNKNOWNREFERER
+
+# Unknown referer Browser - Last visit date
+BEGIN_UNKNOWNREFERERBROWSER 19
+\ 20120526080813
+Nuance/Tegic_Linguistics_Team 20120507005256
+Ruby 20120526080823
+Python-urllib/2.6 20120503154228
+facebookexternalhit/1.0_(_http://www.facebook.com/externalhit_uatext.php) 20120526144941
+YottaaMonitor 20120531235751
+coccoc 20120523202039
+CCBot/1.0_(_http://www.commoncrawl.org/bot.html) 20120518071145
+Java/1.4.1_04 20120520202045
+GSLFbot 20120529133854
+facebookplatform/1.0_(_http://developers.facebook.com) 20120522221709
+User-Agent:_Drupal_(_http://drupal.org/) 20120531220842
+Mozila/5.0_(compatible;_StudioFACA_Search;__http://www.studiofaca.com/) 20120503125400
+YahooCacheSystem 20120510152720
+facebookexternalhit/1.1_(_http://www.facebook.com/externalhit_uatext.php) 20120531012359
+Mnogosearch-3.1.21 20120514182533
+Java/1.6.0_22 20120504052619
+nutch-1.4/Nutch-1.4 20120505041654
+Java/1.6.0_04 20120526181652
+END_UNKNOWNREFERERBROWSER
+
+# Origin - Pages - Hits 
+BEGIN_ORIGIN 6
+From0 8804 9337
+From1 408 421
+From2 156 169
+From3 319 369
+From4 1658 18437
+From5 0 0
+END_ORIGIN
+
+# Search engine referers ID - Pages - Hits
+BEGIN_SEREFERRALS 6
+google 143 155
+search 3 3
+aol 1 1
+bing 7 7
+yandex 0 1
+ask 2 2
+END_SEREFERRALS
+
+# External page referers - Pages - Hits
+# The 25 first Pages must be first (order not required for others)
+BEGIN_PAGEREFS 121
+http://www.svots.edu/events/dean-fr-john-behr-deliver-florovsky-lecture-otsas-annual-meeting 20 20
+http://kemsystem.ru 18 18
+http://korop.in 14 14
+http://blablabla.in 12 12
+http://lagrande.ru 10 10
+http://ocl.org/node/397 9 9
+http://tanchiki.org 8 8
+http://www.stazher.com 8 8
+http://assemblyofbishops.org/ministries/endorsed-organizations 7 7
+http://megalovehouse.info 6 6
+http://ocampr.org 6 6
+http://org.saferpage.com/otsamerica 6 6
+http://autobeseda.ru 6 6
+http://www.facebook.com/l.php 5 5
+http://ocampr.org/conference/ 5 5
+http://ocampr.org/#content 4 4
+http://inbox.centurylink.net/zimbra/h/search 4 4
+http://mlmmarketingnews.com 4 4
+http://xxxtacy.us 4 4
+http://hair-tips.net 4 4
+http://www.duq.edu/theology/faculty/bordeianu.cfm 4 4
+http://us.mc1223.mail.yahoo.com/mc/welcome 4 4
+http://www.hchc.edu/patristics/resources.html 3 3
+http://www.ocampr.org 3 3
+http://m.facebook.com/l.php 3 3
+http://con-w.com/2012/04/18/occupy-the-military/ 2 2
+http://www.backlinkwatch.com/index.php 1 1
+http://ocampr.org/members/ 2 2
+http://ocampr.org/archives/ 1 1
+http://fotobaza.su 2 2
+http://translate.google.ro/translate_p 1 1
+http://www.bigfastweightloss.com 1 1
+http://www.mebel-mia.ru 2 2
+http://extrabot.com/help/frukikijijojo.htm 2 2
+http://animetut.ru 2 2
+http://ropakyxgatu124.blogspace.fr/tag/Ayurvedic+cure+for+Depression/ 1 1
+http://www.orthodoxed.org/resources/links/ 1 1
+http://mlmmarketingnews.com 2 2
+http://translate.googleusercontent.com/translate_c 3 53
+http://java-trade.eu 1 1
+http://chromesandroid.com 2 2
+http://www.shoppingwoman.net 1 1
+http://con-w.com/2012/04/18/occupy-the-military 1 1
+http://www.hristianstvo.ru/orthodoxy/countries/usa/usorgs/ 1 1
+http://portal.brint.com/cgi-bin/cgsearch/cgsearch.cgi 1 1
+http://www.lrs.fm 1 1
+http://www.antiochian.org/links 3 3
+http://www.webstatschecker.com/stats/domain/otsamerica.org 1 1
+http://con-w.com/2012/04/28/626/ 2 2
+http://www.Topauto.it 1 1
+http://wiki.goarch.org/index.php/OTS_America_-_Brookline,_MA 1 1
+http://www.hchc.edu/hellenic/campus_life/vocation/osi/related.html 1 1
+http://www.ocl.org/node/397 2 2
+http://CON-W.COM 1 1
+http://Fastfixfashionvalley.com 1 1
+http://www.hellenic.hchc.edu/hellenic/campus_life/vocation/osi/related.html 1 1
+http://hair-news.info 2 2
+http://sovetogorod.ru/cveti_gipsofila_virashivanie.html 2 2
+http://www.bogoslov.ru/en/text/2585909/index.html 1 1
+http://www.greekorthodoxchurch.org 1 1
+http://en.wikipedia.org/wiki/Orthodox_Theological_Society_in_America 2 2
+http://36ohk6dgmcd1n-c.c.yom.mail.yahoo.net/om/api/1.0/openmail.app.invoke/36ohk6dgmcd1n/11/1.0.35/us/en-US/view.html/0 1 1
+http://www.assemblyofbishops.org/links 1 1
+http://www.we-globe.net/Weblab/SiteCommonGraveReport/www.otsamerica.org/ 1 1
+http://www.cristianismo-ortodoxo.com/heritage/divinity/ 1 1
+http://www.albatros02.ru 1 1
+http://www.romarch.org/pags.php 1 1
+http://y-xaxa.com 2 2
+http://adobe-player.ru 2 2
+http://www.cristianismo-ortodoxo.com/newsites/ 1 1
+http://mmmci.ru 2 2
+http://www.souzenergostroy.ru 2 2
+http://www.archidom.in 2 2
+http://xn--80aheskksgj.xn--p1ai 2 2
+http://hellenic.hchc.edu/hellenic/campus_life/vocation/osi/1101.html 1 1
+http://www.scoba.us/ministries/endorsed-organizations.html 2 2
+http://www.extramoneyforpageantmoms.com 1 1
+http://spotlightradio.net/discuss/member/44610/ 1 1
+http://shoesinview.com 2 2
+http://www.assemblyofbishops.org/ministries/endorsed-organizations 3 3
+http://bized.ca/later-vagine-denglanda/ 1 1
+http://www.internetparket.ru 2 2
+http://orthodoxwiki.org/User:Kalvesmaki 1 1
+http://www.pitersot.ru 2 2
+http://sovetogorod.ru/ovosh_redeka_virashivanie.html 2 2
+http://sovetogorod.ru/frukt_grushi_sorta.html 2 2
+http://sunproducts587.qapacity.com/my-blog/537759/sunlight-merchandise-sunless-tanning-lotions-stay-away-from-cancer/ 1 1
+http://hqeuropewhatches.com 1 1
+http://www.internetparket.ru 2 2
+http://oca.org/directories/organizations/the-orthodox-theological-society-in-america 3 3
+http://www.laptoptraderexpress.com 1 1
+http://socna.cosw.sc.edu/links 1 1
+http://www.webwiki.com/www.otsamerica.org 1 1
+http://www.victoriaadvocate.com/weblogs/demyhurjece244/2012/apr/27/excess-weight-loss-1st-ways/ 1 1
+http://www.callawaypreownedclubs.com 1 1
+http://ublaze.ru 2 2
+http://edfaststore.com 1 1
+http://www.online-casino-boni.de 1 1
+http://www.Auto4sale.info 1 1
+http://www.studiofaca.com 3 3
+http://www.facebook.com 2 2
+http://www.ausergrubhof.info 1 1
+http://omega630.ru 1 1
+http://ocampr.org/ethicsbioethics/ 1 1
+http://site-connect.net/info/www.builders-in-london.ulubiona-kwiaciarnia.pl 1 1
+http://video.cosmosonline.ru 2 2
+http://glassesvogue.com 2 2
+http://www.antiochian.org/content/links 3 3
+http://orthodoxwiki.org/Orthodox_Theological_Society_in_America 1 1
+http://svots.edu/events/dean-fr-john-behr-deliver-florovsky-lecture-otsas-annual-meeting 2 2
+http://flaksearch.com/s/Orthodox_Theological_Society_in_America 1 1
+http://shareyt.com 2 2
+http://www.semrush.com/info/otsamerica.org 1 1
+http://osramkar.info 1 1
+http://ocampr.org/bioethics/ 1 1
+http://kuponshop.net 2 2
+http://assemblyofbishops.org/links 1 1
+http://webfiles.org.ua 1 1
+http://www.hellenic.hchc.edu/hellenic/campus_life/vocation/osi/1101.html 1 1
+http://www.goarch.org/resources/links 1 1
+http://36ohk6dgmcd1n-c.c.yom.mail.yahoo.net/om/api/1.0/openmail.app.invoke/36ohk6dgmcd1n/11/1.0.35/us_sbc/en-US-x-sbc/view.html/0 2 2
+END_PAGEREFS
+
+# Search keyphrases - Number of search
+# The 10 first number of search must be first (order not required for others)
+BEGIN_SEARCHWORDS 57
+otsa 8
+orthodox+theological+society 8
+orthodox+theology 8
+orthodox+theological+society+of+america 8
+fellowship+of+patristic+churches+international 4
+published+news+upcoming+news+submit+a+new+story+groups+lutheran+general 4
+association+for+the+study+of+eastern+christian+history+and+culture 3
+societas+liturgica 3
+american+theological+societies 2
+orthodox+sacramental+theology 2
+2012+theology+meeting 2
+society+for+the+study+of+eastern+orthodoxy 2
+orthodox+theological+society+in+america 2
+amy+slagle+orthodoxy 2
+avg 2
+american+theological+society+september+2012 2
+towards+a+common+date+of+easter 2
+naps+2012 2
+frs.+georges+florovsky+and+sergey+bulgakov+a+conflict+of+typologies+concerning+the+dialogue+of+orthodoxy+and+contemporary+society%3f 2
+theology+meetings+massachusetts 1
+thelogical+orthodox+association+of+america 1
+asec+georgetown+university+2012 1
+theology+society 1
+society+in+america 1
+published+news+upcoming+news+submit+a+new+story+groups+traditions 1
+dr+anton+vrame 1
+orthodox+theological+soceity 1
+theological+society+in+america 1
+societies+in+america 1
+naps+2012+conference 1
+ortodox+register+directory 1
+pavlos+koumarianos 1
+essence+unknowable+nyssa 1
+nicholas+zernov+orthodox 1
+naps+conference+chicago+2012 1
+theology+call+for+papers+orthodox 1
+father+radu+bordeianu 1
+ecological+liturgy 1
+paper+on+st.+gregory+of+nyssa 1
+orthodox+saint+logo 1
+%e2%80%9cthe+compatibility+of+the+principles+of+biological+evolution+with+eastern+orthodoxy+%e2%80%9d 1
+orthodox+theologians 1
+naps+conference+2012+chicago 1
+pavlos+koumanarios 1
+naps+conference+2012 1
+theology+scholars+society 1
+published+news+upcoming+news+submit+a+new+story+groups+americas+secret+societies 1
+north+american+theological+society 1
+orthodox+theological+association 1
+nicholas+zernov 1
+nicholas+afanasiev 1
+logos+an+interdisciplinary+forum+of+orthodox+scholars 1
+bordeianu+r.+2009+.+orthodox-catholic+dialogue+retrieving+eucharistic+ecclesiology.+journal+of+ecumenical+studies+44+2+239-265. 1
+american+christian+theological+societies 1
+logo+ortodox 1
+orthodox+catholic+theological+society 1
+gregory+of+nyssa+unknowable 1
+END_SEARCHWORDS
+
+# Search keywords - Number of search
+# The 25 first number of search must be first (order not required for others)
+BEGIN_KEYWORDS 127
+orthodox 37
+of 30
+society 28
+theological 28
+theology 16
+america 14
+news 12
+2012 11
+a 10
+the 8
+otsa 8
+orthodoxy 7
+and 7
+story 6
+submit 6
+groups 6
+new 6
+upcoming 6
+for 6
+published 6
+eastern 6
+american 6
+naps 6
+association 5
+study 5
+florovsky 2
+meetings 1
+georges 2
+date 2
+ortodox 2
+on 1
+north 1
+christian 4
+concerning 2
+44 1
+history 3
+contemporary 2
+conflict 2
+compatibility 1
+gregory 2
+principles 1
+soceity 1
+society%3f 2
+anton 1
+massachusetts 1
+with 1
+interdisciplinary 1
+sergey 2
+asec 1
+easter 2
+unknowable 2
+forum 1
+theologians 1
+ecclesiology. 1
+orthodox-catholic 1
+towards 2
+conference 4
+2009 1
+afanasiev 1
+paper 1
+societies 5
+journal 1
+bulgakov 2
+patristic 4
+eucharistic 1
+meeting 2
+traditions 1
+avg 2
+dr 1
+secret 1
+common 2
+frs. 2
+logo 2
+ecological 1
+bordeianu 2
+liturgica 3
+st. 1
+fellowship 4
+an 1
+vrame 1
+sacramental 2
+dialogue 3
+retrieving 1
+radu 1
+2 1
+americas 1
+koumanarios 1
+directory 1
+koumarianos 1
+logos 1
+in 5
+culture 3
+nicholas 3
+ecumenical 1
+nyssa 3
+georgetown 1
+typologies 2
+thelogical 1
+r. 1
+biological 1
+zernov 2
+saint 1
+%e2%80%9d 1
+chicago 2
+essence 1
+father 1
+scholars 2
+pavlos 2
+lutheran 4
+september 2
+general 4
+slagle 2
+catholic 1
+papers 1
+. 1
+studies 1
+call 1
+239-265. 1
+%e2%80%9cthe 1
+university 1
+societas 3
+liturgy 1
+register 1
+evolution 1
+churches 4
+amy 2
+international 4
+END_KEYWORDS
+
+# Errors - Hits - Bandwidth
+BEGIN_ERRORS 6
+403 937 20252400
+302 206 0
+206 8 298968
+500 474 9477226
+301 1 0
+404 494 7595791
+END_ERRORS
+
+# URL with 404 errors - Hits - Last URL referer
+BEGIN_SIDER_404 202
+/pdfs/2010/2010-OTSA-Program.doc 2 -
+/annual-meetings/2003.html 1 -
+//phpMyAdmin-2.5.6-rc2/index.php 2 -
+//phpMyAdmin-2.5.5-pl1/index.php 2 -
+/users/kyriakikfitzgerald 1 -
+//web/phpMyAdmin/index.php 1 -
+/taxonomy/term/115/feed 1 -
+/wp-admin/index.php 1 -
+/sites/otsamerica.org/files/js/click.specialSubmit 1 -
+/annual.html 3 -
+//www.otsamerica.org/otsanews/index.php 1 http://www.otsamerica.org//www.otsamerica.org/otsanews/index.php
+/inc/fckeditor/editor/dialog/fck_about.html 1 -
+/round 1 -
+//phpMyAdmin-2.5.1/index.php 2 -
+/javascripts/FCKeditor/editor/dialog/fck_about.html 1 -
+/sites/otsamerica.org/files/js/+u.className+ 1 -
+/assets/galleries/75/1img_0/0 1 -
+/taxonomy/term/121/feed 1 -
+/otsanews/announcements.php 5 -
+/pdfs/2009/OTSA-2009-Reg.pdf 3 -
+//phpMyAdmin/index.php 3 -
+/manager/fckeditor/editor/dialog/fck_about.html 1 -
+/users/elizabeth-prodromou 1 -
+/common/FCKeditor/editor/dialog/fck_about.html 1 -
+/repbi5aiomsa0h3os 1 -
+//web/index.php 1 -
+/users/bucurbduqedu 1 -
+/common/roarretary 1 -
+/otsanews/OTSANEWSfall06.pdf 2 -
+/about/offcesop 1 -
+/users/jjones 10 -
+/public/FCKeditor/editor/dialog/fck_about.html 1 -
+http://www.otsamerica.org/node/211/ 1 http://www.otsamerica.org/node/211/
+//index.php 49 -
+/node/signup.php 2 http://otsamerica.org/node/
+/inprint/index.php 6 -
+/otsanews/node/10 1 -
+//pma/index.php 1 -
+/t&gs/ew=s4-amp-events&rsh22o7lutions&ppsid==4&sh=227&ppsid=&pid=9515149 1 -
+/skins/acquia_marina_default/images/close-quote.png 2 http://www.otsamerica.org/sites/otsamerica.org/files/css/css_M-su9goJX6OANc-SZpNQisunNHqfUtbxzSOVQkWvt2k.css
+//phpMyAdmin-2.5.5/index.php 2 -
+//xampp/phpmyadmin/index.php 1 -
+/text/plain 1 -
+/javascript/fckeditor/editor/dialog/fck_about.html 1 -
+/sites/otsamerica.org/files/js/).replace(T, 1 -
+/dogfold 1 -
+/includes/FCKeditor/editor/dialog/fck_about.html 1 -
+/users/pthamalis 1 -
+/images/books/gd-pastoralrule.gif 1 -
+/system/fckeditor/editor/dialog/fck_about.html 1 -
+/wp-login.php 2 -
+/and/or 1 -
+/sites/otsamerica.org/files/js/)c.isEmptyObject(b) 1 -
+/www.orientecristiano.com 1 -
+/pdfs/Orthodoxy%20&%20Environment%20Conference%20Schedule%202007.pdf 3 -
+/_plugin/FCKeditor/editor/dialog/fck_about.html 1 -
+/pdfs/Orthodoxy%2520%26%2520Environment%2520Conference%2520Schedule%25202007.pdf 2 -
+/users/jwallac6 1 -
+/public/fckeditor/editor/dialog/fck_about.html 1 -
+/javascript/FCKeditor/editor/dialog/fck_about.html 1 -
+/sites/otsamerica.org/files/js/window. 1 -
+/about/index.php 1 http://www.otsamerica.org/index.php
+/thumb.php 1 http://www.otsamerica.org/sites/all/themes/fusion/fusion_core/css/ie6-fixes.css
+/about/officers.php 5 -
+/users/crina 1 -
+/skins/acquia_marina_default/images/open-quote.png 2 http://www.otsamerica.org/sites/otsamerica.org/files/css/css_M-su9goJX6OANc-SZpNQisunNHqfUtbxzSOVQkWvt2k.css
+/inc/FCKeditor/editor/dialog/fck_about.html 1 -
+/pdfs/2010/OTSA-2010-Registration.doc 2 -
+/assetss/directory 1 -
+/plugins/FCKeditor/editor/dialog/fck_about.html 1 -
+/taxonomy/term/113/feed 1 -
+/pdfs/calls-other/IAODT-2009-newsrelease.pdf 1 -
+/g, 1 -
+//phpmyadmin1/index.php 1 -
+/pdfs/2009/OTSA-2009-Prog.doc 4 -
+//phpmyadmin/index.php 3 -
+/system/FCKeditor/editor/dialog/fck_about.html 1 -
+/pdfs/calls-other/Templeton-Orthodoxy_Science.pdf 7 -
+/subtiwations 1 -
+/officers.php 2 -
+/about/faq.php 9 -
+/administrator/index.php 1 -
+/fckeditor/editor/dialog/fck_about.html 1 -
+//phpmyadmin2/index.php 1 -
+/pdfs/2010/2010-OTSA-Program.pdf 4 -
+/mollom/captcha/ 2 -
+/include/FCKeditor/editor/dialog/fck_about.html 1 -
+//phpMyAdmin-2.5.6-rc1/index.php 2 -
+/_plugin/fckeditor/editor/dialog/fck_about.html 1 -
+/pdfs/2009/OTSA-2009-& 1 -
+/wp-trackback.php 1 -
+//phpMyAdmin-2/index.php 2 -
+/node/hmeetings/all/papers 1 -
+/common/roar/results.htm 1 -
+//wp-content/themes/delicate/timthumb.php 1 -
+/otsanews/current.phpindex.php 2 http://www.otsamerica.org/otsanews/current.phpindex.php
+/scripts/fckeditor/editor/dialog/fck_about.html 1 -
+/sites/otsamerica.org/files/js/)+b.data 1 -
+/bilder/image 1 -
+/application/x-www-form-urlencoded 1 -
+/otsanews/IE/Chrome/Opera 1 -
+/otsanews/ 4 -
+/about/online-membhrtthp/p/-application 1 -
+/js/fckeditor/editor/dialog/fck_about.html 1 -
+/pdfs/2011/OTSA-2011-Call.pdf 2 -
+/sites/all/themes/fusion/fusion_core/css/ 1 http://www.otsamerica.org/sites/all/themes/fusion/fusion_core/css/ie6-fixes.css
+/js/FCKeditor/editor/dialog/fck_about.html 1 -
+/Orthodoxy_in_America 1 http://www.otsamerica.org/sites/all/themes/fusion/fusion_core/css/ie6-fixes.css
+/sitemap.xml 6 -
+/editor/FCKeditor/editor/dialog/fck_about.html 1 -
+/plugin/FCKeditor/editor/dialog/fck_about.html 1 -
+/2010/05/26 1 -
+/blog/wp-trackback.php 1 -
+/editor/dialog/fck_about.html 1 -
+/otsanews/register 1 http://www.otsamerica.org/register
+/node//index.php 48 http://otsamerica.org/index.php
+/faq.php 1 -
+/pdfs/OTSANews-Winter07.pdf 3 -
+/sites/otsamerica.org/files/js/,x) 1 -
+/manager/FCKeditor/editor/dialog/fck_about.html 1 -
+/bottom 1 -
+/AHAH/Ajax 1 -
+/pdfs/2010/OTSA-2010-Call.docx 4 -
+//phpMyAdmin-2.5.6/index.php 2 -
+//phpMyAdmin-2.5.5-rc1/index.php 2 -
+/javascripts/fckeditor/editor/dialog/fck_about.html 1 -
+/htp/w 1 -
+/contact.html 1 -
+/contact.php 1 -
+/content/23 8 -
+/forums/laws-and-membership 3 -
+/archives/tag/%e3%82%b3%e3%82%b9%e3%83g/%e3%82%b3%e3%82%b9%e3%83%a1-%e3%82%b5%e3%83%b3%e3%83%97%e3%83%ab 1 -
+/index.php/a-propos/conseil-dareglements 1 -
+/images/photos/IAODT-2009-group.jpg 1 -
+//phpMyAdmin-2.5.7/index.php 2 -
+/Timeline_of_Orthodoxy_in_America 1 http://www.otsamerica.org/sites/all/themes/fusion/fusion_core/css/ie6-fixes.css
+/sites/otsamerica.org/files/js/),o=c.nodeName(e, 1 -
+/a 2 -
+/about/membership.php 8 -
+/sites/otsamerica.org/files/pages-docs/2012/The 2 -
+/fck/editor/dialog/fck_about.html 1 -
+/aboup 1 -
+/text/html 1 -
+/sites/otsamerica.org/files/js/)) 1 -
+/FCKeditor/editor/dialog/fck_about.html 1 -
+/otsanews/2010/05/26 1 -
+http://www.otsamerica.org/meetings/call.php 2 http://www.otsamerica.org/meetings/call.php
+/node/207 1 -
+/root/fckeditor/editor/dialog/fck_about.html 1 -
+/text/javascript 1 -
+//phpMyAdmin-2.5.7-pl1/index.php 2 -
+/pdfs/calls-other/Sophia2009.pdf 1 -
+/images/books/plekon_hh2009.png 1 -
+/root/FCKeditor/editor/dialog/fck_about.html 1 -
+//php-my-admin/index.php 4 -
+/editor/editor/dialog/fck_about.html 1 -
+/prev/next 1 -
+/users/johcd03 1 -
+/gateway/ 1 http://www.otsamerica.org/gateway/
+/text/xml 1 -
+/sites/all/modules/ubercart/uc_roles/uc_roles.js 1 -
+/dog/ 1 -
+/pdfs/2010/OTSA-2010-Registration.pdf 5 -
+/zycx/fckeditor/editor/dialog/fck_about.html 1 -
+/up/down 1 -
+/includes/fckeditor/editor/dialog/fck_about.html 1 -
+//phpMyAdmin-2.5.4/index.php 2 -
+/sites/otsamerica.org/files/js/+d.src+ 22 http://www.otsamerica.org/sites/otsamerica.org/files/js/+d.src+
+/otsanews/resolutions.php 6 -
+/bildengs/2010/papers/question-service-and-language-crisis-greek-orthodox-archdiocese-1970s-tenure 1 -
+//phpMyAdmin-2.2.3/index.php 2 -
+/plugin/fckeditor/editor/dialog/fck_about.html 1 -
+/uhtspr/viiseearch-survey 1 -
+/plugins/fckeditor/editor/dialog/fck_about.html 1 -
+/forums/general-discussion 1 -
+/pdfs/2010/OTSA-2010-Call.pdf 6 -
+/otsanews/prev/next 1 -
+/scripts/FCKeditor/editor/dialog/fck_about.html 1 -
+//phpMyAdmin-2.5.5-rc2/index.php 2 -
+/sites/otsamerica.org/files/index.001.png 1 -
+/top 1 -
+/mbes 1 -
+/IE/Chrome/Opera 1 -
+/pdfs/2009/OTSA-2009-Abstracts.pdf 11 -
+//phpMyAdmin-2.2.6/index.php 2 -
+/otsanews/index.php 31 http://www.otsamerica.org/index.php
+/application/javascript 1 -
+/include/fckeditor/editor/dialog/fck_about.html 1 -
+//websql/index.php 2 -
+/wordpress/wp-trackback.php 1 -
+/news.html 1 -
+/taxonomy/term/128/feed 1 -
+/mambots/editors/wysiwygpro/document.php 3 -
+/forum/index.php 6 http://www.otsamerica.org/index.php
+/FCK/editor/dialog/fck_about.html 1 -
+/wp/wp-trackback.php 1 -
+/pdfs/OTSA_2008-Program.pdf 1 -
+/2010/03/12 1 -
+/otsanews/forum/ 1 http://www.otsamerica.org/forum/
+/pdfs/2011/Submitting-abstract.doc 2 -
+/go.php 1 -
+/common/fckeditor/editor/dialog/fck_about.html 1 -
+END_SIDER_404
+
+# Host - Pages - Hits - Bandwidth - Last visit date - [Start date of last visit] - [Last page of last visit]
+# [Start date of last visit] and [Last page of last visit] are saved only if session is not finished
+# The 25 first Hits must be first (order not required for others)
+BEGIN_VISITOR 713
+184.72.6.169 741 741 5238235 20120531232203
+50.19.204.176 709 709 5010903 20120531230051
+176.34.222.168 699 699 4935434 20120531233637
+79.125.80.46 696 696 4919644 20120531234523
+204.236.138.241 665 665 4702992 20120531232728
+178.79.149.39 573 573 4051511 20120531212520
+175.41.169.216 557 557 3934297 20120531235751
+122.248.199.254 544 544 3845823 20120531211621
+184.73.39.109 467 467 3298539 20120531234617
+23.22.83.35 402 415 5781435 20120529133854
+178.79.165.194 332 332 2345426 20120531233235
+178.79.174.72 320 320 2259231 20120531232531
+69.84.207.147 252 252 6491781 20120501010805
+134.198.192.111 225 326 6333082 20120529114242
+208.138.254.150 150 184 6078001 20120521194205
+222.186.26.41 91 91 2731730 20120520150139
+107.22.116.107 70 700 18824581 20120531051940
+176.34.67.205 64 640 17210814 20120531152254
+107.20.19.159 64 640 17210908 20120530195525
+46.137.227.197 62 620 16673323 20120531172431
+176.34.174.204 62 620 16673119 20120530082920
+204.236.187.179 62 620 16673121 20120531143058
+46.137.6.200 60 600 16135308 20120530175934
+204.236.138.34 56 560 15059236 20120531025736
+213.110.133.221 54 54 1734302 20120531175123
+178.167.117.53 1 19 530777 20120502064358
+117.25.233.110 4 4 171708 20120531092506
+69.249.74.54 1 14 273058 20120501135438
+120.40.148.75 2 2 49979 20120527231207
+198.7.241.87 6 27 635491 20120510003647
+217.69.133.30 4 4 128960 20120526224851
+88.198.51.36 3 3 96430 20120505091648
+218.93.127.117 2 2 63108 20120518180017
+173.33.42.109 4 34 594589 20120511144445
+66.117.215.3 1 19 530781 20120504235701
+24.0.107.91 1 14 273050 20120524235212
+175.44.0.225 2 2 58452 20120524121039
+124.134.54.118 2 2 50071 20120507021425
+182.40.94.209 3 3 91417 20120524063946
+88.212.42.134 1 15 263183 20120531113020
+175.44.17.84 6 6 150178 20120521083434
+66.77.136.153 1 1 5167 20120516102042
+23.20.254.125 1 1 32324 20120502031434
+99.240.175.56 8 59 1167694 20120511183301
+146.0.74.103 4 4 103816 20120526015649
+175.44.26.63 3 3 138588 20120530090708
+98.126.230.250 3 3 101308 20120526154148
+69.63.190.251 0 1 183228 
+69.171.224.1 0 6 1099368 
+70.178.61.137 1 15 273658 20120527211230
+65.52.111.219 1 12 86888 20120518232721
+213.205.227.72 1 19 530779 20120525185306
+220.255.4.26 1 21 271133 20120505071727
+122.72.0.113 1 1 22182 20120505173708
+58.170.117.248 2 19 489157 20120509045838
+69.171.234.6 0 2 366456 
+71.106.152.228 1 1 32327 20120526221504
+188.99.92.33 1 1 32247 20120509100723
+183.5.7.136 2 2 49977 20120528120735
+209.239.119.246 1 1 32325 20120509014452
+98.139.241.252 0 1 183228 
+68.61.152.74 7 28 717937 20120522185016
+85.17.147.193 2 2 54330 20120524222850
+68.37.8.123 1 14 272953 20120528091643
+41.233.33.9 1 1 24962 20120527011011
+182.68.137.148 4 26 570871 20120518075604
+65.200.158.103 1 16 273373 20120502100328
+98.71.103.246 2 10 90231 20120501082341
+76.208.128.28 1 17 274033 20120521102115
+204.188.241.226 3 3 87069 20120519075621
+110.86.12.202 3 3 91414 20120523140046
+175.44.31.225 3 3 87069 20120528142846
+94.153.64.207 4 4 128810 20120505214640
+86.123.45.10 6 33 601171 20120503105403
+68.82.21.43 1 21 271134 20120520193623
+178.78.224.26 16 16 1164426 20120520012031
+207.46.204.223 1 14 78571 20120520081814
+46.17.100.151 8 8 273110 20120522101833
+37.59.221.233 1 1 62689 20120504204519
+175.42.91.200 3 3 87069 20120522005007
+67.54.147.65 3 47 1765386 20120502143653
+222.77.208.231 2 2 62918 20120504212038
+46.229.160.208 0 11 1456735 
+175.44.30.11 3 3 87259 20120529024147
+200.77.126.232 1 17 275340 20120516140220
+176.9.246.99 2 2 62918 20120520182111
+178.137.128.167 2 2 64500 20120503235034
+69.171.247.4 0 1 183228 
+91.189.226.20 1 1 31294 20120530042920
+71.181.72.207 1 20 289806 20120511185753
+139.18.2.17 1 1 32250 20120519140256
+68.12.76.67 5 5 0 20120505075427
+69.171.228.246 0 5 916140 
+93.185.141.204 4 4 136332 20120502092548
+68.75.80.150 33 96 1595696 20120516100813
+193.77.58.161 3 3 96978 20120503125400
+109.245.164.220 2 22 549696 20120512193320
+112.111.179.7 3 3 146507 20120524175357
+174.20.163.236 5 30 153037 20120516235325
+192.162.100.47 2 2 48042 20120517071239
+184.22.147.173 1 1 32462 20120517070805
+69.171.229.244 1 3 373545 20120523202914
+69.166.133.180 7 35 360958 20120508085006
+95.73.103.35 3 28 342551 20120515172238
+113.162.225.255 2 2 62912 20120509032531
+208.65.57.14 1 15 260403 20120525153212
+140.209.53.125 1 19 265712 20120508164814
+107.2.204.74 1 1 40105 20120531080936
+222.171.60.156 2 2 63298 20120504213548
+123.30.175.78 6 6 42378 20120523202039
+91.152.84.192 0 13 253999 
+74.15.206.157 2 29 318025 20120512125235
+75.150.104.17 11 80 1454566 20120514160354
+76.107.218.135 5 24 332347 20120521133216
+114.92.206.12 3 3 91414 20120502162749
+178.137.5.149 8 8 256308 20120527115906
+98.238.133.174 1 1 32250 20120515225050
+91.121.93.19 1 1 32141 20120509123913
+188.227.175.174 3 3 83202 20120507011503
+190.97.70.218 1 15 260215 20120530232332
+74.125.126.87 0 1 35627 
+218.6.12.69 3 3 87069 20120530212041
+112.111.190.88 3 3 87259 20120521011423
+95.31.31.30 3 3 87201 20120517090911
+69.171.234.5 0 1 183228 
+207.46.204.161 2 25 188337 20120507022819
+77.20.4.67 1 1 22712 20120511113028
+112.210.23.110 1 32 986268 20120511225152
+62.219.132.115 1 1 31477 20120527073321
+193.106.136.56 4 4 128990 20120513071727
+190.3.106.163 2 2 63192 20120529121701
+88.86.31.175 1 14 90047 20120521185637
+165.134.208.22 42 129 2825639 20120503112038
+121.205.248.9 1 1 32323 20120509064147
+80.239.243.93 8 29 1033436 20120510065549
+165.190.35.193 12 44 689478 20120521162102
+69.74.234.178 3 21 314505 20120523090606
+82.137.13.102 1 15 274434 20120524054846
+67.222.133.190 1 1 31895 20120501212131
+80.78.79.170 2 15 266072 20120517140406
+174.255.51.28 1 14 260196 20120507140626
+126.114.231.134 2 2 50060 20120521022834
+175.44.31.226 3 3 138600 20120531082051
+165.190.39.149 1 15 260651 20120509150023
+66.229.181.110 1 19 530782 20120504142248
+68.23.138.190 50 225 4463205 20120511194311
+98.139.241.249 1 1 32248 20120510152720
+66.220.149.246 1 3 373910 20120507205948
+178.137.82.160 3 3 86281 20120517070217
+69.171.234.7 0 3 549684 
+69.60.110.160 1 1 44713 20120508123023
+72.107.206.121 1 19 530697 20120531222426
+91.32.115.34 1 1 32249 20120503053154
+66.220.146.248 0 2 366456 
+83.111.38.131 1 1 24962 20120523093534
+59.60.121.130 2 2 50059 20120526111546
+69.171.242.245 0 1 183228 
+69.171.234.3 0 4 732912 
+175.44.26.36 3 3 87639 20120515181652
+70.16.103.219 1 21 531094 20120522054010
+68.168.211.143 1 1 32971 20120531163617
+209.20.69.196 1 1 32326 20120503154228
+64.223.241.176 2 20 282904 20120512052019
+174.54.119.89 26 94 1679608 20120529122415
+24.112.203.150 1 19 530776 20120519232614
+189.180.142.235 1 19 530596 20120503141336
+72.72.254.241 2 22 549105 20120511114551
+188.40.115.199 3 3 36295 20120523071027
+67.160.96.62 3 23 351329 20120502163424
+24.197.142.254 2 22 575460 20120520145816
+188.138.0.138 3 3 91414 20120504153735
+91.236.74.133 3 3 73832 20120521084404
+210.51.12.97 3 3 78828 20120520140939
+94.142.134.41 22 22 708293 20120522013517
+58.83.224.217 1 1 32630 20120509064120
+38.100.21.13 8 10 304368 20120510052648
+109.166.135.205 1 24 373693 20120529145114
+108.169.147.132 1 19 530775 20120514074306
+150.70.75.29 0 1 1136 
+134.198.193.52 12 64 1188417 20120522154132
+209.85.224.90 0 4 200523 
+134.198.193.4 30 100 2718454 20120516094026
+74.125.78.82 1 1 7098 20120504092341
+69.171.228.245 1 6 923238 20120506192110
+41.206.11.16 2 16 263578 20120531225912
+88.214.193.166 1 1 32253 20120522172418
+112.111.162.59 3 3 87069 20120508090405
+69.171.224.4 0 6 1099368 
+108.166.81.89 50 50 1574926 20120516051502
+89.123.14.191 50 50 1581548 20120526181652
+117.83.19.201 2 2 62914 20120513113052
+124.134.55.21 1 1 42969 20120524020005
+205.178.190.237 3 3 64498 20120505033305
+87.248.122.95 0 1 183228 
+61.213.110.210 1 1 31476 20120531015644
+94.153.64.227 4 4 128816 20120523152923
+202.46.57.62 1 1 7492 20120506024103
+218.6.12.66 2 2 58452 20120522203246
+208.80.194.37 1 1 32248 20120510162634
+74.204.189.6 12 12 81260 20120516035632
+31.184.238.13 12 12 362794 20120531170347
+98.222.134.84 3 20 282004 20120505171011
+69.58.178.58 11 11 326523 20120505072551
+208.80.194.30 7 7 226130 20120517130647
+176.9.111.204 2 2 64573 20120512092851
+85.250.17.175 1 1 0 20120507041919
+200.89.112.154 17 47 846827 20120517161938
+76.20.215.37 6 28 376018 20120523180059
+69.171.242.248 0 1 183228 
+37.59.221.170 1 1 62499 20120503170106
+80.84.51.194 9 9 274622 20120518103411
+184.72.58.234 2 2 64650 20120517015433
+121.205.246.113 3 3 87069 20120513010514
+188.72.213.44 1 1 32247 20120509160446
+201.17.221.91 1 1 25322 20120522113249
+112.111.190.255 3 3 87069 20120529134856
+69.38.186.54 1 19 530785 20120501085933
+92.112.46.78 6 36 601146 20120527183546
+24.167.132.200 1 19 530774 20120523202449
+109.165.58.150 3 3 91408 20120510090703
+210.16.201.27 1 1 42969 20120501225510
+98.139.241.245 0 1 183228 
+175.41.184.43 44 440 11833008 20120527125806
+70.36.102.4 1 1 32324 20120512234904
+174.127.133.51 14 16 300393 20120529004019
+208.80.194.27 1 1 32325 20120515064315
+109.148.129.215 2 23 287396 20120502031006
+92.226.58.217 1 1 32061 20120524104959
+65.128.196.243 3 6 35958 20120501220519
+211.55.29.4 2 2 50059 20120518235016
+66.220.149.249 0 2 366456 
+147.71.155.10 27 144 2782453 20120508171813
+178.33.42.68 3 3 86398 20120527153346
+123.160.145.174 2 2 50066 20120506035841
+94.153.65.56 6 6 193496 20120503005539
+71.105.57.101 3 28 584860 20120506143221
+81.167.92.199 10 38 746802 20120506071203
+120.33.244.238 2 2 50062 20120514032232
+69.217.207.1 1 17 282583 20120521183946
+69.63.190.247 0 1 183228 
+76.203.5.193 1 17 269606 20120505162313
+38.229.70.44 2 2 63805 20120531164441
+112.111.162.122 3 3 87069 20120505061307
+204.236.178.141 45 441 11839075 20120530170801
+150.70.172.205 2 4 116605 20120523080227
+101.80.61.236 5 5 164390 20120524183735
+58.22.158.29 3 3 146115 20120515043112
+77.75.76.115 1 14 484959 20120520002050
+176.53.58.137 4 4 106277 20120528002947
+130.179.127.44 11 36 388404 20120529124905
+96.56.15.170 6 32 538801 20120530141250
+209.85.224.87 0 1 2203 
+67.204.10.136 7 34 602567 20120523211623
+69.157.167.160 9 32 465210 20120518003525
+91.201.64.84 4 4 132016 20120509183521
+69.171.224.2 0 4 732912 
+122.72.2.188 1 1 32447 20120512141220
+69.171.228.250 0 2 366456 
+24.49.154.122 1 19 530784 20120506111949
+65.38.82.174 26 60 1271031 20120530112014
+24.29.206.209 15 76 1396224 20120527232101
+122.248.216.100 40 400 10756696 20120531013532
+188.165.195.156 4 4 43278 20120527070151
+139.18.2.209 3 3 97140 20120504154322
+89.123.2.249 50 50 1574900 20120511055124
+71.36.233.182 1 16 273501 20120505002455
+174.127.132.10 1 1 31401 20120528225329
+66.220.149.251 1 6 923591 20120515163730
+190.146.62.161 1 1 37282 20120514133139
+122.72.0.4 1 1 37096 20120505173705
+12.234.67.106 4 27 589482 20120507154506
+174.132.16.36 16 16 0 20120527005346
+203.147.106.195 4 30 565918 20120525184540
+66.133.158.98 1 18 274509 20120511172141
+194.58.30.129 31 31 0 20120531073349
+31.192.105.2 6 6 189128 20120525044752
+98.237.100.175 1 19 530781 20120504223945
+46.17.98.212 27 27 1293328 20120529063600
+209.131.38.91 0 1 183228 
+92.85.57.10 50 50 1579994 20120502234249
+108.92.105.167 6 21 431773 20120503135733
+70.231.238.26 1 1 7091 20120520193527
+175.44.3.46 3 3 87069 20120503112731
+173.49.24.118 1 1 32324 20120514182533
+65.52.111.218 1 14 78573 20120522082158
+71.58.103.7 5 43 321839 20120523151351
+69.171.229.249 0 5 916140 
+98.204.112.136 2 17 273692 20120527091947
+151.29.69.192 50 50 1574926 20120520202045
+206.21.83.209 7 29 398100 20120508215144
+37.220.8.82 24 24 925821 20120531040910
+193.41.184.139 8 48 390749 20120518202441
+176.195.188.172 3 3 91598 20120512050934
+69.41.14.215 2 22 561660 20120521214046
+66.220.149.244 0 1 196 
+176.34.71.102 34 340 9143087 20120527214600
+46.137.239.175 38 380 10218505 20120530120930
+199.255.199.1 1 1 31477 20120527183556
+107.22.104.194 52 520 13983089 20120531162541
+50.19.158.160 6 60 1613623 20120510065045
+72.136.2.49 2 17 272018 20120520044940
+184.242.168.61 1 19 530776 20120520004532
+169.231.35.243 1 19 265701 20120508132236
+69.254.240.246 1 14 273051 20120515202923
+176.9.185.62 1 1 7003 20120525045238
+94.23.225.68 0 1 32531 
+96.253.10.51 1 19 530773 20120523101731
+74.77.61.122 11 43 778308 20120517225211
+94.244.143.49 2 2 62612 20120527152030
+190.98.201.84 1 1 25064 20120521220348
+151.51.98.100 3 24 338401 20120501064942
+91.32.82.186 0 5 13731 
+69.171.228.247 0 4 732912 
+178.137.160.135 6 6 200721 20120521001906
+110.85.75.231 2 2 50061 20120524062550
+67.80.11.146 1 19 530779 20120525185007
+67.104.146.56 1 17 282781 20120501154645
+82.193.109.249 4 4 129726 20120512001129
+109.73.76.39 7 7 296594 20120524064309
+50.76.110.73 14 80 2138794 20120511202017
+208.80.194.28 2 2 64500 20120512233144
+91.207.8.26 24 24 672739 20120526100026
+220.181.125.146 1 1 7098 20120505083733
+109.206.168.126 1 1 32326 20120505124317
+220.181.51.110 1 1 32249 20120505094638
+93.186.96.20 0 3 487578 
+209.85.224.88 0 1 7716 
+69.230.164.230 2 27 554874 20120525185237
+98.139.241.243 0 1 183228 
+98.95.159.221 1 16 273527 20120501204637
+69.171.242.247 0 1 183228 
+173.73.115.178 2 2 63583 20120528095330
+74.215.184.55 6 30 596052 20120527110619
+37.59.176.213 1 1 62689 20120504204521
+204.64.62.132 5 26 598416 20120521104840
+37.220.1.114 13 13 437163 20120526140225
+46.105.151.65 2 2 52588 20120513095527
+125.127.99.156 3 3 91414 20120517012653
+208.53.187.254 1 1 32250 20120506162723
+173.2.83.5 1 19 530693 20120530205814
+66.175.172.111 1 1 7092 20120523215155
+202.46.55.205 1 1 6364 20120506024058
+173.22.194.184 1 19 265702 20120501005202
+188.230.35.137 4 4 172487 20120516073837
+176.195.179.223 1 1 37092 20120512113558
+99.18.107.25 1 15 263182 20120502131708
+68.222.183.29 16 63 1750479 20120515102319
+110.85.113.17 2 2 49979 20120531032708
+174.63.154.122 11 46 797489 20120510203859
+77.123.190.85 1 12 76555 20120509173802
+60.215.225.44 2 2 50065 20120516063836
+98.248.60.247 1 19 530782 20120504130932
+99.180.199.137 2 17 281297 20120524111119
+23.20.237.24 2 2 63800 20120527204126
+80.82.66.232 11 11 364145 20120517184039
+81.21.160.130 1 1 24273 20120528043705
+95.132.16.233 2 2 14183 20120524113504
+175.42.91.0 2 2 58452 20120518132722
+194.146.132.135 3 3 86638 20120509140330
+41.189.39.101 1 1 32326 20120507054142
+128.30.52.70 1 1 6909 20120501191301
+99.42.21.75 8 40 646607 20120528233521
+115.61.103.80 3 3 96791 20120525160314
+101.66.59.163 1 21 265989 20120516041449
+176.34.79.67 46 460 12370159 20120531035453
+174.127.133.48 21 22 479598 20120529003645
+128.146.22.162 1 15 274437 20120511122738
+176.31.18.156 29 29 1232859 20120530140603
+75.151.30.217 18 80 1072078 20120502143858
+91.210.104.143 3 3 86439 20120529023710
+108.7.4.94 2 26 322986 20120510225505
+58.22.132.140 3 3 146127 20120525110923
+192.162.19.183 2 2 63104 20120513184205
+118.192.35.173 2 2 63651 20120527102219
+81.94.193.226 3 3 91417 20120526133959
+84.23.222.136 1 1 0 20120514135137
+69.169.248.135 2 25 549842 20120529090510
+175.44.29.226 3 3 87069 20120521121608
+27.16.212.62 1 1 32326 20120520025422
+125.127.101.158 3 3 91984 20120523200429
+74.120.16.26 1 1 32248 20120510080622
+74.130.81.240 1 16 259841 20120529214501
+72.200.204.102 5 20 312453 20120528181242
+116.125.143.74 1 1 7089 20120524005955
+108.89.25.92 0 1 243789 
+175.41.156.24 32 320 8605288 20120529000033
+66.41.217.199 1 16 273495 20120526093352
+96.31.86.184 4 4 108660 20120516092821
+108.56.236.40 1 19 530775 20120517220513
+50.130.135.60 7 50 1215790 20120531230415
+62.24.252.133 1 7 1162757 20120525193030
+94.103.230.252 4 4 27917 20120508114531
+27.159.220.90 2 2 49876 20120514143444
+209.85.224.96 0 1 433 
+68.80.143.92 3 25 336249 20120512073926
+74.125.18.156 1 1 42885 20120529144734
+205.178.190.235 4 4 53476 20120505103952
+197.251.157.69 1 1 32323 20120509214945
+184.72.24.82 42 420 11294567 20120531143256
+94.153.64.36 8 8 251214 20120531124200
+93.172.181.159 1 1 0 20120531201831
+99.10.179.245 2 17 14432 20120517214333
+79.112.126.165 1 21 531094 20120510085331
+69.171.229.248 0 1 183228 
+96.250.41.106 41 172 3054667 20120522153207
+27.159.227.191 3 3 91408 20120508053236
+220.181.51.111 2 2 39423 20120505094639
+82.9.160.190 2 17 291382 20120509070424
+216.217.35.106 9 27 488039 20120507081649
+208.54.36.148 4 30 611322 20120521160912
+175.42.90.4 3 3 146501 20120507072047
+112.111.168.122 3 3 87069 20120520044952
+201.218.63.4 1 1 24962 20120530150923
+122.72.2.190 2 2 54622 20120512141217
+69.171.234.2 0 4 732912 
+66.175.172.238 0 7 214455 
+74.95.35.17 1 15 273722 20120514162532
+140.192.196.34 1 16 274737 20120503111848
+218.6.8.19 2 2 62916 20120503020857
+216.80.59.144 2 23 553775 20120525194810
+64.80.225.13 11 34 789132 20120506191935
+188.72.220.152 8 8 256297 20120528173657
+68.180.211.142 0 1 183228 
+98.90.101.200 2 24 555154 20120523231610
+188.227.176.155 2 2 47085 20120507171026
+152.228.163.141 1 17 277722 20120501153935
+176.58.211.96 1 19 530776 20120524185248
+71.53.122.227 20 87 1469210 20120516153359
+41.131.138.32 0 18 523685 
+208.90.56.152 2 2 58255 20120503161711
+69.28.58.72 1 1 7098 20120505041654
+99.247.107.42 3 21 313026 20120524130724
+148.137.168.51 1 2 7099 20120501125305
+66.220.149.247 0 1 183228 
+58.23.253.176 1 1 37096 20120517152829
+69.171.229.251 0 4 732912 
+71.234.20.230 1 17 266925 20120508231454
+37.59.220.95 1 1 62499 20120506183503
+66.197.131.5 6 6 197882 20120520164258
+184.72.182.221 42 420 11294617 20120529170714
+207.46.195.216 1 2 7537 20120515234048
+77.70.1.147 2 22 548628 20120531114326
+174.127.133.52 4 5 137608 20120528235329
+175.44.17.221 2 2 50060 20120521032235
+110.86.185.125 5 5 67813 20120503041044
+97.89.54.89 2 22 549115 20120506190510
+107.20.3.16 34 340 9143355 20120530105235
+61.191.190.210 3 3 91411 20120507025726
+174.127.133.47 15 19 200225 20120529003836
+58.22.158.178 3 3 146121 20120504112727
+92.21.149.25 1 19 530777 20120525192957
+69.73.70.122 8 38 726328 20120522200807
+193.106.136.45 2 2 62802 20120527142218
+108.57.63.134 5 50 803747 20120525132351
+125.106.50.81 2 2 50064 20120516133613
+209.85.224.85 0 2 4831 
+37.59.177.156 1 1 62497 20120515062750
+178.137.129.166 6 6 193502 20120521081300
+209.29.196.10 1 21 531101 20120503095826
+188.2.8.32 0 203 7610102 
+75.5.231.246 3 28 571506 20120531210105
+71.99.92.114 3 24 556429 20120531215621
+220.181.51.108 2 2 37655 20120505094638
+130.185.159.12 1 1 37092 20120511050200
+68.46.213.235 3 21 313231 20120520081404
+74.115.3.65 3 3 91423 20120522190817
+130.160.138.51 9 38 618283 20120501095247
+69.171.229.247 0 7 1282596 
+69.143.238.95 5 25 450558 20120503184006
+186.201.88.50 1 1 37096 20120519135825
+71.72.33.252 1 19 530777 20120519190030
+200.137.130.31 3 3 78828 20120521205855
+74.101.224.54 1 1 5311 20120522223916
+209.85.224.95 0 2 4384 
+174.127.133.50 17 17 501390 20120529004516
+70.16.71.13 2 25 550849 20120506181900
+67.159.8.164 2 2 65854 20120530003351
+111.13.8.126 2 2 13993 20120526204348
+178.222.18.95 1 19 530693 20120529095105
+124.181.74.137 7 27 312742 20120516234439
+66.220.149.250 0 1 196 
+68.222.9.89 1 19 530776 20120508214158
+220.181.141.69 6 6 193102 20120530090815
+178.137.128.69 2 2 64500 20120518030554
+23.22.87.166 1 2 51402 20120526080813
+184.0.220.254 4 34 426573 20120523073910
+94.124.234.24 2 2 54622 20120524055030
+199.87.251.125 1 1 7097 20120514151306
+98.71.96.196 1 19 530698 20120531075214
+175.42.58.141 1 1 7008 20120527032204
+69.171.228.251 0 5 916140 
+150.70.172.107 0 4 138783 
+205.178.190.234 6 6 80246 20120505104009
+61.7.231.171 1 1 24230 20120531152942
+175.42.90.131 3 3 87069 20120519191646
+58.22.150.20 6 6 233564 20120516192926
+208.80.194.36 1 1 32250 20120503195037
+184.73.25.232 3 3 21267 20120520143558
+97.116.53.60 1 19 530776 20120522214606
+69.171.234.0 1 6 923229 20120523202520
+209.85.224.94 0 3 904 
+112.111.177.230 3 3 87069 20120513141526
+211.97.127.94 3 3 128655 20120531025735
+64.228.90.64 1 1 32325 20120515112956
+216.15.52.143 1 20 265463 20120508175452
+173.224.125.209 3 24 602647 20120513235743
+69.171.224.3 1 4 556691 20120531012359
+218.6.12.98 25 25 844871 20120528122047
+83.220.79.68 2 2 74192 20120519000439
+108.69.120.48 1 17 279740 20120503223039
+94.153.64.194 20 20 644598 20120517022456
+218.213.137.22 12 12 354071 20120522092342
+69.171.229.250 0 1 183228 
+69.86.96.253 6 31 339611 20120531104716
+199.187.122.98 38 38 1318767 20120529020734
+81.167.160.175 2 25 550693 20120501120703
+69.171.228.244 0 4 732912 
+67.82.133.194 1 20 268165 20120527210222
+125.77.236.247 2 2 50061 20120522000120
+84.228.29.95 1 21 532403 20120508053935
+150.70.64.198 1 12 509829 20120501042920
+184.73.45.134 40 400 10756554 20120530195543
+66.220.147.244 0 1 183228 
+173.255.182.167 4 4 109185 20120508035536
+166.147.115.243 1 19 530696 20120527155410
+91.224.247.81 3 3 91414 20120523195528
+67.99.177.2 30 132 2350558 20120508120345
+37.59.177.220 1 1 62689 20120506183506
+193.41.185.37 8 27 198852 20120515182609
+199.15.234.64 2 2 63298 20120504192955
+175.44.24.219 3 3 138784 20120528152848
+209.85.224.81 0 2 3654 
+81.165.78.159 1 15 259880 20120511212931
+193.106.136.34 2 2 64502 20120524013809
+209.85.224.86 0 1 32493 
+65.213.23.62 2 24 278903 20120523141211
+72.14.171.11 9 38 642772 20120501145906
+222.185.125.45 1 1 32630 20120509064118
+23.22.47.106 1 1 0 20120504052619
+208.102.17.158 1 17 267152 20120516075731
+67.208.183.235 1 1 32326 20120507005256
+203.66.83.46 1 1 6967 20120530110633
+173.208.43.13 1 1 72435 20120507152530
+218.29.131.11 3 3 138594 20120527133739
+75.56.194.126 4 22 377165 20120504094039
+212.219.117.25 1 21 795278 20120524090538
+64.134.180.204 6 26 334985 20120524205945
+75.84.127.164 1 19 530785 20120501042238
+193.106.136.53 2 2 62806 20120531224119
+70.36.97.52 1 1 31479 20120531185538
+67.128.178.222 1 1 22106 20120531081241
+202.46.53.68 1 1 7490 20120506024103
+87.248.122.91 0 1 183228 
+184.18.63.1 13 66 1460331 20120521211830
+66.212.133.10 17 90 1276830 20120516151028
+1.202.218.14 0 2 183228 
+130.83.167.153 1 1 32250 20120523081351
+122.248.196.207 43 421 11301765 20120531172300
+69.171.228.249 0 4 732912 
+62.131.212.200 2 22 575464 20120507053907
+110.137.6.126 4 18 333123 20120530173400
+91.201.64.4 10 11 1043942 20120516073146
+124.115.10.68 1 4 40831 20120504052505
+71.174.45.201 2 3 37872 20120519083738
+69.171.234.4 0 1 183228 
+94.187.71.216 4 19 282314 20120521124554
+75.148.101.162 1 19 530596 20120505182544
+67.134.208.134 1 1 32327 20120524070255
+176.8.154.40 4 4 139944 20120501031238
+118.169.43.123 1 1 32329 20120522145103
+222.77.208.85 3 3 91414 20120520112728
+66.220.149.248 0 3 549684 
+209.85.224.93 0 1 1248 
+81.196.161.191 10 37 645328 20120513172329
+91.201.64.24 2 2 49510 20120528075443
+66.249.17.179 1 21 532399 20120517212500
+202.46.53.130 1 1 6364 20120506024058
+209.85.172.87 1 1 5973 20120523122735
+109.73.77.138 2 2 63104 20120508024202
+174.49.198.48 45 121 2397614 20120529135150
+166.248.4.153 2 24 562667 20120525192342
+184.76.195.80 3 24 557096 20120525112710
+206.228.222.37 5 30 584989 20120517181652
+70.49.251.132 0 1 923050 
+69.171.247.0 0 1 183228 
+69.171.224.5 0 4 732912 
+58.210.206.239 3 3 87069 20120508114555
+205.164.0.53 2 2 14192 20120514053346
+65.52.111.22 1 14 79272 20120524054727
+69.171.242.244 0 1 183228 
+175.44.29.254 3 3 146121 20120502103345
+64.136.27.227 16 90 1536491 20120505124429
+112.111.179.218 3 3 87259 20120531174641
+35.46.2.82 8 53 933721 20120513215952
+166.147.96.68 1 17 279926 20120512175941
+24.241.226.65 5 32 734263 20120511235613
+173.203.65.87 1 1 32324 20120510133330
+176.34.218.211 42 420 11294607 20120531152753
+150.70.172.106 3 9 434078 20120512002207
+111.68.97.181 2 2 65341 20120523021109
+124.115.4.214 1 4 13190 20120519221800
+204.15.122.39 3 3 0 20120531220842
+74.166.77.142 1 19 530695 20120530192020
+128.135.228.66 1 16 273906 20120503170944
+98.235.70.246 1 15 263590 20120509203236
+70.56.245.217 1 19 530777 20120515020726
+175.44.0.174 3 3 87069 20120515222116
+46.246.70.193 2 2 58269 20120525132541
+74.125.18.154 1 1 5291 20120529144549
+79.114.193.144 1 15 274341 20120531141459
+174.59.53.112 4 18 565559 20120501003833
+38.121.226.130 1 14 259064 20120503174042
+70.83.216.143 1 14 273057 20120505181456
+177.43.10.78 7 7 105346 20120524213536
+123.30.175.69 5 5 35465 20120517183758
+175.44.3.116 3 3 146299 20120514080645
+69.171.229.246 1 7 923790 20120522221708
+41.207.211.45 2 2 57407 20120531053821
+68.12.64.34 9 9 0 20120531134225
+202.46.57.97 1 1 5905 20120506024059
+75.164.196.217 2 23 549425 20120511003547
+64.125.188.25 10 35 1097608 20120525145351
+216.245.209.10 1 1 32251 20120524120929
+64.28.57.43 3 21 299258 20120527205323
+80.243.191.67 3 3 119874 20120528101718
+91.207.6.138 3 3 91414 20120507090317
+72.66.80.124 2 27 555070 20120504142851
+221.150.177.204 1 1 42885 20120521062055
+152.130.6.134 7 39 597309 20120524125305
+99.181.239.8 2 22 541521 20120504222348
+95.82.233.17 2 2 70461 20120504113945
+93.174.93.85 3 3 91788 20120512122203
+136.242.250.243 2 16 305302 20120504100056
+82.171.81.117 3 3 91408 20120513181453
+71.126.74.20 3 24 602121 20120519201352
+178.250.47.109 1 1 31400 20120530151640
+158.14.80.140 1 21 531096 20120510164413
+70.36.99.52 1 1 32136 20120516095144
+175.211.28.71 2 2 50060 20120525022509
+193.106.136.61 2 2 64500 20120506160003
+85.72.243.217 1 19 265699 20120531073221
+174.252.196.206 1 15 263780 20120509220822
+112.101.64.45 3 3 146133 20120522033445
+123.30.175.68 10 10 70740 20120523202034
+134.198.192.234 3 32 574040 20120525120913
+209.85.224.92 1 1 6858 20120516235219
+199.15.234.104 2 2 62912 20120509172508
+199.8.81.101 20 75 2214966 20120529135834
+111.13.8.17 19 19 134137 20120528163251
+202.46.56.170 1 1 5905 20120506024058
+213.55.95.17 0 18 1813332 
+66.220.147.246 0 1 183228 
+50.18.25.249 44 440 11833028 20120529024853
+220.181.51.107 1 1 7097 20120505094637
+112.111.186.58 3 3 91408 20120514220636
+108.203.190.239 1 13 329605 20120504155029
+74.245.78.24 5 32 586948 20120512210254
+101.71.0.11 2 2 50058 20120512023544
+120.43.13.40 2 2 50062 20120523012703
+184.72.18.20 54 540 14521571 20120529221124
+69.171.234.1 0 1 183228 
+74.96.236.10 8 34 613339 20120526105219
+99.235.204.245 1 19 530777 20120518161118
+66.220.149.245 0 2 366456 
+183.5.12.165 2 2 50059 20120518231750
+89.136.74.67 22 70 924179 20120529145620
+46.4.104.35 6 6 41870 20120530124508
+61.184.137.38 10 10 492393 20120520231619
+208.80.194.35 2 2 64575 20120515062225
+178.63.161.11 2 2 58262 20120514190851
+134.48.245.244 2 27 554881 20120501145238
+95.133.29.92 2 2 59278 20120515161254
+195.24.234.177 3 3 77742 20120506133724
+74.101.196.194 17 83 1301183 20120524091213
+65.26.223.252 1 15 260099 20120507093017
+72.55.186.41 3 3 176646 20120517110158
+134.198.192.76 6 46 798110 20120524115626
+184.82.44.208 1 1 37098 20120521203214
+69.171.229.245 0 1 183228 
+2.102.243.92 0 1 923050 
+193.106.136.60 2 2 64496 20120503043432
+99.191.115.165 1 15 273909 20120524180005
+66.175.172.222 0 10 258029 
+18.77.0.83 11 46 722460 20120515190307
+174.129.138.113 1 1 32325 20120515101832
+80.243.189.130 6 6 199954 20120524130314
+175.44.28.161 3 3 87069 20120525063754
+175.44.1.207 3 3 146115 20120515091439
+71.28.195.165 5 26 596897 20120514090820
+184.82.131.106 2 2 64649 20120509071824
+209.85.224.84 0 1 216 
+41.78.239.194 2 2 62213 20120531123115
+151.74.27.143 5 33 600629 20120514040204
+27.159.208.27 3 3 91600 20120502034200
+217.117.250.32 2 2 13915 20120504170321
+72.94.249.37 1 1 31479 20120531135831
+146.115.145.237 1 17 279732 20120523122058
+193.106.136.54 2 2 64306 20120516220340
+76.23.180.94 1 21 531095 20120517070408
+65.242.114.226 3 24 556509 20120504104116
+92.80.3.181 1 19 530694 20120528051955
+119.46.90.28 1 1 32440 20120509064049
+94.68.156.193 9 31 324973 20120519133310
+112.111.44.242 2 2 49790 20120530043644
+108.21.103.51 3 3 91981 20120507025956
+24.214.35.5 2 20 300647 20120508101343
+218.6.19.79 2 2 62920 20120521051908
+74.125.18.153 1 1 6325 20120507132503
+120.206.199.4 2 2 50063 20120516211826
+24.42.145.63 1 19 530783 20120516001949
+27.159.218.55 3 3 91414 20120506185157
+69.171.224.6 0 3 549684 
+59.57.14.123 3 3 87639 20120508131448
+END_VISITOR
+
+# Date - Pages - Hits - Bandwidth - Visits
+BEGIN_DAY 31
+20120501 546 1195 26681236 159
+20120502 321 921 22987775 145
+20120503 309 887 19560614 147
+20120504 290 905 21407402 143
+20120505 290 817 17659759 144
+20120506 293 798 18493800 146
+20120507 270 795 17733848 151
+20120508 347 1138 24120874 149
+20120509 259 707 17601810 147
+20120510 290 865 23097130 146
+20120511 350 987 24481790 167
+20120512 316 813 17813145 172
+20120513 328 823 18023771 177
+20120514 315 798 16232396 174
+20120515 354 847 17638686 190
+20120516 472 1250 25720170 182
+20120517 334 805 18632051 182
+20120518 376 852 19509156 172
+20120519 316 799 17567149 185
+20120520 387 866 18261599 171
+20120521 510 1083 24923696 182
+20120522 361 956 19978416 180
+20120523 353 1005 23520230 200
+20120524 345 956 20597143 194
+20120525 317 952 20391803 190
+20120526 338 705 14976370 166
+20120527 307 817 16931309 178
+20120528 323 751 15550735 182
+20120529 1086 1883 34333241 179
+20120530 311 711 14933573 178
+20120531 331 824 16364802 180
+END_DAY
+
+# Session range - Number of visits
+BEGIN_SESSION 7
+1h+ 452
+5mn-15mn 565
+30s-2mn 152
+15mn-30mn 66
+2mn-5mn 305
+0s-30s 3432
+30mn-1h 286
+END_SESSION
+
+# URL - Pages - Bandwidth - Entry - Exit
+# The 25 first Pages must be first (order not required for others)
+BEGIN_SIDER 552
+/ 8123 64402492 4807 4704
+/publications 268 7134783 7 10
+/forum 162 3431250 11 22
+/news/societies 103 5555480 59 19
+/otsanews/current.php 102 3209622 65 18
+/system/ajax 101 521727 0 0
+/members/directory 97 2965191 2 11
+/register 83 1969721 4 37
+/user/register 75 3223152 18 40
+/meetings/2012 67 1054451 14 23
+/members 66 1041417 0 3
+/about 60 931792 3 9
+/meetings 49 904856 6 5
+/meetings/call.php 49 1500840 47 3
+/about/faq 44 693526 2 11
+/index.php 44 1412061 5 41
+/about/membership 39 591297 2 6
+/meetings/index.php 38 1151140 4 35
+/news/2012/annual-meeting-2012 37 451561 28 10
+/about/officers 37 629623 4 3
+/news/index.php 37 1833472 0 36
+/meetings/all 33 712386 2 5
+/about/online-membership-application 27 630538 3 8
+/contact/Secretary 27 483291 2 4
+/sites/otsamerica.org/files/pages-docs/2012/The%20Orthodox%20Theological%20Society%20will%20hold%20its%202012%20Annual%20Meeting%20September%2020.docx 22 1467664 0 5
+/node/15 1 5853 0 0
+/news/2011/pappas-patristic-institute-2011-annual-thematic-conference-family-and-children-patristic 2 53464 0 0
+/js/admin_menu/cache/3875256f61763115d16bf2e6acbbf196 1 10114 0 0
+/meetings/2008/schedule 1 5785 0 0
+/user/66/edit 1 134498 0 0
+/news/2011/pilgrims-and-pioneers-growth-orthodox-christianity-20th-century-america 2 49643 0 0
+/news/upcoming 17 544578 0 3
+/register/florovsky-fund-contribution 8 190967 0 0
+/news/archived/ 1 10463 1 0
+/taxonomy/autocomplete/field_soc_membership/AAR 1 13 0 0
+/meetings/all/all 8 208903 4 4
+/admin/people/people 3 209277 0 0
+/meetings/2009/papers/matrix-and-our-captivity 1 6390 0 0
+/admin/store/orders/240/receive_check 1 17496 0 0
+/tags/societies/slec-0 1 5456 0 0
+/search/node/des 1 30979 0 0
+/admin/store/orders/233 2 40452 0 0
+/location/autocomplete/us/OH 1 30 0 0
+/admin/store/orders/236/delete 1 14693 0 0
+/flag/flag/bookmarks/15 1 763 0 0
+/meetings/2011/papers/weighing-glory-luminous-body-new-testament-writings 1 6191 0 0
+/admin/store/orders/237/receive_check 1 17496 0 0
+/node/129 1 6570 0 0
+/contact/President 16 223305 1 2
+/tags/societies/pappas 1 6384 0 0
+/location/autocomplete/us/T 1 45 0 0
+/node/209 2 48279 0 0
+/taxonomy/autocomplete/field_soc_membership/NAPS 2 30 0 0
+/admin/store/orders/240/edit 2 72020 0 0
+/node/86 1 5570 0 0
+/tags/news-amp-events/academic-conference/ 1 8374 0 0
+/news/2011/journal-american-orthodox-church-history 1 7277 1 1
+/tags/focus/missiology 1 5291 1 1
+/website-help 15 345712 1 1
+/taxonomy/autocomplete/field_soc_membership/SBL 1 13 0 0
+/node/74 1 5587 0 0
+/meetings/2005/papers%20 1 5684 0 0
+/meetings/2011/sessions/dinner-0 1 5566 0 0
+/publications/submitted/changing-churches-orthodox-roman-catholic-lutheran-theological-conversation 7 123591 2 2
+/admin/store/orders/233/edit 3 105038 0 0
+/admin/store/orders/241 2 41060 0 0
+/sites/otsamerica.org/files/pages-docs/2011/OTSA-2010-Call.docx 1 249738 0 0
+/news 13 300365 4 2
+/meetings/2009/papers/orthodoxy-and-islam-uncommon-opportunity 3 39514 1 0
+/meetings/2001/details 1 7760 0 0
+/node/87 1 5570 0 0
+/user/508/orders 1 25750 0 0
+/admin/config/people 2 27998 0 0
+/meetings/2008/details 1 6075 0 0
+/user/109/publications 4 76852 0 1
+/location/autocomplete/us/NY 2 24 0 0
+/tags/societies/ocampr 2 11264 0 0
+/admin/store/orders/234/edit 8 333987 0 0
+/user/417/edit 2 259018 0 0
+/mollom/captcha/audio/form-Wnbxc16tA-x6jx8FR4LjrT0g1wjjMVOeHHcEwUKEGJ0/120529d39aca14bab6 3 5097 0 0
+/meetings/2002/papers%20 1 5682 0 0
+/user/309/edit 4 391306 0 0
+/node/4 2 48805 0 0
+/taxonomy/autocomplete/field_soc_membership/Americ 1 231 0 0
+/meetings/2006/papers%20 1 5684 0 0
+/meetings/2011/sessions/breakfast 1 5574 0 0
+/news/upcoming/ 1 8570 0 0
+/node/80 1 5787 0 0
+/mollom/captcha/audio/form-ncsVqbeaSXrWb4rtVaoE7CuJY7S5SkfsOK0-SyTswI8/120516072f21452ff7 1 1699 0 0
+/news/ 2 74194 2 1
+/admin/store/orders/233/payments 1 16508 0 0
+/meetings/2011/sessions/concurrent-session-i-near-death-experience 1 5669 0 0
+/forum/ 7 155274 0 1
+/publications/2011/god-willing-really-note-ambiguities-interfaith-expression 5 113076 0 1
+/publications/all/keywords 11 357469 4 3
+/node/12 2 48265 0 0
+/admin/store/orders/view 19 1300954 0 0
+/publications/2010/heart-russia-trinity-sergius-monasticism-and-society-after-1825 2 32894 0 0
+/tags/focus/sacramental-theology 4 57158 1 1
+/tags/focus/index.php 1 22931 0 1
+/register/user/register 1 5918 0 0
+/user/509/edit 7 699911 0 0
+/news/2012/aar-eastern-orthodox-studies-group-0 7 184198 2 0
+/tags/focus/theology-and-philosophy 1 5810 0 0
+/tags/societies/aar 3 58270 0 0
+/meetings/2009/papers%20 7 52306 0 1
+/tags/societies/naal 2 29833 0 0
+/users/jmcguckin 2 70982 0 0
+/admin/store/orders/241/receive_check 1 17496 0 0
+/meetings/2009/details 10 209816 4 3
+/meetings/2010/papers/diakonia-liturgy 3 17716 2 2
+/location/autocomplete/us/Kentuck 1 23 0 0
+/meetings/2012/papers%20 7 39789 0 1
+/admin/store/orders/233/receive_check 1 17496 0 0
+/user/507/bookmarks 1 25167 0 0
+/forums/laws-and-membership 1 26760 0 0
+/publications/all/authors 13 422274 0 2
+/meetings/2010/papers/report-assembly-bishops-and-implications-scoba-related-organizations 2 31898 0 0
+/meetings/2003 7 176286 0 0
+/location/autocomplete/ca/Manitop 1 2 0 0
+/publications/2010/nicholas-afanasiev-church-holy-spirit 5 69831 2 2
+/meetings/2005/schedule 1 5779 0 0
+/users/pbaktis1 1 32206 0 0
+/admin/store/orders/237/edit 3 72159 0 0
+/meetings/2011/sessions/vespers 1 5560 0 0
+/field_collection/ajax 1 6221 0 0
+/news/societies%22%20class=%22resultLink/wp-content/themes/delicate/timthumb.php 1 51967 0 1
+/meetings/2010/papers/filled-visible-theophany-lord-reading-dionysius-east-and-west 2 12176 0 0
+/admin/store/orders/242 2 41135 0 0
+/admin/store/orders/239/receive_check 1 17496 0 0
+/meetings/all/florovsky 18 304006 1 3
+/meetings/2012/schedule 7 40466 0 2
+/tags/focus/spirituality 2 30894 0 0
+/location/autocomplete/us/Mi 1 68 0 0
+/meetings/2007/details 1 6115 0 0
+/meetings/2007 2 34052 0 0
+/node/73 1 5565 0 0
+/node/211 2 46036 0 0
+/tags/societies/slec 3 54689 0 0
+/meetings/2011/sessions/paraklesis 1 5561 0 0
+/users/iifrim 2 64474 0 0
+/welcome 20 900461 1 2
+/taxonomy/autocomplete/field_soc_membership/American%20Academ 1 63 0 0
+/node/3 6 187335 4 1
+/user/508/edit 3 293375 0 0
+/user-help/limited-access 2 31652 0 0
+/users/napostola 1 30983 0 0
+/location/autocomplete/us/PA 1 31 0 0
+/admin/store/orders/234 1 21950 0 0
+/node/193 1 5546 0 0
+/location/autocomplete/us/Kentucky 1 23 0 0
+/news/index.php 1 45607 0 1
+/tags/societies/naps 5 93530 0 0
+/meetings/2011/sessions/2011-annual-florovsky-lecture 3 17346 1 1
+/user/169/edit 1 140611 0 1
+/node/48 1 6478 0 0
+/meetings/2009/papers/orthodox-liturgical-theology-and-georges-florovskys-return-fathers-alexander 4 22792 0 2
+/location/autocomplete/us/M 1 85 0 0
+/meetings/2011/sessions/dinner 1 5565 0 0
+/tags/societies/stp 3 55427 0 0
+/meetings/2011/details/2011-annual-meeting 2 33653 0 0
+/contact 16 372885 1 1
+/news/2011/orthodox-christian-tradition-and-integration-europe 3 56176 0 0
+/news/2012/huffington-ecumenical-spring-symposium-pan-orthodoxy-north-america 2 48620 0 0
+/taxonomy/autocomplete/field_soc_membership/S 1 339 0 0
+/node/203 1 5667 0 0
+/meetings/all/papers%20 1 9509 0 0
+/node/61 1 5762 0 0
+/user/513/edit 11 1166034 0 1
+/meetings/2011/sessions/session-ii-science-and-materialism 1 5659 0 0
+/meetings/2010/papers/slavophile-thought-and-conceptions-mission-russian-north-american-archdiocese 1 5958 0 0
+/meetings/2009/papers/political-influence-prince-petru-rares-sixteenth-century-frescoes-humor 2 12839 1 1
+/news/resolutions 12 316667 2 2
+/admin/people 2 138583 0 0
+/file/ajax/field_member_photo/und/0/form-to3Io5fAQG7PI-xZqjcFG281p1FNb6Q855PIam2nhZY 2 9551 0 0
+/user/140/orders/240 2 54587 0 0
+/admin/people/create 3 110500 0 0
+/users/ehumphrey 1 37246 0 0
+/location/autocomplete/us/NC 1 22 0 0
+/meetings/2011/papers/orthodox-festal-liturgies-and-contemporary-french-phenomenology-liturgy-liminal 1 6435 0 0
+/meetings/2009/papers/analysis-theologies-employed-christian-responses-common-word-between-us-and-you 3 19570 0 0
+/node/79 1 5651 0 0
+/meetings/2009/papers/looking-toward-unity-how-russian-church-abroad-viewed-moscow-patriarchate-1927 2 32324 0 0
+/publications/all/import 12 410574 1 0
+/node/106 1 6138 0 0
+/meetings/2011/papers/patristic-gender-anthropology-elisabeth-behr-sigel 1 6081 0 0
+/meetings/2010/papers/servant-church-and-christian-unity-nicholas-zernov%E2%80%99s-rethinking-orthodox 3 18118 2 2
+/location/autocomplete/us/MO 1 33 0 0
+/search/node/ 2 64892 0 0
+/node/85 1 5573 0 0
+/meetings/2008 3 41373 0 0
+/admin/store/orders/33 1 20780 0 0
+/admin/store/orders/241/edit 2 72035 0 0
+/store/manage 4 639212 0 0
+/node/78 1 5598 0 0
+/meetings/2001/schedule 1 5782 0 0
+/news/upcoming/feed 2 11702 0 0
+/meetings/index.php/papers%20 1 5689 0 0
+/users/gabrielcrochelle 1 45252 0 0
+/meetings/2010/papers/towards-theology-marriage 1 5957 0 0
+/node/77 1 5687 0 0
+/news/societies/ 2 29206 0 0
+/tags/societies/ctsa 4 59616 0 0
+/tags/focus/feminist-theologies 2 33818 0 0
+/meetings/2011/details/2010-annual-meeting 4 46424 1 1
+/publications/authors/ 1 25423 0 0
+/meetings/2011/sessions/session-viii-orthodox-theology-and-politics 1 5810 0 0
+/publications/all 21 687584 3 2
+/user/508/publications 1 24872 0 0
+/meetings/2009/papers/some-remarks-kontoglou 1 6240 0 0
+/meetings/all/list 3 46133 0 0
+/tags/societies/aseees 1 5598 0 0
+/meetings/2005/details 1 5622 0 0
+/tags/societies/sol 4 40023 1 1
+/tags/societies/sophia 4 40446 0 1
+/meetings/2010/papers/elder-sophrony-and-experience-god-religion-and-science-dialogue 3 58901 0 0
+/publications/2011/ 2 64924 2 1
+/news/2011/naps-2012-annual-meeting)%20or%20(http://patristics.org/annual-meeting/ 2 14432 2 2
+/publications/2010/joy-embodied-virtue-toward-ordination-women-eastern-orthodox-priesthood 5 91932 1 1
+/tags/focus/modern-period 2 31384 0 0
+/node/213 3 56522 1 2
+/taxonomy/autocomplete/field_soc_membership/SB 1 27 0 0
+/taxonomy/autocomplete/field_soc_membership/REA 1 2 0 0
+/meetings/2010/papers/oca%E2%80%99s-history-and-future-assembly-bishops 1 6036 0 0
+/node/127 1 7757 0 0
+/file/ajax/field_member_photo/und/0/form-rMeC-5X6P1AVaQbFN8HcHnApsGHTU0KUy31tZH-OVao 1 3524 0 0
+/location/autocomplete/us/N 2 166 0 0
+/news/2011/2011-aar-annual-meeting 2 47389 0 0
+/tags/societies/cts 3 53778 0 0
+/node/204 5 172434 1 0
+/meetings/2003/schedule 1 5781 0 0
+/tags/societies/socha 3 39549 0 0
+/taxonomy/term/9 2 12728 2 2
+/register/tracker 1 5919 0 0
+/tags/societies/logos 7 96211 0 1
+/tags/focus/scripture-new-testament 2 30963 0 0
+/meetings/2011/papers/texts-and-tradition-orthodox-theology-and-canon-law 1 5941 0 0
+/admin/store/orders/create 17 298687 0 0
+/tags/societies/otsa 6 144392 1 1
+/tags/focus/church-history 2 32407 0 0
+/meetings/2011/papers/frs-georges-florovsky-and-sergey-bulgakov-conflict-typologies-concerning 5 28797 0 1
+/tags/focus/scripture-old-testament 2 28651 0 0
+/tags/focus/theology-and-science 3 41090 1 0
+/tags/societies/volos 2 12272 0 1
+/user/reset/509/1337714920/lABVNfH65378uL0syHPkRAWUidjODkq5Xd6n6_DQLXg 1 5131 0 0
+/admin/store/orders/236/edit 4 72340 0 0
+/tags/focus/liturgy 3 67422 0 1
+/publications/2011/compatibility-principles-biological-evolution-eastern-orthodoxy 11 226296 1 2
+/admin/store/orders/234/delete 1 14693 0 0
+/tags/societies/asch 1 5795 0 0
+/admin/store/orders/32 1 20979 0 0
+/taxonomy/autocomplete/field_soc_membership/NA 2 186 0 0
+/users/wcohen 1 44316 0 0
+/tags/focus/historical-theology 2 28616 0 0
+/meetings/2009 7 72944 1 2
+/news/2012/index.php 1 51459 0 1
+/tags/focus/patristics 3 62914 0 0
+/meetings/all/papers 20 648551 2 5
+/node/88 1 5578 0 0
+/meetings/2011/sessions/luncheon-and-business-meeting 1 5600 0 0
+/contact/Treasurer 8 183940 0 0
+/taxonomy/autocomplete/field_soc_membership/American 1 133 0 0
+/js/admin_menu/cache/5f69aece0e34fe235aeff4ac67e7bcd7 1 3854 0 0
+/meetings/2003/details 1 6569 0 0
+/admin/people/advanced 19 1364931 0 0
+/register/otsa-membership-2012 8 192710 0 0
+/user/514/publications 2 49530 0 1
+/user/514/edit 1 98027 1 1
+/admin/store/orders/242/receive_check 1 17496 0 0
+/user/ 1 22685 0 0
+/taxonomy/autocomplete/field_soc_membership/AAr 1 13 0 0
+/tags/societies/societas-liturgica 8 114236 2 2
+/users/jonesj 3 102374 0 0
+/meetings/2006 2 33666 0 0
+/tags/societies/american-academy-religion 1 5305 0 0
+/meetings/2007/schedule 1 5784 0 0
+/tags/societies/bsana 3 53837 0 0
+/node/9 13 277145 0 0
+/meetings/2012/details 3 69029 0 0
+/node/23 10 245375 0 0
+/tags/societies/aslh 1 5726 0 0
+/users/josephwoodillyahoocom 1 32431 0 0
+/meetings/2001 3 24366 2 1
+/tags/meeting-sessions/florovsky-lecture 2 12804 0 0
+/js/admin_menu/cache/bc599e6d5d7245e063bee49ab3173c0c 1 3853 0 0
+/meetings/all/schedule 1 7963 0 0
+/node/13 2 46655 0 1
+/meetings/all/papers/ 1 9510 0 0
+/meetings/2004/index.php 1 27774 0 1
+/node/18 1 6116 0 0
+/users/mmcdowell 1 36348 0 1
+/meetings/call.php/papers%20 2 5688 0 0
+/news/2011/programme-volos-academy-theological-studies-2010-2011 4 67009 1 0
+/mollom/captcha/image/form-ncsVqbeaSXrWb4rtVaoE7CuJY7S5SkfsOK0-SyTswI8/120516072f21452ff7 1 432 0 0
+/tags/focus/theology-and-political-theory 1 6104 0 0
+/node/146 3 58396 2 0
+/node/205 1 6278 0 0
+/location/autocomplete/us/O 1 54 0 0
+/publications/2009/orthodox-catholic-dialogue-retrieving-eucharistic-ecclesiology 6 117058 1 3
+/node/64 1 5817 0 0
+/meetings/2010 2 37677 0 0
+/publications/2010/globalization-hesychasm-and-jesus-prayer-contesting-contemplation 4 67206 0 0
+/tags/focus/hagiography 1 5858 0 0
+/node/26 1 6385 0 0
+/publications/authors 13 334027 0 0
+/user/355/edit 7 714636 0 1
+/tags/focus/religious-education 2 28615 0 0
+/user-help/account-validation 2 11619 0 0
+/meetings/2010/papers/role-%E2%80%9Cservant-servants-god%E2%80%9D-and-roman-catholic-dogma-papal-infallibility 2 32627 0 0
+/meetings/call.php/schedule 3 11575 1 1
+/node/130 1 6078 0 0
+/admin/store/orders/18 1 20499 0 0
+/cart/checkout/review 2 63306 0 1
+/tags/meeting-sessions/panel 1 6255 0 0
+/taxonomy/autocomplete/field_soc_membership/s 1 339 0 0
+/user/reset/355/1327346295/6NZbNdG_64kPXSa7MRrIOxXamp3ab6OYA3VIqCmT-nc 1 5124 0 0
+/meetings/2009/papers/liturgy-st-basil-liturgy-st-john-chrysostom-%E2%80%93-when-and-why-preliminary-report 1 5968 0 0
+/meetings/2005 2 32192 0 0
+/publications/sophia-apophasis-and-communion-trinity-contemporary-orthodox-theology 10 243197 0 1
+/publications/all/index.php 1 32508 0 1
+/user/password 16 375860 0 0
+/node/72 1 5561 0 0
+/node/83 1 5564 0 0
+/tags/focus/theology-and-anthropology 2 33853 0 0
+/node/110 1 6075 0 0
+/mollom/captcha/image/form-Wnbxc16tA-x6jx8FR4LjrT0g1wjjMVOeHHcEwUKEGJ0/120529d39aca14bab6 3 1296 0 0
+/node/8 3 89656 1 0
+/node/10 8 209181 0 0
+/publications/2011/index.php 1 32528 0 1
+/users/jallen 1 143204 0 0
+/user/304/publications 1 24830 0 1
+/meetings/2011/sessions/social-hour 1 5586 0 0
+/tags/news-amp-events/index.php 4 92228 0 4
+/meetings/2010/papers/questions-science-religion-interface 3 38128 0 0
+/meetings/2009/papers/st-basil-great-and-st-gregory-nyssa-trinity%E2%80%99s-activity-created-world 5 32419 3 3
+/cart/checkout 2 81056 0 0
+/news/2011/human-cloning 4 60984 0 0
+/admin/store/orders/243/receive_check 1 17496 0 0
+/admin/store/orders/238/edit 4 111459 0 0
+/node/11 8 197581 0 0
+/meetings/2009/papers/toward-\xe2\x80\x9cgreen\xe2\x80\x9d-liturgy-ecological-theology-bartholomew-i 1 26634 0 0
+/meetings/2011/papers/according-whole-ecclesiological-vision-elisabeth-behr-sigel 1 6009 0 0
+/user/510/edit 2 197165 1 0
+/tags/meeting-sessions/joint 1 5706 0 0
+/meetings/2012/materials/call-papers 1 26711 0 0
+/user/142/edit 2 236605 0 0
+/meetings/2011/sessions/coffee-break 1 5544 0 0
+/admin/store/orders/240 2 41150 0 0
+/taxonomy/autocomplete/field_soc_membership/N 3 1473 0 0
+/meetings/2011/sessions/concurrent-session-v-orthodox-ecclesiology 1 5785 0 0
+/meetings/2010/papers/women-deacons-and-orthodox-church 1 6161 0 0
+/meetings/2011/sessions/breakfast-0 1 5579 0 0
+/meetings/2011/papers/marriage-and-eucharist-restoring-canonical-tradition 1 6375 0 0
+/taxonomy/autocomplete/field_soc_membership/NAP 1 15 0 0
+// 16 534367 1 1
+/admin/store/orders/239 2 41068 0 0
+/meetings/2011/papers/just-peacemaking-and-christian-realism-possibilities-moving-beyond-impasse-0 1 6706 0 0
+/meetings/2008/papers%20 1 5682 0 0
+/tags/societies/csbs 3 37208 0 0
+/meetings/2011/papers/virtuous-invitations-orthodoxy-and-religious-freedom 1 6063 0 0
+/tags/focus/canon-law 2 32386 0 0
+/tags/societies/iaodt 3 35719 1 1
+/meetings/2010/papers/deacons-presbyters-and-bishops-current-north-american-church-some-reflections 2 32423 0 0
+/node/35 1 5778 0 0
+/tags/meeting-sessions/concurrent 1 5672 0 0
+/meetings/2004/details 1 6077 0 0
+/meetings/2003/papers%252520 2 56658 2 0
+/node/25 1 6274 0 0
+/admin/index 1 33141 0 0
+/tags/societies/iecs 1 5698 0 0
+/meetings/2003/papers%20 1 5683 0 0
+/tags/focus/trinitarian-theology 2 30486 0 0
+/node/147 1 6115 0 0
+/node/62 1 5673 0 0
+/meetings/2009/papers/index.php 2 75316 0 2
+/user/reset/142/1337195318/KGh3-p2jW9qUMWgGPw7CVaMpM5fJ8COF17B8_1qE29U 1 5128 0 0
+/node/63 2 30638 1 0
+/user/507/edit 6 604124 0 0
+/news/resolutions/ 1 7247 1 0
+/meetings/2011/sessions/reception 1 5517 0 0
+/location/autocomplete/us/Pen 1 31 0 0
+/file/ajax/field_member_photo/und/0/form-aJyShCr4myF0zeFr3vN9C1ch9233RwWNuK9n3IpWyiM 1 3524 0 0
+/meetings/2011/papers/exploring-human-rights-architectures-regarding-phenomenon-religious-cleansing 1 6534 0 0
+/node/84 1 5519 0 0
+/news/2011/towards-common-date-easter 5 71183 1 1
+/meetings/2006/schedule 1 5781 0 0
+/admin/store/orders/238 1 20292 0 0
+/meetings/2009/papers/antinomy-feast-and-fast-reassessment-post-communion-fasting-byzantine-liturgy 2 33059 1 0
+/node/206 1 8096 0 0
+/meetings/2004/schedule 1 5782 0 0
+/user/reset/309/1327346303/PpP730PSys1JuIO_fjXxTOc6w2fYwcwrb4EjlUZyZxQ 1 5126 1 0
+/tags/focus/ethics 4 92742 1 0
+/tags/societies/sbl 1 5604 0 0
+/location/autocomplete/ca/Manitoba 1 23 0 0
+/node/7 10 381534 3 1
+/meetings/2011/papers/appearing-glory-visions-asceticism-and-glory-colossians-216-311 1 6562 0 0
+/tags/societies/modern-language-association 1 5305 0 0
+/news/2011/body-living-christ-patristic-doctrine-church 2 49564 0 0
+/tags/news-amp-events/academic-conference 7 265641 4 0
+/meetings/2004 7 172539 0 5
+/location/autocomplete/us/P 2 140 0 0
+/node/201 1 6194 0 0
+/search/node/dues 1 32279 0 0
+/node/148 1 5937 0 0
+/tags/focus/ecumenical-relations 2 31148 0 0
+/tags/focus/interfaith-relations 1 6535 0 0
+/meetings/2001/papers%20 1 5681 0 0
+/user/140/edit 4 478748 0 0
+/news/wp-content/themes/delicate/timthumb.php 1 51700 0 0
+/meetings/2011/papers/%E2%80%9Ccomplete-inversion-values%E2%80%9D-questioning-scandalousness-st-symeon-emesa 1 6058 0 0
+/user-help/manage-your-user-account 4 88710 0 0
+/sites/all/modules/mollom/mollom-captcha-player.swf 2 2800 0 0
+/news/2012/changing-churches 2 46033 0 0
+/file/ajax/field_member_photo/und/0/form-r4SSMvlBGlvFN0SDY8lA-17IIIp27HD0ox7pw_CPl8M 1 5731 1 0
+/sites/otsamerica.org/files/pages-docs/2011/Submitting-abstract.docx 1 96379 0 0
+/meetings/2011/sessions/concurrent-session-ii-orthodox-theology-and-reappropriation-patristic-witness 1 5817 0 0
+/meetings/2011/sessions/concurrent-session-v-orthodox-theology-and-philosophy-ancient-and-modern 1 5688 0 0
+/tags/societies/byzantine-studies-association-north-america 1 5327 0 0
+/node/81 1 5543 0 0
+/location/autocomplete/us/Te 1 45 0 0
+/news/archived 20 968512 7 8
+/location/autocomplete/us/Tex 1 31 0 0
+/meetings/2010/papers/servant-servants-god%25E2%2580%2599-imaging-primatial-authority-and-power-late-antiquity 3 119874 3 3
+/tags/societies/association-study-literature-and-environment 1 5330 0 0
+/js/admin_menu/cache/34031653975c348eaeed27a0a94f512b 2 7706 0 0
+/publications/keywords 22 575121 7 6
+/tags/societies/north-american-patristic-society 2 10613 0 0
+/node/76 1 5831 0 0
+/meetings/2010/papers/canonical-view-assembly%E2%80%99s-work 1 6017 0 0
+/meetings/2009/papers/common-vision-john-cassian-and-al-ghazali%E2%80%99s-correlative-conceptions-spiritual 6 40139 0 0
+/news/2011/eastern-europe-still-matters 2 48515 0 0
+/location/autocomplete/us/Penn 1 31 0 0
+/tags/focus/medieval-period 2 28597 0 0
+/meetings/2011/schedule 1 7957 0 0
+/news/2011/naps-2012-annual-meeting%29%20or%20%28http://patristics.org/annual-meeting/ 11 161613 6 4
+/admin/store/orders/235/edit 3 111384 0 0
+/meetings/2002 1 7307 0 0
+/taxonomy/autocomplete/field_soc_membership/American%20Academy%20of%20Religion 1 63 0 0
+/tags/societies/drupal 1 5278 0 0
+/meetings/2010/schedule 1 5782 0 0
+/meetings/2011/sessions/session-i-orthodoxy-and-warfare 1 5759 0 0
+/admin/store/orders/243 2 41167 0 0
+/admin/store/orders/242/edit 3 72170 0 0
+/meetings/2002/details 1 6939 0 0
+/news/2011/naps-2012-annual-meeting/ 1 7483 0 0
+/tags/societies/ijcu 2 29764 0 0
+/meetings/2011/sessions/orthros 1 5559 0 0
+/node/2 2 48513 0 0
+/meetings/2006/details 1 5939 0 0
+/taxonomy/autocomplete/field_soc_membership/sb 1 27 0 0
+/taxonomy/autocomplete/field_soc_membership/AA 2 82 0 0
+/tags/focus/ethics-social 3 39225 1 1
+/node/208 2 46276 0 0
+/website-help/user-help 15 293613 1 0
+/meetings/2011/sessions/session-ix-orthodox-theology-and-canons 1 5775 0 0
+/meetings/2007/papers%20 1 5683 0 0
+/node/20 1 5809 0 0
+/node/105 1 6568 0 0
+/meetings/2002/schedule 1 5782 0 0
+/node/14 1 5957 0 0
+/node/210 8 194282 1 1
+/admin/store/orders/237 1 20365 0 0
+/node/33 1 5808 0 0
+/meetings/2011/sessions/session-vii-regional-and-national-orthodox-scholars-networks 1 5693 0 0
+/meetings/2010/papers/question-service-and-language-crisis-greek-orthodox-archdiocese-1970s-tenure 1 6131 0 0
+/node/16 1 6212 0 0
+/node/122 1 6887 0 0
+/user/355/orders 5 128700 0 0
+/meetings/2010/papers%20 7 52880 0 0
+/publications/all/keywords/ 1 32511 0 1
+/node/6 2 47388 0 0
+/node/125 1 6587 0 0
+/tags/societies/naae 1 5568 0 0
+/tags/focus/pastoral-theology 2 28601 0 0
+/meetings/2010/papers/servant-servants-god%E2%80%99-imaging-primatial-authority-and-power-late-antiquity 1 6108 0 0
+/tags/societies/aha 1 5565 0 0
+/news/2011/naps-2012-annual-meeting 20 249989 12 14
+/tags/focus/environment 2 30804 0 0
+/taxonomy/autocomplete/field_soc_membership/Religious%20Education%20Association 1 2 0 0
+/user/412/edit 1 126904 0 0
+/user 22 460102 2 3
+/meetings/2004/papers%20 1 5685 0 0
+/users/cbuleza 3 99133 0 0
+/tags/societies/sscs 1 5644 0 0
+/meetings/2009/papers/palladius-helenopolis-john-chrysostom%E2%80%99s-ordinations-asia 2 12937 0 0
+/user/login 11 197489 1 2
+/admin/store/orders/243/edit 2 72033 0 0
+/node/75 1 5560 0 0
+/tags/societies/aceot 2 29828 0 0
+/news/2012/asec-conference 9 175319 2 2
+/meetings/2011 19 319626 4 7
+/tags/focus/systematic-theology 2 28610 0 0
+/node/194 7 151260 0 0
+/node/1 5 173778 1 0
+/tags/societies/sce 2 29859 0 0
+/admin/store/orders/238/delete 1 14693 0 0
+/node/211/ 1 37370 1 0
+/node/82 1 5694 0 0
+/meetings/2010/papers/virtuous-icons-unique-persons-or-gendered-stereotypes 1 6168 0 0
+/node/149 1 5622 0 0
+/publications/rss.xml 7 437452 0 1
+/publications/2010/looking-toward-unity-how-russian-church-abroad-viewed-patriarchate-moscow-1927 2 34710 0 1
+/node/17 1 6075 0 0
+/location/autocomplete/us/Texas 1 31 0 0
+/user/511/edit 1 98638 0 0
+/user/reset/140/1338308461/t4gzQwYXQRtjSALb3XCEBIEVRaYuiVNqVj-r8BSTIPA 1 5128 0 0
+/news/societies/wp-content/themes/delicate/timthumb.php 1 72979 1 0
+/meetings/2004/papers%252520 1 27786 1 0
+/tags/societies/asec 2 11495 0 0
+/news/resolutions/human-cloning 1 7170 0 0
+/register/ 1 5908 1 0
+/tags/societies/socna 4 46622 1 1
+/admin/store/orders/235/receive_check 1 17496 0 0
+/admin/store/orders/239/edit 2 72034 0 0
+/meetings/2011/sessions/session-vi-orthodoxy-and-academy 1 5651 0 0
+/node/65 1 5672 0 0
+/user/reset/355/1336450755/JGzNcsL-8XroXWu7Z_NyjuQRDZEX7qqWkASKwUtlDHU 1 5129 0 0
+/node/128 1 6935 0 0
+/user/309/orders 1 25644 0 0
+/about/otsa-laws 15 288859 0 1
+/meetings/2011/papers/entering-glory-god-luke-24-christian-midrash-genesis-3 1 5960 0 0
+/file/ajax/submitted/curriculum_vitae/form-iWK1rJ4RcFTRp69zZxtxjgQ8r4E7eBv-BHSh3FgG5IA 1 3659 0 0
+/admin/store/orders/235 2 41257 0 0
+/meetings/2009/papers/toward-%E2%80%9Cgreen%E2%80%9D-liturgy-ecological-theology-bartholomew-i 5 45937 2 1
+/tags/news-amp-events/resolutions 3 37989 0 1
+/taxonomy/autocomplete/field_soc_membership/A 1 303 0 0
+/news/resolutions/towards-common-date-easter 1 7166 0 0
+/publications/2011/missions-and-prophecy-ecumenical-attitudes-post-communist-romania 5 90796 0 0
+/tags/focus/ecclesiology 3 58487 0 0
+/meetings/2011/sessions/session-iii-orthodox-theology-and-behavioral-and-applied-sciences-what-have 1 5673 0 0
+/cart 5 118345 1 1
+/location/autocomplete/us/WI 1 25 0 0
+/tags/societies/inasec 1 5906 0 0
+/tags/societies/osi 2 12336 0 0
+/tags/focus/theology-and-psychology 2 28642 0 0
+/node/54 8 167375 1 0
+/meetings/2009/schedule 1 5780 0 0
+/user/303/edit 1 125426 0 0
+/tags/meeting-sessions/paper 3 23214 0 0
+/meetings/2011/papers%20 8 60728 0 0
+/location/autocomplete/us/Miss 1 44 0 0
+/meetings/2003/index.php 2 56634 0 2
+/user/511/publications 2 49780 1 1
+/contact/websupport 17 369889 1 4
+/meetings/2011/sessions/morning-prayer 1 5570 0 0
+/meetings/2009/papers/towards-liturgical-musicology-greek-orthodoxy-america 2 13074 0 0
+/meetings/2011/sessions/session-iv-orthodoxy-theology-and-glory-sacred-scriptures 1 5830 0 0
+/news/2012/aar-eastern-orthodox-studies-group 2 16302 1 1
+/meetings/2011/papers/just-peacemaking-and-christian-realism-possibilities-moving-beyond-impasse 1 6098 0 0
+/node/34 1 5777 0 0
+/node/5 5 187616 3 1
+/js/admin_menu/cache/38c0b03af580522c82e178ca6d0daf4e 2 7706 0 0
+END_SIDER
