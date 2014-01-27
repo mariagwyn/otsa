@@ -79,10 +79,9 @@ function commerce_coupon_pct_commerce_coupon_type_configure($bundle, $reset = FA
  *
  * Gets the right amount value to display it in the coupon "log" view.
  */
-function commerce_coupon_pct_commerce_coupon_granted_amount_alter(&$amount, $coupon, $values) {
+function commerce_coupon_pct_commerce_coupon_granted_amount_alter(&$amount, $coupon, $order) {
   // Get the price component.
   if ($coupon->type == 'commerce_coupon_pct') {
-    $order = commerce_order_load($values->order_id);
     $order_wrapper = entity_metadata_wrapper('commerce_order', $order);
     $coupon_wrapper = entity_metadata_wrapper('commerce_coupon', $coupon);
 
