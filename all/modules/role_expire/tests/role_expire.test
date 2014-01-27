@@ -1,5 +1,24 @@
 <?php
 
+///**
+// * @package RoleExpireUnitTestCase
+// */
+//class RoleExpireUnitTestCase extends DrupalUnitTestCase {
+//
+//public static function getInfo() {
+//
+//  return array(
+//    'name' => 'Role Expire unit tests',
+//    'description' => 'Unit tests for the Role Expire module.',
+//    'group' => 'Role Expire',
+//  );
+//
+//}
+//
+//
+//} // class RoleExpireUnitTestCase
+
+
 /**
  * @package RoleExpireWebTestCase
  */
@@ -45,7 +64,7 @@ public function testRoleExpire_tests() {
 
   // NOTE: No need to test in the creation/deletion of users and roles. Let
   // the *user* simpletests do that. NOTE: user.test takes a long time.
-
+  
   // Create a role *without* a default expiration date.
   // ***covered by user.test***
 
@@ -75,7 +94,7 @@ public function testRoleExpire_tests() {
                          )
              )
             );
-
+    
   } // foreach field value
 
   $field = 'role_expire_'.$rid;
@@ -86,7 +105,7 @@ public function testRoleExpire_tests() {
   $edit = array($field => $yesterday);
   $result = $this->drupalPost($user_edit_path,$edit,t('Save'));
   $this->assertText(t('Role expiry must be in the future.'),t('Yesterday should be invalid'));
-
+  
   // Edit user: add completely invalid expiration date.
   $invalid_date = 'completely invalid date';
   $edit = array($field => $invalid_date);
@@ -153,30 +172,30 @@ public function testRoleExpire_tests() {
   return TRUE;
 }
 
-  public function testAssignAndRemoveRole()  {
+public function testAssignAndRemoveRole()  {
 
-    // Create and log in the operating user.
-    $admin_user = $this->drupalCreateUser(array('administer users','administer role expire'));
-    $this->drupalLogin($admin_user);
+  // Create and log in the operating user.
+  $admin_user = $this->drupalCreateUser(array('administer users','administer role expire'));
+  $this->drupalLogin($admin_user);
 
-    // Create the victim (with a randomly assigned role).
-    $victim_user = $this->drupalCreateUser();
+  // Create the victim (with a randomly assigned role).
+  $victim_user = $this->drupalCreateUser();
 
-    // Get the victim's highest rid.
-    $all_rids = array_keys($victim_user->roles);
-    sort($all_rids);
-    $rid = array_pop($all_rids);
+  // Get the victim's highest rid.
+  $all_rids = array_keys($victim_user->roles);
+  sort($all_rids);
+  $rid = array_pop($all_rids);
 
-    // Assign the role to the user.
-    $this->drupalPost('user/' . $victim_user->uid . '/edit', array("roles[$rid]" => $rid), t('Save'));
-    $this->assertText(t('The changes have been saved.'));
-    $this->assertFieldChecked('edit-roles-' . $rid, t('Role is assigned.'));
+  // Assign the role to the user.
+  $this->drupalPost('user/' . $victim_user->uid . '/edit', array("roles[$rid]" => $rid), t('Save'));
+  $this->assertText(t('The changes have been saved.'));
+  $this->assertFieldChecked('edit-roles-' . $rid, t('Role is assigned.'));
 
-    // Remove the role from the user.
-    $this->drupalPost('user/' . $victim_user->uid . '/edit', array("roles[$rid]" => FALSE), t('Save'));
-    $this->assertText(t('The changes have been saved.'));
-    $this->assertNoFieldChecked('edit-roles-' . $rid, t('Role is removed from user.'));
-  }
+  // Remove the role from the user.
+  $this->drupalPost('user/' . $victim_user->uid . '/edit', array("roles[$rid]" => FALSE), t('Save'));
+  $this->assertText(t('The changes have been saved.'));
+  $this->assertNoFieldChecked('edit-roles-' . $rid, t('Role is removed from user.'));
+}
 
 
 }

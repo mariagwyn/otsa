@@ -61,13 +61,45 @@ function role_expire_schema() {
  * Implementation of hook_install().
  */
 function role_expire_install() {
-  
+
 }
 
 /**
  * Implementation of hook_uninstall().
  */
 function role_expire_uninstall() {
-  
+
 }
 
+/**
+ * Update schema for default role_expire_length table. Convert integer days to text "# days".
+ */
+function role_expire_update_7101() {
+
+  // Fetch out all the current durations.
+  $result = db_query('SELECT rid,duration FROM {role_expire_length}');
+  $durations = array();
+  while($row = $result->fetchObject()) {
+    $durations[$row->rid] = $row->duration;
+  }
+
+  // Convert the original duration column from type int to type text
+  db_change_field(
+          'role_expire_length',
+          'duration',
+          'duration',
+          array(
+              'type' => 'text',
+              'size' => 'small',
+              'description' => t('A strtotime-compatible duration string'),
+          )
+  );
+
+  // Append "days" since that's all it could've been before this revision.
+  foreach ($durations as $rid => $duration) {
+    db_update('role_expire_length')
+      ->fields(array('duration' => "$duration days"))
+      ->condition('rid',$rid)
+      ->execute();
+  }
+}

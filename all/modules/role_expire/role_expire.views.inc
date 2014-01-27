@@ -84,7 +84,7 @@ class role_expire_handler_field_rid extends views_handler_field {
 
   // Derived from views_handler_field_user_roles
   // Purpose: get the *names* that correspond to the role_expire_rids.
-  function pre_render(&$values) {
+  function pre_render($values) {
     $roles = array();
     $this->items = array();
 
