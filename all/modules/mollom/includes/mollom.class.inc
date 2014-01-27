@@ -36,11 +36,31 @@ abstract class Mollom {
   const RESPONSE_ERROR = 511;
 
   /**
-   * Server communication failure code: Authentication error.
+   * Client communication failure code: Bad request.
+   *
+   * Used in case of a too large system time offset from UTC.
+   *
+   * @see MollomBadRequestException
+   * @see Mollom::TIME_OFFSET_MAX
+   */
+  const REQUEST_ERROR = 400;
+
+  /**
+   * Client communication failure code: Authentication error.
    *
    * @see MollomAuthenticationException
    */
   const AUTH_ERROR = 401;
+
+  /**
+   * Maximum allowed time offset from UTC in seconds allowed for the client's local time.
+   *
+   * @see Mollom::handleRequest()
+   * @see MollomBadRequestException
+   *
+   * @var integer
+   */
+  const TIME_OFFSET_MAX = 300;
 
   /**
    * The public Mollom API key to use for request authentication.
@@ -111,6 +131,7 @@ abstract class Mollom {
    * If not TRUE, then the value is either one of
    * - Mollom::NETWORK_ERROR
    * - Mollom::RESPONSE_ERROR
+   * - Mollom::REQUEST_ERROR
    * - Mollom::AUTH_ERROR
    * or the actual HTTP status code returned by the server.
    *
@@ -265,7 +286,7 @@ abstract class Mollom {
    * @see Mollom::handleRequest()
    * @see Mollom::request()
    */
-  protected function query($method, $path, array $data = array(), array $expected = array()) {
+  public function query($method, $path, array $data = array(), array $expected = array()) {
     // Reset list response properties.
     $this->listCount = NULL;
     $this->listOffset = 0;
@@ -277,6 +298,10 @@ abstract class Mollom {
     while ($max_attempts--) {
       try {
         $result = $this->handleRequest($method, $server, $path, $data, $expected);
+      }
+      catch (MollomBadRequestException $e) {
+        // This is an irrecoverable error, so don't try further.
+        break;
       }
       catch (MollomAuthenticationException $e) {
         // This is an irrecoverable error, so don't try further.
@@ -325,6 +350,11 @@ abstract class Mollom {
     // If the last request succeeded but there was a unexpected response, return
     // the error code.
     if ($this->lastResponseCode === self::RESPONSE_ERROR) {
+      return $this->lastResponseCode;
+    }
+    // Return a request error, which always requires to take client-side
+    // measures to resolve the problem.
+    if ($this->lastResponseCode === self::REQUEST_ERROR) {
       return $this->lastResponseCode;
     }
     // Return an authentication error, which may require special client-side
@@ -464,6 +494,19 @@ abstract class Mollom {
         throw new MollomNetworkException('Network error.', self::NETWORK_ERROR, NULL, $this, $request_info);
       }
       if ($response->code == self::AUTH_ERROR) {
+        // Check whether authentication failed due to a too large time offset.
+        if (isset($response->headers['date'])) {
+          // Parse the 'Date' HTTP header in the response into a UNIX timestamp;
+          // strtotime() normally performs poorly on date operations, but in
+          // this case, there is a standardized date format and timezone
+          // conversion, so it is safe to use.
+          $offset = abs(time() - strtotime($response->headers['date']));
+          // The abs() above turns a negative offset into an absolute integer
+          // value, so the difference is always positive.
+          if ($offset > self::TIME_OFFSET_MAX) {
+            throw new MollomBadRequestException(sprintf('Invalid client system time: Too large offset from UTC: %s seconds.', $offset), self::REQUEST_ERROR, NULL, $this, $request_info);
+          }
+        }
         throw new MollomAuthenticationException('Invalid authentication.', self::AUTH_ERROR, NULL, $this, $request_info);
       }
       if ($response->code == self::RESPONSE_ERROR || $response->code >= 500) {
@@ -805,6 +848,57 @@ abstract class Mollom {
   }
 
   /**
+   * Retrieves GET/HEAD or POST/PUT parameters of an inbound HTTP request.
+   *
+   * @return array
+   *   An array containing either GET/HEAD query string parameters or POST/PUT
+   *   post body parameters. Parameter parsing accounts for multiple request
+   *   parameters in non-PHP format; e.g., 'foo=one&foo=bar'.
+   */
+  public static function getServerParameters() {
+    if ($_SERVER['REQUEST_METHOD'] == 'GET' || $_SERVER['REQUEST_METHOD'] == 'HEAD') {
+      $data = self::httpParseQuery($_SERVER['QUERY_STRING']);
+    }
+    elseif ($_SERVER['REQUEST_METHOD'] == 'POST' || $_SERVER['REQUEST_METHOD'] == 'PUT') {
+      $data = self::httpParseQuery(file_get_contents('php://input'));
+    }
+    return $data;
+  }
+
+  /**
+   * Retrieves the OAuth Authorization header of an inbound HTTP request.
+   *
+   * @return array
+   *   An array containing all key/value pairs extracted out of the
+   *   'Authorization' HTTP header, if any.
+   */
+  public static function getServerAuthentication() {
+    $header = array();
+    // PHP as Apache module provides a SAPI function.
+    // PHP 5.4+ enables getallheaders() also for FastCGI.
+    if (function_exists('getallheaders')) {
+      $headers = getallheaders();
+      if (isset($headers['Authorization'])) {
+        $input = $headers['Authorization'];
+      }
+    }
+    // PHP as CGI with server/.htaccess configuration (e.g., via mod_rewrite)
+    // may transfer/forward HTTP request data into server variables.
+    elseif (isset($_SERVER['HTTP_AUTHORIZATION'])) {
+      $input = $_SERVER['HTTP_AUTHORIZATION'];
+    }
+    // PHP as CGI may provide HTTP request data as environment variables.
+    elseif (isset($_ENV['HTTP_AUTHORIZATION'])) {
+      $input = $_ENV['HTTP_AUTHORIZATION'];
+    }
+    if (isset($input)) {
+      preg_match_all('@([^, =]+)="([^"]*)"@', $input, $header);
+      $header = array_combine($header[1], $header[2]);
+    }
+    return $header;
+  }
+
+  /**
    * Retrieves a list of sites accessible to this client.
    *
    * Used by Mollom resellers only.
@@ -846,6 +940,7 @@ abstract class Mollom {
     if (!isset($publicKey)) {
       $publicKey = $this->publicKey;
     }
+    $publicKey = rawurlencode($publicKey);
     $result = $this->query('GET', 'site/' . $publicKey, array(), array('site', 'publicKey'));
     return isset($result['site']) ? $result['site'] : $result;
   }
@@ -893,7 +988,8 @@ abstract class Mollom {
     if (!isset($publicKey)) {
       $publicKey = $this->publicKey;
     }
-    $result = $this->query('POST', 'site/' . $this->publicKey, $data, array('site', 'publicKey'));
+    $publicKey = rawurlencode($publicKey);
+    $result = $this->query('POST', 'site/' . $publicKey, $data, array('site', 'publicKey'));
     return isset($result['site']) ? $result['site'] : $result;
   }
 
@@ -907,12 +1003,14 @@ abstract class Mollom {
    *
    * @return mixed
    *   TRUE on success. On failure, the error response code returned by the
-   *   server; either Mollom::AUTH_ERROR or Mollom::NETWORK_ERROR.
+   *   server; either Mollom::REQUEST_ERROR, Mollom::AUTH_ERROR or
+   *   Mollom::NETWORK_ERROR.
    */
   public function verifyKeys() {
     $data = $this->getClientInformation();
     $result = $this->updateSite($data);
-    // lastResponseCode will either be TRUE, AUTH_ERROR, or NETWORK_ERROR.
+    // lastResponseCode will either be TRUE, REQUEST_ERROR, AUTH_ERROR, or
+    // NETWORK_ERROR.
     return $this->lastResponseCode === TRUE ? TRUE : $this->lastResponseCode;
   }
 
@@ -926,6 +1024,7 @@ abstract class Mollom {
    *   TRUE on success, FALSE otherwise.
    */
   public function deleteSite($publicKey) {
+    $publicKey = rawurlencode($publicKey);
     $result = $this->query('POST', 'site/' . $publicKey . '/delete');
     return $this->lastResponseCode === TRUE;
   }
@@ -950,6 +1049,13 @@ abstract class Mollom {
    *   - checks: An indexed array of strings denoting the checks to perform, one
    *     or more of: 'spam', 'quality', 'profanity', 'language', 'sentiment'.
    *     Defaults to 'spam'.
+   *   - type: An optional string identifier to request a special content
+   *     classification behavior. Possible values are:
+   *     - 'user': Enables classification of 'author*' request parameters as
+   *       primary content. postTitle and postBody may be left empty without
+   *       negative impact on the classification result. Use this for checking
+   *       user registration forms. Optionally pass additional user profile text
+   *       fields as postBody.
    *   - unsure: Integer denoting whether a "unsure" response should be allowed
    *     (1) for the 'spam' check (which should lead to CAPTCHA) or not (0).
    *     Defaults to 1.
@@ -997,7 +1103,12 @@ abstract class Mollom {
   public function checkContent(array $data = array()) {
     $path = 'content';
     if (!empty($data['id'])) {
-      $path .= '/' . $data['id'];
+      // The ID originates from raw form input. Ensure we hit the right endpoint
+      // in case a bogus bot fills in even hidden input fields with random
+      // strings, by performing a basic syntax validation.
+      if (preg_match('@^[a-z0-9-]+$@i', $data['id'])) {
+        $path .= '/' . rawurlencode($data['id']);
+      }
       unset($data['id']);
     }
     $result = $this->query('POST', $path, $data, array('content', 'id'));
@@ -1074,7 +1185,13 @@ abstract class Mollom {
     if (empty($data['id'])) {
       return FALSE;
     }
-    $path = 'captcha/' . $data['id'];
+    // The ID originates from raw form input. Ensure we hit the right endpoint
+    // in case a bogus bot fills in even hidden input fields with random
+    // strings, by performing a basic syntax validation.
+    if (!preg_match('@^[a-z0-9-]+$@i', $data['id'])) {
+      return FALSE;
+    }
+    $path = 'captcha/' . rawurlencode($data['id']);
     unset($data['id']);
     $result = $this->query('POST', $path, $data, array('captcha', 'id'));
 
@@ -1127,6 +1244,7 @@ abstract class Mollom {
     if (!isset($publicKey)) {
       $publicKey = $this->publicKey;
     }
+    $publicKey = rawurlencode($publicKey);
     $result = $this->query('GET', 'blacklist/' . $publicKey, array(), array('list'));
     return isset($result['list']) ? $result['list'] : $result;
   }
@@ -1164,7 +1282,8 @@ abstract class Mollom {
     if (!isset($publicKey)) {
       $publicKey = $this->publicKey;
     }
-    $result = $this->query('GET', 'blacklist/' . $publicKey . '/' . $entryId, array(), array('entry', 'id'));
+    $path = 'blacklist/' . rawurlencode($publicKey) . '/' . rawurlencode($entryId);
+    $result = $this->query('GET', $path, array(), array('entry', 'id'));
     return isset($result['entry']) ? $result['entry'] : $result;
   }
 
@@ -1188,9 +1307,9 @@ abstract class Mollom {
     if (!isset($publicKey)) {
       $publicKey = $this->publicKey;
     }
-    $path = 'blacklist/' . $publicKey;
+    $path = 'blacklist/' . rawurlencode($publicKey);
     if (!empty($data['id'])) {
-      $path .= '/' . $data['id'];
+      $path .= '/' . rawurlencode($data['id']);
       unset($data['id']);
     }
     $result = $this->query('POST', $path, $data, array('entry', 'id'));
@@ -1213,7 +1332,8 @@ abstract class Mollom {
     if (!isset($publicKey)) {
       $publicKey = $this->publicKey;
     }
-    $result = $this->query('POST', 'blacklist/' . $publicKey . '/' . $entryId . '/delete');
+    $path = 'blacklist/' . rawurlencode($publicKey) . '/' . rawurlencode($entryId) . '/delete';
+    $result = $this->query('POST', $path);
     return $this->lastResponseCode === TRUE;
   }
 }
@@ -1287,12 +1407,20 @@ class MollomException extends Exception {
     $mollom->lastResponseCode = $code;
 
     // Log the exception.
+    // To aid Mollom technical support, include the IP address of the server we
+    // tried to reach in case a request fails.
+    // PHP's native gethostbyname() is available on all platforms, but its DNS
+    // lookup and caching behavior is undocumented and unclear. User comments on
+    // php.net mention that it does not have an own cache and also does not use
+    // the OS/platform's native DNS name resolver. Due to that, we only use it
+    // under error conditions.
     $message = array(
       'severity' => $this->severity,
-      'message' => 'Error @code: %message',
+      'message' => 'Error @code: %message (@server-ip)',
       'arguments' => array(
         '@code' => $code,
         '%message' => $message,
+        '@server-ip' => gethostbyname($mollom->server),
       ),
     );
     // Add HTTP request information, if available.
@@ -1324,6 +1452,18 @@ class MollomNetworkException extends MollomException {
  * Thrown in case API keys or other authentication parameters are invalid.
  */
 class MollomAuthenticationException extends MollomException {
+}
+
+/**
+ * Mollom error due to bad client request exception.
+ *
+ * Thrown in case the local time diverges too much from UTC.
+ *
+ * @see Mollom::TIME_OFFSET_MAX
+ * @see Mollom::REQUEST_ERROR
+ * @see Mollom::handleRequest()
+ */
+class MollomBadRequestException extends MollomException {
 }
 
 /**

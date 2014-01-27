@@ -6,9 +6,9 @@ dependencies[] = simplenews
 
 files[] = tests/simplenews_roles.test
 
-; Information added by drupal.org packaging script on 2012-03-19
+; Information added by drupal.org packaging script on 2013-05-25
 version = "7.x-1.x-dev"
 core = "7.x"
 project = "simplenews_roles"
-datestamp = "1332117418"
+datestamp = "1369453678"
 

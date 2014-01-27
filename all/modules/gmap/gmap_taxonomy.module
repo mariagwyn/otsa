@@ -17,23 +17,17 @@ function gmap_taxonomy_form_alter(&$form, &$form_state, $form_id) {
       '#title' => t('GMap markers'),
     );
     $vid = isset($form['vid']) ? $form['vid']['#value'] : -1;
-    $temp = variable_get('gmap_taxonomy_vocabs', array());
-    if (!isset($temp[$vid])) {
-      $temp[$vid] = 0;
-    }
     $form['gmap_taxonomy']['gmap_taxonomy_enable'] = array(
       '#type' => 'checkbox',
       '#title' => t('Enable'),
       '#description' => t('Enable choosing a marker for terms in this vocabulary.'),
-      '#default_value' => $temp[$vid],
+      '#default_value' => gmap_taxonomy_vocabulary_is_enabled($vid),
     );
   }
   // @@@ Why does this get called up on delete?
   if ($form_id == 'taxonomy_form_term' && empty($form['confirm']['#value'])) {
-    $vid = $form['#vocabulary']->vid;
-    $term = (object)$form['#term'];
-    $vocs = variable_get('gmap_taxonomy_vocabs', array());
-    if (isset($vocs[$vid]) && $vocs[$vid]) {
+    $term = (object) $form['#term'];
+    if (gmap_taxonomy_vocabulary_is_enabled($form['#vocabulary'])) {
       $temp = '';
       if (!empty($term->tid)) {
         if ($t = db_query('SELECT marker FROM {gmap_taxonomy_term} WHERE tid = :tid', array(':tid' => $term->tid))->fetchField()) {
@@ -83,9 +77,10 @@ function gmap_taxonomy_taxonomy_vocabulary_insert($vocabulary) {
  */
 function gmap_taxonomy_taxonomy_vocabulary_update($vocabulary) {
   if (isset($vocabulary->gmap_taxonomy_enable)) {
-    $status = variable_get('gmap_taxonomy_vocabs', array());
-    $status[$vocabulary->vid] = $vocabulary->gmap_taxonomy_enable;
-    variable_set('gmap_taxonomy_vocabs', $status);
+    variable_set('gmap_taxonomy_vocab_' . $vocabulary->machine_name, TRUE);
+  }
+  else {
+    variable_del('gmap_taxonomy_vocab_' . $vocabulary->machine_name);
   }
 }
 
@@ -93,9 +88,7 @@ function gmap_taxonomy_taxonomy_vocabulary_update($vocabulary) {
  * Implement hook_taxonomy_vocabulary_delete().
  */
 function gmap_taxonomy_taxonomy_vocabulary_delete($vocabulary) {
-  $status = variable_get('gmap_taxonomy_vocabs', array());
-  unset($status[$vocabulary->vid]);
-  variable_set('gmap_taxonomy_vocabs', $status);
+  variable_del('gmap_taxonomy_vocab_' . $vocabulary->machine_name);
 }
 
 /**
@@ -109,8 +102,7 @@ function gmap_taxonomy_taxonomy_term_insert($term) {
  * Implement hook_taxonomy_term_update().
  */
 function gmap_taxonomy_taxonomy_term_update($term) {
-  $vocabs = variable_get('gmap_taxonomy_vocabs', array());
-  if (isset($vocabs[$term->vid]) && $vocabs[$term->vid]) {
+  if (gmap_taxonomy_vocabulary_is_enabled($term->vid)) {
     db_delete('gmap_taxonomy_term')
       ->condition('tid', $term->tid)
       ->execute();
@@ -169,7 +161,9 @@ function gmap_taxonomy_node_update($node) {
   $gmap_taxonomy_markers = gmap_taxonomy_get_markers();
 
   // If this node doesn't use taxonomy_term_reference fields at all, skip the rest.
-  if (!isset($gmap_taxonomy_fields[$node->type])) { return; }
+  if (!isset($gmap_taxonomy_fields[$node->type])) {
+    return;
+  }
 
   // Loop through the page's terms and insert markers if applicable
   foreach ($gmap_taxonomy_fields[$node->type] as $fieldname) {
@@ -177,11 +171,15 @@ function gmap_taxonomy_node_update($node) {
     $terms = field_get_items('node', $node, $fieldname, $node->language);
 
     // Skip if term has no value
-    if (!$terms) { continue; }
+    if (!$terms) {
+      continue;
+    }
 
     // Otherwise loop through and set marker for term, if term has marker
     foreach ($terms as $term) {
-      if (!isset($gmap_taxonomy_markers[$term['tid']])) { continue; }
+      if (!isset($gmap_taxonomy_markers[$term['tid']])) {
+        continue;
+      }
       // Insert to gmap_taxonomy table
       db_insert('gmap_taxonomy_node')
         ->fields(array(
@@ -215,13 +213,30 @@ function gmap_taxonomy_node_revision_delete($node) {
 */
 
 /**
+ * Check if gmap taxonomy is enabled for the given vocabulary
+ *
+ * @param $vocabulary
+ *   The vocabulary to check. Entire object and vid are allowed.
+ * @return bool
+ *   TRUE if the vocabulary is enabled
+ */
+function gmap_taxonomy_vocabulary_is_enabled($vocabulary) {
+  if (!is_object($vocabulary)) {
+    $vocabulary = taxonomy_vocabulary_load($vocabulary);
+  }
+
+  return $vocabulary
+    && variable_get('gmap_taxonomy_vocab_' . $vocabulary->machine_name, FALSE);
+}
+
+/**
  * Get all gmap taxonomy markers
  * Helper function to return cached version of gmap taxonomy markers from the database
  * @return
  *   Associative array of tid => marker.
  */
 function gmap_taxonomy_get_markers() {
-  $gmap_taxonomy_markers = &drupal_static(__FUNCTION__);
+  $gmap_taxonomy_markers = & drupal_static(__FUNCTION__);
 
   if (!isset($gmap_taxonomy_markers)) {
     if ($cache = cache_get('gmap_taxonomy_markers_data')) {
@@ -242,7 +257,7 @@ function gmap_taxonomy_get_markers() {
  *   Associative array keyed with node type and with values as array of field names.
  */
 function gmap_taxonomy_get_instances() {
-  $gmap_taxonomy_fields = &drupal_static(__FUNCTION__);
+  $gmap_taxonomy_fields = & drupal_static(__FUNCTION__);
   // TODO: Could do something with the vid, but probably too much overhead to use it here
   // as field_info_fields() only gives us machine names and gmap_taxonomy_vocabs only gives us vid
   // $gmap_taxonomy_vocabs = variable_get('gmap_taxonomy_vocabs', array());
@@ -257,7 +272,7 @@ function gmap_taxonomy_get_instances() {
       $fields = field_info_fields();
       // loop through to get the ones of field type taxonomy_term_reference
       foreach ($fields as $field) {
-        if ($field['type'] == 'taxonomy_term_reference') {
+        if ($field['type'] == 'taxonomy_term_reference' && isset($field['bundles']['node'])) {
           foreach ($field['bundles']['node'] as $node_type) {
             $gmap_taxonomy_fields[$node_type][] = $field['field_name'];
           }

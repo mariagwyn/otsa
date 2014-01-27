@@ -29,7 +29,7 @@ function commerce_addressbook_schema() {
         'default' => '',
       ),
       'uid' => array(
-        'description' => 'Serial numeric ID of the customer profile in the local database.',
+        'description' => 'The {users}.uid that owns this profile-.',
         'type' => 'int',
         'unsigned' => TRUE,
         'not null' => TRUE,

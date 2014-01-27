@@ -91,44 +91,63 @@ function acquia_agent_page_alter(&$page) {
  * Pre-render function which dynamically adds links to the toolbar.
  */
 function acquia_agent_toolbar_add_links($toolbar) {
-    $link['html'] = TRUE;
-    if (acquia_agent_subscription_is_active()) {
-      $subscription = acquia_agent_settings('acquia_subscription_data');
+  $link = array();
+  if (acquia_agent_subscription_is_active()) {
+    $subscription = acquia_agent_settings('acquia_subscription_data');
+    if (is_array($subscription['expiration_date']) && isset($subscription['active']) && $subscription['active'] !== FALSE) {
       // Yes, this uses inline CSS, which sounds bad, but including a CSS file
       // just for this sounds equally bad.
       $icon = '<img src="' . base_path() . 'misc/message-16-ok.png" alt="ok" style="vertical-align: middle;" />';
       $link['title'] = t("!icon Subscription active (expires @date)", array('!icon' => $icon, '@date' => format_date(strtotime($subscription['expiration_date']['value']), 'custom', 'Y/n/j')));
       $link['attributes']['class'][] = "acquia-active-subscription";
-      $link['attributes']['title'] = $subscription['product']['view'];
       $link['href'] = $subscription['href'];
     }
-    else {
-      // Yes, this uses inline CSS, which sounds bad, but including a CSS file
-      // just for this sounds equally bad.
-      $icon = '<img src="' . base_path() . 'misc/message-16-error.png" alt="error" style="vertical-align: middle;" />';
-      $link['title'] = t("!icon Subscription not active", array('!icon' => $icon));
-      $link['attributes']['class'][] = "acquia-inactive-subscription";
-      $link['href'] = 'http://acquia.com/network';
-    }
-
+  }
+  if (empty($link)) {
+    // Yes, this uses inline CSS, which sounds bad, but including a CSS file
+    // just for this sounds equally bad.
+    $icon = '<img src="' . base_path() . 'misc/message-16-error.png" alt="error" style="vertical-align: middle;" />';
+    $link['title'] = t("!icon Subscription not active", array('!icon' => $icon));
+    $link['attributes']['class'][] = "acquia-inactive-subscription";
+    $link['href'] = 'http://acquia.com/network';
+  }
+  $link['html'] = TRUE;
   $toolbar['toolbar_user']['#links'] = array_merge(array('acquia_agent' => $link), $toolbar['toolbar_user']['#links']);
   return $toolbar;
 }
 
 /**
- * Implementation of hook_init().
+ * Implements hook_init().
  */
 function acquia_agent_init() {
+  // Auto-connect with Acquia Cloud credentials if there's not currently a
+  // connection or credentials set.
+   if (!acquia_agent_has_credentials() && !variable_get('acquia_subscription_data', FALSE)
+      && variable_get('ah_network_key', FALSE) && variable_get('ah_network_identifier', FALSE)) {
+
+    variable_set('acquia_identifier', variable_get('ah_network_identifier', FALSE));
+    variable_set('acquia_key', variable_get('ah_network_key', FALSE));
+
+    $activated = acquia_agent_check_subscription();
+
+    if ($activated) {
+      $text = t('Your site has been automatically connected to the Acquia Network. <a href="!url">Change subscription</a>', array('!url' => url('admin/config/system/acquia-agent/setup')));
+      drupal_set_message($text, 'status', FALSE);
+    }
+  }
+
   $request = ltrim(request_uri(), DIRECTORY_SEPARATOR);
-  if ((arg(0) != 'overlay-ajax') && (arg(3) != 'acquia-agent') &&
+  $hide_signup_messages = variable_get('acquia_agent_hide_signup_messages', 0);
+  if (!$hide_signup_messages &&
+    (arg(0) != 'overlay-ajax') && (arg(3) != 'acquia-agent') &&
     empty($_POST) &&  user_access('administer site configuration') &&
     (!acquia_agent_has_credentials()) &&
     (strpos($request, variable_get('file_public_path', conf_path() . DIRECTORY_SEPARATOR . 'files')) !== 0)) {
     $text = 'Get a <a href="!acquia-free">free 30-day trial</a> of the Acquia Network which includes a <a href="!library" target="_blank">library</a> of expert knowledge, <a href="!services" target="_blank">tools and services</a> to make your site awesome, and <a href="!support" target="_blank">Drupal support</a> when you need it.<br/>If you have an Acquia Network subscription, <a href="!settings">connect now</a>. Otherwise, you can turn this message off by disabling the Acquia Network <a href="!admin-modules">modules</a>.';
     if (isset($_SERVER['AH_SITE_GROUP'])) {
-      $text = '<a href="!settings">Connect your site to the Acquia Network now</a>.';
+      $text = '<a href="!settings">Connect your site to the Acquia Network now</a>. <a href="!more">Learn more</a>.';
     }
-    $message = t($text, array('!acquia-free' => url('admin/config/system/acquia-agent'), '!library' => url('http://library.acquia.com'), '!settings' => url('admin/config/system/acquia-agent/setup'), '!support' => url('http://www.acquia.com/drupal-support'), '!services' => url('http://www.acquia.com/products-services/acquia-network/cloud-services'), '!admin-modules' => url('admin/modules')));
+    $message = t($text, array('!more' => url('https://docs.acquia.com/network/install/connector'), '!acquia-free' => url('admin/config/system/acquia-agent'), '!library' => url('http://library.acquia.com'), '!settings' => url('admin/config/system/acquia-agent/setup'), '!support' => url('http://www.acquia.com/drupal-support'), '!services' => url('http://www.acquia.com/products-services/acquia-network/cloud-services'), '!admin-modules' => url('admin/modules')));
     drupal_set_message($message, 'warning', FALSE);
   }
 }
@@ -211,6 +230,14 @@ function acquia_agent_get_subscription($params = array(), $identifier = NULL, $k
       $params['search_version'][$name] = isset($info['version']) ? (string)$info['version'] : (string)$info['core'];
     }
   }
+  // Include Acquia Search for Search API module version number.
+  if (module_exists('search_api_acquia')) {
+    foreach (array('search_api_acquia', 'search_api', 'search_api_solr') as $name) {
+      $info = system_get_info('module', $name);
+      // Send the version, or at least the core compatibility as a fallback.
+      $params['search_version'][$name] = isset($info['version']) ? (string)$info['version'] : (string)$info['core'];
+    }
+  }
 
   // Retrieve our subscription details
   $data = acquia_agent_call('acquia.agent.subscription', $params, $identifier, $key, $acquia_network_address);
@@ -259,10 +286,10 @@ function acquia_agent_update_status_alter(&$projects) {
   foreach ($projects as $project => $project_info) {
     if ($project == 'drupal') {
       if (isset($subscription['update'])) {
-        $projects[$project]['status'] = $subscription['update']['status'];
-        $projects[$project]['releases'] = $subscription['update']['releases'];
-        $projects[$project]['recommended'] = $subscription['update']['recommended'];
-        $projects[$project]['latest_version'] = $subscription['update']['latest_version'];
+        $projects[$project]['status'] = isset($subscription['update']['status']) ? $subscription['update']['status'] : t('Unknown');
+        $projects[$project]['releases'] = isset($subscription['update']['releases']) ? $subscription['update']['releases'] : array();
+        $projects[$project]['recommended'] = isset($subscription['update']['recommended']) ? $subscription['update']['recommended'] : '';
+        $projects[$project]['latest_version'] = isset($subscription['update']['latest_version']) ? $subscription['update']['latest_version'] : '';
         // Security updates are a separate piece of data.  If we leave it, then core
         // security warnings from druapl.org will also be displayed on the update page.
         unset($projects[$project]['security updates']);

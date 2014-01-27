@@ -11,7 +11,7 @@
 /**
  * Implements hook_entity_info().
  *
- * This function provides informations about the coupon entities.
+ * This function provides information about the coupon entities.
  */
 function commerce_coupon_entity_info() {
   $entity_info['commerce_coupon'] = array(
@@ -30,6 +30,15 @@ function commerce_coupon_entity_info() {
     ),
     'access callback' => 'commerce_coupon_access',
     'module' => 'commerce_coupon',
+    'permission labels' => array(
+      'singular' => t('coupon'),
+      'plural' => t('coupons'),
+    ),
+    'access callback' => 'commerce_entity_access',
+    'access arguments' => array(
+      'user key' => 'uid',
+      'access tag' => 'commerce_coupon_access',
+    ),
   );
 
   $entity_info['commerce_coupon_type'] = array(
@@ -97,7 +106,7 @@ function commerce_coupon_commerce_checkout_pane_info() {
   $checkout_panes['commerce_coupon'] = array(
     'title' => t('Coupons'),
     'page' => 'checkout',
-    'locked' => TRUE,
+    'locked' => FALSE,
     'file' => 'includes/commerce_coupon.checkout_pane.inc',
     'base' => 'commerce_coupon_pane',
     'weight' => 9,
@@ -107,17 +116,19 @@ function commerce_coupon_commerce_checkout_pane_info() {
 }
 
 /**
- * Access callback for coupon types.
+ * Checks coupon access for various operations.
+ *
+ * @param $op
+ *   The operation being performed. One of 'view', 'update', 'create' or
+ *   'delete'.
+ * @param $coupon
+ *   Optionally a coupon to check access for. If nothing is given access
+ *   permissions for all coupons are returned.
+ * @param $account
+ *   The user to check for. Leave it to NULL to check for the current user.
  */
-function commerce_coupon_type_access($op, $type = NULL, $account = NULL) {
-  return user_access('administer coupon types', $account);
-}
-
-/**
- * Access callback for coupons
- */
-function commerce_coupon_access($op, $type = NULL, $account = NULL) {
-  return user_access('administer coupons', $account);
+function commerce_coupon_access($op, $coupon = NULL, $account = NULL) {
+  return commerce_entity_access($op, $coupon, $account, 'commerce_coupon');
 }
 
 /**
@@ -135,11 +146,10 @@ function commerce_coupon_permission() {
       'title' => t('Administer Coupon Types'),
       'description' => t('Allows users to manage coupon types.'),
     ),
-    'administer coupons' => array(
-      'title' => t('Administer Coupons'),
-      'description' => t('Allows users to manage coupons.'),
-    ),
   );
+
+  $permissions += commerce_entity_access_permissions('commerce_coupon');
+
   return $permissions;
 }
 
@@ -204,7 +214,7 @@ function commerce_coupon_generate_coupon_code($length = NULL) {
  *   Returns TRUE if the code is valid else FALSE.
  */
 function commerce_coupon_code_is_valid($code, $order) {
-  global $commerce_coupon_validation_error_message;
+  global $_commerce_coupon_validation_error_message;
 
   // Trim trailing spaces
   $code = trim($code);
@@ -213,13 +223,14 @@ function commerce_coupon_code_is_valid($code, $order) {
 
   // if no such coupon found, the $code is invalid
   if (!is_object($coupon)) {
+   // $commerce_coupon_validation_error_message = t('Coupon code is invalid.');
     return FALSE;
   }
 
   // Check if the coupon is already applied to this order. In any case we
   // never want that a coupon is applied twice.
   if (commerce_coupon_code_is_in_order($code, $order)) {
-    $commerce_coupon_validation_error_message = t('Sorry, you can only apply a coupon once per order.');
+    $_commerce_coupon_validation_error_message = t('Sorry, you can only apply a coupon once per order.');
     return FALSE;
   }
 
@@ -610,12 +621,12 @@ function commerce_coupon_load_by_code($code) {
  *   Coupon object to remove.
  */
 function commerce_coupon_remove_coupon_from_order($order, $coupon) {
-  $original_order = $order;
+  $original_order = clone $order;
   $order_wrapper = entity_metadata_wrapper('commerce_order', $order);
 
-  //Remove the coupons from the order relationship.
+  // Remove the coupons from the order relationship.
   foreach ($order_wrapper->commerce_coupon_order_reference as $delta => $coupon_wrapper) {
-    if ($coupon_wrapper->value() == $coupon) {
+    if ($coupon_wrapper->coupon_id->value() == $coupon->coupon_id) {
       $order_wrapper->commerce_coupon_order_reference->offsetUnset($delta);
     }
   }
@@ -719,7 +730,7 @@ function commerce_coupon_delete_multiple(array $commerce_coupon_ids) {
  * @return
  *   Boolean indicating whether or not the coupon can be deleted.
  *
- * @see commerce_product_can_delete
+ * @see commerce_product_can_delete()
  */
 function commerce_coupon_can_delete($coupon) {
   // Return FALSE if the given coupon does not have an ID; it need not be
@@ -802,7 +813,7 @@ function commerce_coupon_get_number_of_uses($coupon_id) {
 function commerce_coupon_code_is_in_order($code, $order) {
   $order_wrapper = entity_metadata_wrapper('commerce_order', $order);
   foreach ($order_wrapper->commerce_coupon_order_reference as $coupon_wrapper) {
-    if ($coupon_wrapper->commerce_coupon_code->raw() == $code) {
+    if (strcasecmp($coupon_wrapper->commerce_coupon_code->raw(), $code) == 0) {
       return TRUE;
     }
   }
@@ -865,8 +876,8 @@ function commerce_coupon_machine_name_code($coupon) {
   $coupon_code = $coupon->commerce_coupon_code[LANGUAGE_NONE][0]['value'];
   // Set the pattern replacement to the default one that drupal uses for
   // machine names.
-  // @see form_process_machine_name
-  return preg_replace('/_+/', '_', preg_replace('/[^a-z0-9]/', '_', strtolower($coupon_code)));
+  // @see form_process_machine_name()
+  return preg_replace('/_+/', '_', preg_replace('/[^a-z0-9]/', '_', drupal_strtolower($coupon_code)));
 }
 
 /**
@@ -1070,4 +1081,37 @@ function commerce_coupon_commerce_cart_order_refresh($order_wrapper) {
       }
     }
   }
+}
+
+/**
+ * Returns the number of uses for this coupon.
+ *
+ * @param $coupon_id
+ *   Coupon id to check.
+ *
+ * @return integer
+ *   Returns number of uses of the coupon in all orders.
+ */
+function commerce_coupon_get_coupons_in_order($order_id) {
+  $order_wrapper = entity_metadata_wrapper('commerce_order', $order_id);
+  $coupons = array();
+  foreach ($order_wrapper->commerce_coupon_order_reference as $coupon_wrapper) {
+    if ($coupon_wrapper->value()->is_active == 1) {
+      $coupons[] = $coupon_wrapper->value();
+    }
+  }
+  return $coupons;
+}
+
+/**
+ * Returns a list of coupons that have been attached to the order.
+ *
+ * @param $commerce_order
+ *  The order which is to be checked.
+ */
+function commerce_coupon_action_get_coupons_for_order($commerce_order) {
+  if (!$commerce_order) {
+    return array();
+  }
+  return array('order_coupons' => commerce_coupon_get_coupons_in_order($commerce_order->order_id));
 }

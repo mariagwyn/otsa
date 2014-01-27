@@ -1,18 +1,30 @@
-#permissions th {
-	white-space: nowrap;
-}
-#permissions .pselect {
+.pselect {
   font-weight: normal !important;
   text-align: center;
   margin: 0;
-  padding: 0 5px;
-  white-space: nowrap;
+  padding: 0;
 }
-#permissions .pselect a, #permissions .pselect a:link, #permissions .pselect a:visited {
-	font-size: 9px;
-  text-decoration: underline; 
-  margin: 0;
+/* Creating Image Links to clean up the interface now instead of the traditional text links */
+.pselect a, 
+.permission_select a.rcheck, 
+.permission_select a.runcheck,
+.permission_select a.check, 
+.permission_select a.uncheck {
+	text-indent: -2000em;
+	height: 14px;
+	width: 13px;
+	display: inline-block;
+	margin: 0 5px;
 }
-#permissions .pselect a:hover {
-  text-decoration: none; 
+a.rcheck,
+a.check {
+  background: transparent url('checkbox-checked.png') no-repeat top left; 
+}
+a.runcheck,
+a.uncheck {
+  background: transparent url('checkbox-unchecked.png') no-repeat top left; 
+}
+span.role {
+  margin: 0 10px;
+  padding: 0 0 5px 0;
 }

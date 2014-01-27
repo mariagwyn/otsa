@@ -1,4 +1,4 @@
-var $j = jQuery.noConflict();
+var $ = jQuery.noConflict();
 
 function safelog(data) {if(console){console.log(data)}}
 /** 
@@ -6,36 +6,37 @@ function safelog(data) {if(console){console.log(data)}}
  * @return the jQuery selector to use in finding the checkboxes we are attempting to manipulate
  */
 function find_matching_checkboxes(link) {
-	var module = $j(link)
+
+	var module = $(link)
 								.parent('td')
 								.parent('tr')
 								.children('td.module_name')
 								.attr('id');
 	safelog('module name to modify: '+module);
-	var ctd = $j(link).parent('td');
+	var ctd = $(link).parent('td');
 	// get the index of the current column
-	var col_index = $j('tr.'+module+' td').index(ctd);
+	var col_index = $('tr.'+module+' td').index(ctd);
 	col_index++;
-	return 'tr.'+module+' td:nth-child('+col_index+') input:checkbox';
+	return 'td.'+module+':nth-child('+col_index+') input:checkbox';
 }
 
-$j(document).ready(function(){
+$(document).ready(function(){
 
   // get number of columns we will need to manipulate & add 
   // select / unselect options for each module header row
-  var roles = $j('#permissions > thead > tr > th.checkbox');
+  var roles = $('#permissions > thead > tr > th.checkbox');
   var role_count = roles.size();
   
   // take off the stupid colspan from the module header row, because we 
   // will be matching up to the other rows perfectly now
-  $j('td.module').removeAttr('colspan');
+  $('td.module').removeAttr('colspan');
   
   // needed to add in a defining class or id to the parent TR in 
   // order to have a reference to grab a proper index for the links
   // being clicked.
-  $j('td.module').each(function(){
-    var module_id = $j(this).attr('id');
-    $j(this)
+  $('td.module').each(function(){
+    var module_id = $(this).attr('id');
+    $(this)
     	.parent('tr')
     	.addClass(module_id+' module_parent')
     	.attr('rel', module_id);
@@ -43,23 +44,36 @@ $j(document).ready(function(){
   
   // cycle how many roles we have and insert that many columns worth of 
   // select / deselect options
-  $j(roles).each(function(){
-	  $j('td.module')
+  $(roles).each(function(){
+	  $('td.module')
 	   		.after('<td class="pselect"><a href="#" class="check">check all</a>&nbsp;/&nbsp;<a href="#" class="uncheck">uncheck all</a></td>');
 	  });
 
   // give the new boxes the module class to preserve styling of the row
-  $j('td.pselect').addClass('module');
+  $('td.pselect').addClass('module');
 
   // clicky 
-  $j('a.check').click(function(){
+  $('a.check').click(function(){
 	var check_it = find_matching_checkboxes(this);
-	$j(check_it).attr('checked', true);
+	safelog(check_it);
+	$(check_it).attr('checked', true);
 	return false;	
   });
-  $j('a.uncheck').click(function(){
+  $('a.uncheck').click(function(){
 	var uncheck_it = find_matching_checkboxes(this);
-	$j(uncheck_it).attr('checked', false);
+	$(uncheck_it).attr('checked', false);
 	return false;	
   });  
+	
+	$('a.rcheck').click(function(){
+	var check_it = $(this).parent('li').children('span.role').attr('id');
+	$('td.'+check_it+' input:checkbox').attr('checked', true);
+	return false;	
+  });
+	$('a.runcheck').click(function(){
+	var check_it = $(this).parent('li').children('span.role').attr('id');
+	$('td.'+check_it+' input:checkbox').attr('checked', false);
+	return false;	
+  });
+	
 });

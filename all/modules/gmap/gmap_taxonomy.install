@@ -28,7 +28,7 @@ function gmap_taxonomy_requirements($phase) {
 function gmap_taxonomy_schema() {
   $schema['gmap_taxonomy_term'] = array(
     'fields' => array(
-      'tid'    => array('type' => 'int', 'unsigned' => TRUE, 'not null' => TRUE, 'default' => 0),
+      'tid' => array('type' => 'int', 'unsigned' => TRUE, 'not null' => TRUE, 'default' => 0),
       'marker' => array('type' => 'varchar', 'length' => 32),
     ),
     'primary key' => array('tid'),
@@ -36,9 +36,9 @@ function gmap_taxonomy_schema() {
 
   $schema['gmap_taxonomy_node'] = array(
     'fields' => array(
-      'nid'    => array('type' => 'int', 'unsigned' => TRUE, 'not null' => TRUE, 'default' => 0),
+      'nid' => array('type' => 'int', 'unsigned' => TRUE, 'not null' => TRUE, 'default' => 0),
 //      'vid'    => array('type' => 'int', 'unsigned' => TRUE, 'not null' => TRUE, 'default' => 0),
-      'tid'    => array('type' => 'int', 'unsigned' => TRUE, 'not null' => TRUE, 'default' => 0),
+      'tid' => array('type' => 'int', 'unsigned' => TRUE, 'not null' => TRUE, 'default' => 0),
       'marker' => array('type' => 'varchar', 'length' => 32),
     ),
     'primary key' => array('nid'),
@@ -70,9 +70,9 @@ function gmap_taxonomy_update_6001() {
 
   $schema['gmap_taxonomy_node'] = array(
     'fields' => array(
-      'nid'    => array('type' => 'int', 'unsigned' => TRUE, 'not null' => TRUE, 'default' => 0),
-      'vid'    => array('type' => 'int', 'unsigned' => TRUE, 'not null' => TRUE, 'default' => 0),
-      'tid'    => array('type' => 'int', 'unsigned' => TRUE, 'not null' => TRUE, 'default' => 0),
+      'nid' => array('type' => 'int', 'unsigned' => TRUE, 'not null' => TRUE, 'default' => 0),
+      'vid' => array('type' => 'int', 'unsigned' => TRUE, 'not null' => TRUE, 'default' => 0),
+      'tid' => array('type' => 'int', 'unsigned' => TRUE, 'not null' => TRUE, 'default' => 0),
       'marker' => array('type' => 'varchar', 'length' => 32),
     ),
     'primary key' => array('vid'),
@@ -88,6 +88,35 @@ function gmap_taxonomy_update_6001() {
   $ret[] = update_sql("INSERT INTO {gmap_taxonomy_node} (nid, vid, tid, marker) (SELECT n.nid, n.vid, t.tid, g.marker FROM {node_revisions} n INNER JOIN {term_node} t ON n.vid = t.vid INNER JOIN {gmap_taxonomy_term} g ON t.tid = g.tid GROUP BY n.vid ORDER BY NULL)");
 
   return $ret;
+}
+
+/**
+ * Use vocabularies machine names instead of vids.
+ */
+function gmap_taxonomy_update_7201() {
+  $enabled_vocabularies = variable_get('gmap_taxonomy_vocabs', array());
+  $vocabularies = taxonomy_vocabulary_load_multiple(array_keys(array_filter($enabled_vocabularies)));
+
+  $result = array();
+  foreach ($vocabularies as $vocabulary) {
+    $result[$vocabulary->machine_name] = TRUE;
+  }
+
+  // Save result
+  variable_set('gmap_taxonomy_vocabs', $result);
+}
+
+/**
+ * Split settings in a variable for each vocabulary.
+ */
+function gmap_taxonomy_update_7202() {
+  $enabled_vocabularies = variable_get('gmap_taxonomy_vocabs', array());
+
+  foreach ($enabled_vocabularies as $machine_name => $enabled) {
+    variable_set('gmap_taxonomy_vocab_' . $machine_name, $enabled);
+  }
+
+  variable_del('gmap_taxonomy_vocabs');
 }
 
 /**

@@ -62,7 +62,7 @@ function commerce_cheque_cash_access($order, $transaction) {
   else {
     if ($transaction->status == COMMERCE_PAYMENT_STATUS_PENDING) {
       // Allow access if the user can update payments on this order.
-      return commerce_payment_transaction_access('update', $order, $transaction);
+      return commerce_payment_transaction_access('update', $transaction);
     }
     else {
       return FALSE;
@@ -154,15 +154,21 @@ function commerce_cheque_cash_form_submit($form, &$form_state) {
     $transaction->remote_status = $form_state['values']['cheque_status'];
     switch($form_state['values']['cheque_status']){
       case 'Received':
+          $transaction->message = t('The cheque for this order has been received');
+          $transaction->status = COMMERCE_PAYMENT_STATUS_PENDING;
+        break;
       case 'Deposited':
+          $transaction->message = t('The cheque for this order has been deposited');
           $transaction->status = COMMERCE_PAYMENT_STATUS_PENDING;
         break;
       case 'Cleared':
+          $transaction->message = t('The cheque for this order has been cleared');
           $transaction->status = COMMERCE_PAYMENT_STATUS_SUCCESS;
         break;
     }
   }else{
     // Assume success as default status
+    $transaction->message = t('The cheque for this order has been cashed');
     $transaction->status = COMMERCE_PAYMENT_STATUS_SUCCESS;
   }
   if (!empty($form_state['values']['reference'])) {
@@ -177,7 +183,6 @@ function commerce_cheque_cash_form_submit($form, &$form_state) {
   if($payload){
     $transaction->payload[REQUEST_TIME] = $payload; // Add additional fields
   }
-  $transaction->message = t('The cheque for this order has been cashed');
   commerce_payment_transaction_save($transaction);
   $form_state['redirect'] = 'admin/commerce/orders/'.$order->order_id.'/payment';
 }

@@ -59,23 +59,6 @@ function commerce_addressbook_customer_profile_form_submit($form, &$form_state) 
       commerce_addressbook_set_default_profile($profile);
     }
   }
-
-  // Set the profile as default if it has just been added, and the user has no
-  // other active profiles of this type.
-  if (!empty($profile->_is_new)) {
-    $query = new EntityFieldQuery;
-    $query->entityCondition('entity_type', 'commerce_customer_profile')
-          ->entityCondition('bundle', $profile->type)
-          ->propertyCondition('uid', $profile->uid)
-          ->propertyCondition('status', 1)
-          ->count();
-    $result = $query->execute();
-
-    if ($result < 2) {
-      commerce_addressbook_set_default_profile($profile);
-    }
-  }
-
   $form_state['redirect'] = 'user/' . $profile->uid . '/addressbook/' . $profile->type;
 }
 
@@ -119,6 +102,10 @@ function commerce_addressbook_profile_options_delete_form_submit($form, &$form_s
   else {
     $customer_profile->status = 0;
     commerce_customer_profile_save($customer_profile);
+    // Delete the profile entry from the commerce_addressbook_defaults table.
+    db_delete('commerce_addressbook_defaults')
+      ->condition('profile_id', $customer_profile->profile_id)
+      ->execute();
   }
   $form_state['redirect'] = 'user/' . $customer_profile->uid . '/addressbook/' . $customer_profile->type;
 }
@@ -128,11 +115,26 @@ function commerce_addressbook_profile_options_delete_form_submit($form, &$form_s
  * Used for both ajax and non-ajax delivery of the customer profile updates.
  */
 function commerce_addressbook_profile_options_default($account, $customer_profile, $type = 'ajax') {
+  // Check if the user already has defaults addresses to know which
+  // ajax command we should use.
+  $defaults_view = commerce_addressbook_retrieve_view('commerce_addressbook_defaults', 'default', array($account->uid, $customer_profile->type));
   commerce_addressbook_set_default_profile($customer_profile);
   if ($type == 'ajax') {
     $commands = array();
-    $commands[] = ajax_command_replace('#commerce-addressbook-' . $customer_profile->type . '-default', '<div id="commerce-addressbook-' . $customer_profile->type . '-default">' . views_embed_view('commerce_addressbook_defaults', 'default', $account->uid, $customer_profile->type) . '</div>');
-    $commands[] = ajax_command_replace('#commerce-addressbook-' . $customer_profile->type . '-list', '<div id="commerce-addressbook-' . $customer_profile->type . '-list">' . views_embed_view('commerce_addressbook', 'default', $account->uid, $customer_profile->type) . '</div>');
+    $list_view = commerce_addressbook_retrieve_view('commerce_addressbook', 'default', array($account->uid, $customer_profile->type));
+    $commands[] = ajax_command_replace('#commerce-addressbook-' . $customer_profile->type . '-list', '<div id="commerce-addressbook-' . $customer_profile->type . '-list">' . $list_view->render() . '</div>');
+    $defaults_html = '<div id="commerce-addressbook-' . $customer_profile->type . '-default">' . views_embed_view('commerce_addressbook_defaults', 'default', $account->uid, $customer_profile->type) . '</div>';
+    if (empty($defaults_view->result)) {
+      if (empty($list_view->result)) {
+        $commands[] = ajax_command_replace('#commerce-addressbook-' . $customer_profile->type . '-list', $defaults_html);
+      }
+      else {
+        $commands[] = ajax_command_after('#commerce-addressbook-' . $customer_profile->type . '-list', $defaults_html);
+      }
+    }
+    else {
+      $commands[] = ajax_command_replace('#commerce-addressbook-' . $customer_profile->type . '-default', $defaults_html);
+    }
     ajax_deliver(array('#type' => 'ajax', '#commands' => $commands));
   }
   else {
@@ -147,7 +149,7 @@ function commerce_addressbook_profile_options_default($account, $customer_profil
  */
 function commerce_addressbook_page($account) {
   if ($account->uid) {
-    if ($type = commerce_addressbook_page_access()) {
+    if ($type = commerce_addressbook_page_access($account)) {
       menu_set_active_item('user/' . $account->uid . '/addressbook/' . $type);
       return menu_execute_active_handler(NULL, FALSE);
     }
@@ -162,8 +164,15 @@ function commerce_addressbook_page($account) {
  */
 function commerce_addressbook_profile_page($account, $profile_type) {
   $output = '';
-  $output .= '<div id="commerce-addressbook-' . $profile_type . '-default">' . views_embed_view('commerce_addressbook_defaults', 'default', $account->uid, $profile_type) . '</div>';
-  $output .= '<div id="commerce-addressbook-' . $profile_type . '-list">' . views_embed_view('commerce_addressbook', 'default', $account->uid, $profile_type) . '</div>';
+  $arguments = array($account->uid, $profile_type);
+  $defaults_view = commerce_addressbook_retrieve_view('commerce_addressbook_defaults', 'default', $arguments);
+  $list_view = commerce_addressbook_retrieve_view('commerce_addressbook', 'default', $arguments);
+  if (!empty($defaults_view->result)) {
+    $output .= '<div id="commerce-addressbook-' . $profile_type . '-default">' . $defaults_view->render() . '</div>';
+  }
+  if (!empty($list_view->result)) {
+    $output .= '<div id="commerce-addressbook-' . $profile_type . '-list">' . $list_view->render() . '</div>';
+  }
   return $output;
 }
 
