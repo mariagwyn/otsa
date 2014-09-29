@@ -1,0 +1,39 @@
+diff --git a/role_expire.module b/role_expire.module
+index 4557f39..69f1525 100644
+--- a/role_expire.module
++++ b/role_expire.module
+@@ -435,6 +435,7 @@ function role_expire_cron() {
+                 'Removed role @role from user @account.',
+                 array('@role' => $role_name, '@account' => $account->name)
+                 );
++        rules_invoke_event('role_expire_rules_event_role_expires', $role_name);
+       }
+       else {
+ 
+diff --git a/role_expire.rules.inc b/role_expire.rules.inc
+index 6dd1eac..29081b3 100644
+--- a/role_expire.rules.inc
++++ b/role_expire.rules.inc
+@@ -5,6 +5,22 @@
+  * Rules integration for the role expire module.
+  */
+ 
++function role_expire_rules_event_info() {
++  $items = array(
++    'role_expire_rules_event_role_expires' => array(
++      'label' => 'When a role expires',
++      'group' => 'Role Expire',
++      'variables' => array(
++	        'previous_role' => array(
++	          'type' => 'text',
++	          'label' => t('previous role'),
++	        ),
++	      ),
++    ),
++  );
++  return $items;
++}
++
+ /**
+  * Implementation of hook_rules_action_info().
+  */
