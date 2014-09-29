@@ -26,7 +26,6 @@
                   <?php if ($site_slogan): ?>
                   <span id="slogan"><?php print $site_slogan; ?></span>
                   <?php endif; ?>
-<div class="beta">BETA</div>
                 </div><!-- /site-name-wrapper -->
                 <?php endif; ?>
               </div><!-- /header-site-info-inner -->
