@@ -1,0 +1,73 @@
+diff --git a/role_expire.module b/role_expire.module
+index 4557f39..2f15b66 100644
+--- a/role_expire.module
++++ b/role_expire.module
+@@ -369,7 +369,7 @@ function role_expire_user_load($users) {
+   /**
+    * Load the starter roles into a static cache so it is easy to
+    * see what has changed later on.
+-   * 
++   *
+    * TODO. Support multiple users that are being loaded here. Not sure yet
+    * what that means for Role Expire 7.
+    */
+@@ -435,6 +435,7 @@ function role_expire_cron() {
+                 'Removed role @role from user @account.',
+                 array('@role' => $role_name, '@account' => $account->name)
+                 );
++        rules_invoke_event('role_expire_rules_event_role_expires', $account, $role_name);
+       }
+       else {
+ 
+diff --git a/role_expire.rules.inc b/role_expire.rules.inc
+index 6dd1eac..12c01a3 100644
+--- a/role_expire.rules.inc
++++ b/role_expire.rules.inc
+@@ -5,6 +5,26 @@
+  * Rules integration for the role expire module.
+  */
+ 
++/**
++ * Implementation of hook_rules_event_info().
++ */
++function role_expire_rules_event_info() {
++  $items = array(
++    'role_expire_rules_event_role_expires' => array(
++      'label' => 'When a role expires',
++      'group' => 'Role Expire',
++      'variables' => array(
++        'user' => array(
++          'type' => 'user',
++          'label' => t('Expired user'),
++        ),
++        'previous_role' => array(
++          'type' => 'text',
++          'label' => t('Previous role'),
++        ),
++      ),
++    ),
++  );
++  return $items;
++}
++
+ /**
+  * Implementation of hook_rules_action_info().
+  */
+@@ -103,14 +123,14 @@ function role_expire_rules_action_set_role_expire($account, $rid, $timestamp) {
+ }
+ 
+ /**
+- * Action: Set expire time for role to longest attached to this user. Defaults 
++ * Action: Set expire time for role to longest attached to this user. Defaults
+  * to the current time.
+  */
+ function role_expire_rules_action_set_role_expire_to_longest($account, $rid, $timestamp) {
+   // Set an invalid timestamp to allow for comparisons without warnings.
+   $timestamp = -1;
+   foreach($account->roles as $id => $name) {
+-    $this_ts = role_expire_get_user_role_expiry_time($account->uid, $id);    
++    $this_ts = role_expire_get_user_role_expiry_time($account->uid, $id);
+     if (!empty($this_ts)) {
+       $timestamp = ($this_ts > $timestamp) ? $this_ts : $timestamp;
+     }
+
