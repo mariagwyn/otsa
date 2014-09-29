@@ -194,7 +194,11 @@ body .grid12-12 {
   margin-right: 5px;
 }
 
-
+/* page min width */
+body,
+div.full-width {
+  min-width: 0;
+}
 
 #grid-mask-overlay .block .gutter {
   background-color: rgba(220,220,70,.1);

@@ -1,5 +1,5 @@
 name = Fusion Core
-description = <a href="http://drupal.org/project/fusion">Fusion Core</a> is the grid-enabled base theme for powerful sub-themes.  With the <a href="http://drupal.org/project/fusion_accelerator">Fusion Accelerator</a> module, it enables easy point-and-click theming. By <a href="http://www.topnotchthemes.com">TopNotchThemes</a>
+description = <a href="http://drupal.org/project/fusion">Fusion Core</a> is the grid-enabled base theme for powerful sub-themes.  With the <a href="http://drupal.org/project/fusion_accelerator">Fusion Accelerator</a> module, it enables easy point-and-click theming.
 core = 7.x
 engine = phptemplate
 
@@ -14,6 +14,7 @@ fusion[api] = 2
 fusion[directory] = skins
 
 scripts[] = js/script.js
+scripts[] = skins/core/js/script.js
 
 regions[sidebar_first] = Sidebar first
 regions[sidebar_second] = Sidebar second
@@ -61,6 +62,63 @@ settings[search_info_upload] = 1
 settings[block_config_link] = 1
 settings[grid_mask] = 0
 
+; Set to 0 to remove support for responsive themes.
+settings[responsive_enabled] = 1
+
+; Load JavaScript library to support media queries for older versions of IE.  Recommended.
+settings[responsive_ie_shim] = 1
+
+; Default grid parameters for responsive.
+settings[responsive_columns] = 12
+
+; Supported displays
+; Display "sidebar" is used for desktop, and for backwards compatibility with non-sidebar_responsive or pre-accelerator themes.
+settings[responsive_displays][] = sidebar
+settings[responsive_displays][] = sidebar_tablet_landscape
+settings[responsive_displays][] = sidebar_tablet_portrait
+settings[responsive_displays][] = sidebar_phone_landscape
+
+; Desktop layout.
+; These settings are also used for non-responsive and fluid grids. 
+settings[sidebar_enabled] = 1
+settings[sidebar_layout] = sidebars-split
+settings[sidebar_first_width] = 3
+settings[sidebar_second_width] = 3
+settings[sidebar_grid_width] = 1200
+settings[sidebar_gutter] = 30
+settings[sidebar_mquery] = 'only screen and (min-width:1200px)'
+settings[sidebar_mask] = 'rgba(0, 73, 225, .12)'
+
+; Tablet: landscape
+settings[sidebar_tablet_landscape_enabled] = 1
+settings[sidebar_tablet_landscape_layout] = sidebars-split
+settings[sidebar_tablet_landscape_first_width] = 3
+settings[sidebar_tablet_landscape_second_width] = 3
+settings[sidebar_tablet_landscape_grid_width] = 960
+settings[sidebar_tablet_landscape_gutter] = 20
+settings[sidebar_tablet_landscape_mquery] = 'only screen and (max-device-width: 1024px) and (orientation:landscape), only screen and (min-width:960px) and (max-width:1199px) and (min-device-width: 1100px)'
+settings[sidebar_tablet_landscape_mask] = 'rgba(213,95,28,.15)'
+
+; Tablet: portrait
+settings[sidebar_tablet_portrait_enabled] = 1
+settings[sidebar_tablet_portrait_layout] = sidebars-split
+settings[sidebar_tablet_portrait_first_width] = 3
+settings[sidebar_tablet_portrait_second_width] = 3
+settings[sidebar_tablet_portrait_grid_width] = 768
+settings[sidebar_tablet_portrait_gutter] = 20
+settings[sidebar_tablet_portrait_mquery] = 'only screen and (max-device-width: 1024px) and (orientation:portrait), only screen and (min-width:768px) and (max-width:959px) and (min-device-width: 1100px)'
+settings[sidebar_tablet_portrait_mask] = 'rgba(11,186,40,.15)'
+
+; Smartphone
+settings[sidebar_phone_landscape_enabled] = 1
+settings[sidebar_phone_landscape_layout] = sidebars-drop
+settings[sidebar_phone_landscape_first_width] = 3
+settings[sidebar_phone_landscape_second_width] = 3
+settings[sidebar_phone_landscape_grid_width] = mobile
+settings[sidebar_phone_landscape_gutter] = 10
+settings[sidebar_phone_landscape_mquery] = 'only screen and (max-width:759px)'
+settings[sidebar_phone_landscape_mask] = 'rgba(220,220,70,.1)'
+
 ; Grid layout settings (Advanced)
 ; Nested grid regions without full-width wrappers
 settings[grid_nested_regions][] = sidebar_first
@@ -94,9 +152,9 @@ settings[grid_adjusted_regions_fluid][content][] = sidebar_second
 ; Nested group fluid width adjustments: regions inside a parent group to subtract to get remaining width
 settings[grid_adjusted_groups_fluid][content_group][] = sidebar_second
 
-; Information added by drupal.org packaging script on 2012-03-23
-version = "7.x-2.0-beta2"
+; Information added by Drupal.org packaging script on 2014-09-26
+version = "7.x-2.1"
 core = "7.x"
 project = "fusion"
-datestamp = "1332517846"
+datestamp = "1411765770"
 

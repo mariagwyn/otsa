@@ -25,6 +25,16 @@ function fusion_core_form_system_theme_settings_alter(&$form, $form_state) {
   // Get default theme settings from .info file.
   $theme_data = list_themes();
   $defaults = ($theme_name && isset($theme_data[$theme_name]->info['settings'])) ? $theme_data[$theme_name]->info['settings'] : array();
+   
+  // Get defaults from Fusion core if not defined in .info.
+  if($theme_name != 'fusion_core') {
+  $fusion_defaults = $theme_data['fusion_core']->info['settings'];
+    foreach($fusion_defaults as $key=>$setting) {
+      if(!isset($defaults[$key])){
+      $defaults[$key] = $setting;
+      }
+    }
+  }
 
   // Calculate sidebar width options.
   $width_options = fusion_core_get_width_options($theme_name);

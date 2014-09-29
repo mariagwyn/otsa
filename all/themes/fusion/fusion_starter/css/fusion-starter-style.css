@@ -160,7 +160,6 @@ body {
 
 /* Style for individual dropdown menu items, add border-bottom for separators */
 .main-menu-inner ul.sf-menu li li {
-  background-color: #fff;
 }
 
 .main-menu-inner ul.sf-menu li li.last {

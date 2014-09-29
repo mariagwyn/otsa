@@ -61,6 +61,28 @@ ul, ol, dd {
   float: right;
 }
 
+/* prevent text from overlapping image in system messages */
+div.content-messages-inner div.status {
+  padding-right: 35px;
+}
+
+div.content-messages-inner div.error {
+  padding-right: 35px;
+}
+
+div.content-messages-inner div.help {
+  padding-right: 35px;
+}
+
+div.content-messages-inner div.warning {
+  padding-right: 35px;
+}
+
+/* place logo on the right */
+#logo {
+  float: right !important;
+  margin-left: 20px;
+}
 
 /* Skinr styles - swap directions in RTL so bidi sites are consistent
 /------------------------------------------------------------------- */

@@ -243,6 +243,7 @@ div.full-width {
 -------------------------------------------------------------- */
 #header-site-info {
   width: auto;
+  float: left;
 }
 
 #site-name-wrapper {
