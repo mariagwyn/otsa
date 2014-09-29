@@ -54,6 +54,14 @@ function fusion_core_preprocess_html(&$vars) {
   // Remove any empty elements in the array.
   $vars['classes_array'] = array_filter($vars['classes_array']);
 
+  // Serialize RDF namespaces into an RDFa 1.1 prefix attribute.
+  if (function_exists('rdf_get_namespaces')) {
+    foreach (rdf_get_namespaces() as $prefix => $uri) {
+      $prefixes[] = $prefix . ': ' . $uri;
+    }
+    $vars['rdf_namespaces'] = ' prefix="' . implode(' ', $prefixes) . '"';
+  }
+
   $themes = fusion_core_theme_paths($theme_key);
   $file = theme_get_setting('theme_grid') . '.css';
   $cache = cache_get('fusion');
@@ -115,14 +123,14 @@ function fusion_core_preprocess_html(&$vars) {
     foreach ($themes as $name => $path) {
       if (empty($cache->data['grid_css'][$name][$file])) {
         if (file_exists($path . '/css/' . $file)) {
-          drupal_add_css($path . '/css/' . $file, array('basename' => $name . '-' . $file, 'group' => CSS_THEME, 'preprocess' => TRUE));
+          drupal_add_css($path . '/css/' . $file, array('group' => CSS_THEME, 'preprocess' => TRUE));
           $new_cache['grid_css'][$name][$file] = TRUE;
         } else {
           $new_cache['grid_css'][$name][$file] = FUSION_FILE_NOT_FOUND;
         }
       } else {
         if ($cache->data['grid_css'][$name][$file] === TRUE) {
-          drupal_add_css($path . '/css/' . $file, array('basename' => $name . '-' . $file, 'group' => CSS_THEME, 'preprocess' => TRUE));
+          drupal_add_css($path . '/css/' . $file, array('group' => CSS_THEME, 'preprocess' => TRUE));
         }
       }
     }
@@ -134,14 +142,14 @@ function fusion_core_preprocess_html(&$vars) {
     // Include any instances of local.css.
     if (empty($cache->data['local_css'][$path])) {
       if (file_exists($path . '/css/local.css')) {
-        drupal_add_css($path . '/css/local.css', array('basename' => $name . '-local.css', 'group' => CSS_THEME, 'preprocess' => TRUE));
+        drupal_add_css($path . '/css/local.css', array('group' => CSS_THEME, 'preprocess' => TRUE));
         $new_cache['local_css'][$path] = TRUE;
       } else {
         $new_cache['local_css'][$path] = FUSION_FILE_NOT_FOUND;
       }
     } else {
       if ($cache->data['local_css'][$path] === TRUE) {
-        drupal_add_css($path . '/css/local.css', array('basename' => $name . '-local.css', 'group' => CSS_THEME, 'preprocess' => TRUE));
+        drupal_add_css($path . '/css/local.css', array('group' => CSS_THEME, 'preprocess' => TRUE));
       }
     }
 
@@ -149,14 +157,14 @@ function fusion_core_preprocess_html(&$vars) {
     if (module_exists('fusion_accelerator') && theme_get_setting('responsive_enabled')) {
       if (empty($cache->data['responsive_css'][$path])) {
         if (file_exists($path . '/css/responsive.css')) {
-          drupal_add_css($path . '/css/responsive.css', array('basename' => $name . '-responsive.css', 'group' => CSS_THEME, 'preprocess' => TRUE));
+          drupal_add_css($path . '/css/responsive.css', array('group' => CSS_THEME, 'preprocess' => TRUE));
           $new_cache['responsive_css'][$path] = TRUE;
         } else {
           $new_cache['responsive_css'][$path] = FUSION_FILE_NOT_FOUND;
         }
       } else {
         if ($cache->data['responsive_css'][$path] === TRUE) {
-          drupal_add_css($path . '/css/responsive.css', array('basename' => $name . '-responsive.css', 'group' => CSS_THEME, 'preprocess' => TRUE));
+          drupal_add_css($path . '/css/responsive.css', array('group' => CSS_THEME, 'preprocess' => TRUE));
         }
       }
     }
@@ -278,14 +286,16 @@ function fusion_core_preprocess_node(&$vars) {
   $vars['classes_array'][] = $vars['zebra'];                              // Node is odd or even
   $vars['classes_array'][] = (!$vars['teaser']) ? 'full-node' : '';       // Node is teaser or full-node
 
-  // Make select regions available to node template.
-  $node_region_list = array('node_top', 'node_bottom');
-  $node_region_blocks = array();
-  foreach($node_region_list as $region) {
-    if ($list = fusion_core_block_list($region)) {
-      $node_region_blocks[$region] = _block_get_renderable_array($list);
+  // Make select regions available to node template, but only on full node view.
+  if ($vars['view_mode'] === 'full') {
+    $node_region_list = array('node_top', 'node_bottom');
+    $node_region_blocks = array();
+    foreach($node_region_list as $region) {
+      if ($list = fusion_core_block_list($region)) {
+        $node_region_blocks[$region] = _block_get_renderable_array($list);
+      }
+      $vars[$region] = isset($node_region_blocks[$region]) ? $node_region_blocks[$region] : array();
     }
-    $vars[$region] = isset($node_region_blocks[$region]) ? $node_region_blocks[$region] : array();
   }
 }
 
@@ -394,9 +404,22 @@ function fusion_core_theme() {
  */
 function fusion_core_block_list($region) {
   $drupal_list = array();
-  if (module_exists('block')) {
-    $drupal_list = block_list($region);
-  }
+    if (module_exists('context') && $context = context_get_plugin('reaction', 'region')) {
+    // Region reaction might be disabling this region. If it 
+    // does, an empty array should be returned.
+    $dummy_page = array($region => 1);
+    $context->execute($dummy_page);
+      if (!isset($dummy_page[$region])) {
+        return array();
+      }
+    }
+    if (module_exists('block')) {
+      $drupal_list=array();
+      $list_of_blocks_per_region = _block_load_blocks();
+      if (isset($list_of_blocks_per_region[$region])) {
+        $drupal_list = $list_of_blocks_per_region[$region];
+      }
+    }
   if (module_exists('context') && $context = context_get_plugin('reaction', 'block')) {
     $context_list = $context->block_list($region);
     $drupal_list = array_merge($context_list, $drupal_list);
@@ -442,10 +465,17 @@ function fusion_core_grid_info() {
     $grid['width'] = (int)substr($grid['name'], 4, 2);
   }
 
-  // @todo - eventually sidebar widths should be per responsive layout, but this isn't possible
-  // the way Fusion currently handles "adjusted regions".
+  // Set sidebar width if this is the block demonstration page.
+  global $theme;
+  $item = menu_get_item();
+  if ($item['path'] == 'admin/structure/block/demo/' . $theme) {
+    $grid['sidebar_first_width'] = theme_get_setting('sidebar_first_width');
+    $grid['sidebar_second_width'] = theme_get_setting('sidebar_second_width');
+  }
+  else {  
   $grid['sidebar_first_width'] = (fusion_core_block_list('sidebar_first')) ? theme_get_setting('sidebar_first_width') : 0;
   $grid['sidebar_second_width'] = (fusion_core_block_list('sidebar_second')) ? theme_get_setting('sidebar_second_width') : 0;
+  }
 
   $grid['regions'] = array();
   $regions = array_keys(system_region_list($theme_key, REGIONS_VISIBLE));

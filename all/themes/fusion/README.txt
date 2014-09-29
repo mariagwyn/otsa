@@ -25,8 +25,8 @@ INSTALLATION
     or "sites/default/".
 
  3. Install the Fusion Accelerator module: 
-    http://drupal.org/project/fusion_accelerator Fusion Accelerator makes Fusion even more powerful, giving you control over Fusion's 
-    layout and style options in Drupal's interface. Download and install 
+    http://drupal.org/project/fusion_accelerator Fusion Accelerator makes Fusion even more powerful, 
+    giving you control over Fusion's layout and style options in Drupal's interface. Download and install 
     this module like usual to get the most out of Fusion.
 
 	* How to install modules: http://drupal.org/node/70151
@@ -90,6 +90,10 @@ The Fusion Core base theme (parent theme) is designed to be easily extended by a
 	  settings at: 
 	  http://fusiondrupalthemes.com/support/theme-developers/subtheming-quickstart
 
+REMINDER:
+    If you want your subtheme to appear on your site, you'll need to upload the
+    newly created subtheme to your web server unless you are only using Fusion
+    on a local install.
 
 Optional:
 
